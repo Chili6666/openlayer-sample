@@ -1,0 +1,4119 @@
+{
+	"data": {
+		"Stands": [
+			{
+				"EntityId": "Stand.INF.A05",
+				"DisplayName": "A05",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7111266654765,
+				"LabelLongitude": 6.154063420527129,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.7112787543058,
+				"StandAllocationLongitude": 6.1550481480542,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782995",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801785582",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801791136",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801793686",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795655",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801799021",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801800881",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803458",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801804949",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806540",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801811157",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814646",
+						"PictogramId": "330"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A10",
+				"DisplayName": "A10",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7107703133118,
+				"LabelLongitude": 6.1571834293712899,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 255,
+				"StandAllocationLatitude": 50.710598117183199,
+				"StandAllocationLongitude": 6.156240553795639,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782360",
+						"PictogramId": "757"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801787776",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801788643",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801791853",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801793250",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797009",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798350",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801799534",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801800760",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801801856",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803189",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801804238",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805907",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807221",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801809122",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801811323",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812267",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801813341",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801814794",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A04",
+				"DisplayName": "A04",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7106024718443,
+				"LabelLongitude": 6.1542902903466,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.710745160536898,
+				"StandAllocationLongitude": 6.155279700112259,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783335",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801786859",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801793996",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798562",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801801100",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801802607",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801804661",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801809269",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801812581",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814998",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A03",
+				"DisplayName": "A03",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7099138458375,
+				"LabelLongitude": 6.15459158864782,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.710084050602599,
+				"StandAllocationLongitude": 6.155560709688349,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.A06",
+				"DisplayName": "A06",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.711957430467,
+				"LabelLongitude": 6.1542504666908999,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 127,
+				"StandAllocationLatitude": 50.7115825401039,
+				"StandAllocationLongitude": 6.15510523475379,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782836",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802653249",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801786311",
+						"PictogramId": "767"
+					},
+					{
+						"EntityId": "StandAllocation.801789065",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801792629",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801794222",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801797456",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801799174",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801801707",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801807985",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801810850",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816516",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A11",
+				"DisplayName": "A11",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.710363600441407,
+				"LabelLongitude": 6.15736780255999,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 255,
+				"StandAllocationLatitude": 50.7101867371062,
+				"StandAllocationLongitude": 6.15640211669434,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781771",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784417",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801786783",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801788225",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801790211",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792460",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795335",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796116",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801797650",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801800281",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801801382",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801802193",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803586",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806613",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801807649",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801809403",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809873",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810931",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801811759",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812674",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801814350",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815558",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801817133",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A07",
+				"DisplayName": "A07",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7122262512778,
+				"LabelLongitude": 6.15590406248254,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 202,
+				"StandAllocationLatitude": 50.711657452347299,
+				"StandAllocationLongitude": 6.155565390776959,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802593083",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802594785",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.802593087",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801790391",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801793969",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801803530",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798777",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801801557",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803791",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801804861",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814718",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816464",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A12",
+				"DisplayName": "A12",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7099388408193,
+				"LabelLongitude": 6.1575378866368999,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 255,
+				"StandAllocationLatitude": 50.709783197777699,
+				"StandAllocationLongitude": 6.15657723415314,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781974",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801790023",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801791530",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801794931",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801796782",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801799864",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801801009",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801802459",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803263",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801805732",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801812485",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815230",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816948",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B05",
+				"DisplayName": "B05",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.70978880679,
+				"LabelLongitude": 6.161755601177699,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 165,
+				"StandAllocationLatitude": 50.709217599255598,
+				"StandAllocationLongitude": 6.162015999754149,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784301",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801786721",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801788355",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801797826",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803512",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801808858",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801810651",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801814700",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801811967",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B10",
+				"DisplayName": "B10",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7077940542387,
+				"LabelLongitude": 6.1606255321687,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.7083648779374,
+				"StandAllocationLongitude": 6.160382375421009,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801787123",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789160",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801792223",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801793209",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796098",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796710",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801797485",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798141",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798590",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799154",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801800244",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801802585",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803850",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807416",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808169",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808641",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801809796",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801811372",
+						"PictogramId": "737"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A08",
+				"DisplayName": "A08",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7115927345006,
+				"LabelLongitude": 6.15684320268515,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 255,
+				"StandAllocationLatitude": 50.71141806023479,
+				"StandAllocationLongitude": 6.15586127639921,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784860",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801787918",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801792163",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801793803",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795766",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798848",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803140",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801804977",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801808365",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801809816",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814538",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801816492",
+						"PictogramId": "330"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B10L",
+				"DisplayName": "B10L",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7077132813899,
+				"LabelLongitude": 6.16022635404489,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.7083140865826,
+				"StandAllocationLongitude": 6.16012690337285,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783314",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801785130",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786369",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801790643",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801794913",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805606",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801810579",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801813821",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801816727",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A09",
+				"DisplayName": "A09",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7111860402488,
+				"LabelLongitude": 6.15701332578359,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 255,
+				"StandAllocationLatitude": 50.71101098456769,
+				"StandAllocationLongitude": 6.15604678881469,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784201",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801787240",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801791670",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801793940",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797115",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801799201",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801803349",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801805209",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801810159",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814255",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816328",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.101",
+				"DisplayName": "101",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.71280887014029,
+				"LabelLongitude": 6.159353852522119,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7122185156202,
+				"StandAllocationLongitude": 6.15885197026228,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784623",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801791560",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801794799",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801796680",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801798875",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801801585",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801802715",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801804096",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801808138",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809843",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801811819",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814672",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801816785",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B01",
+				"DisplayName": "B01",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.70931338856679,
+				"LabelLongitude": 6.15921805104311,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 165,
+				"StandAllocationLatitude": 50.7087555730517,
+				"StandAllocationLongitude": 6.1594603808809,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782256",
+						"PictogramId": null
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783363",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801784673",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801786494",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801790370",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801791165",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792761",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801794394",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801797808",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801798982",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799970",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801802397",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805447",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801808187",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810324",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813648",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815328",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B09L",
+				"DisplayName": "B09L",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7079375718031,
+				"LabelLongitude": 6.161395349214319,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.7085053013019,
+				"StandAllocationLongitude": 6.16116985594486,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801798803",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B02",
+				"DisplayName": "B02",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7094299942605,
+				"LabelLongitude": 6.15984530865395,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 165,
+				"StandAllocationLatitude": 50.708868461566897,
+				"StandAllocationLongitude": 6.16009817555909,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782684",
+						"PictogramId": null
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783876",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786290",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801787738",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789264",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801791342",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801795286",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797234",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798542",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801799675",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805485",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801806940",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809295",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810063",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801810875",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813483",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801814206",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801815058",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816911",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B03",
+				"DisplayName": "B03",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.709546618572797,
+				"LabelLongitude": 6.16045831617452,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 165,
+				"StandAllocationLatitude": 50.708994625150399,
+				"StandAllocationLongitude": 6.160738278932559,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783022",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801783741",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801785561",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786665",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801788731",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801790907",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792562",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801794956",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798220",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799825",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801800742",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801802147",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801806111",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801808347",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809249",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801810597",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812038",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813771",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801815105",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801817072",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B04",
+				"DisplayName": "B04",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7096722197147,
+				"LabelLongitude": 6.16111409347662,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 165,
+				"StandAllocationLatitude": 50.7091060446043,
+				"StandAllocationLongitude": 6.16139431060455,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782925",
+						"PictogramId": "330"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784342",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786249",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.802657754",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801795848",
+						"PictogramId": "767"
+					},
+					{
+						"EntityId": "StandAllocation.801800065",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808072",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801815498",
+						"PictogramId": "330"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.104",
+				"DisplayName": "104",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.713470713792,
+				"LabelLongitude": 6.157474264895519,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7128757594912,
+				"StandAllocationLongitude": 6.15696710015178,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782965",
+						"PictogramId": "737"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801786686",
+						"PictogramId": "767"
+					},
+					{
+						"EntityId": "StandAllocation.801789963",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801792696",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801795434",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797184",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801798947",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801801612",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805827",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806638",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801808109",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801810617",
+						"PictogramId": "767"
+					},
+					{
+						"EntityId": "StandAllocation.801816625",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B06",
+				"DisplayName": "B06",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.709696785658007,
+				"LabelLongitude": 6.163052164282489,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 216,
+				"StandAllocationLatitude": 50.7091892314159,
+				"StandAllocationLongitude": 6.16250386294615,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802594783",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801786920",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801793631",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798092",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801800112",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801801183",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801803715",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808462",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801809027",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810288",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801812430",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816150",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B11",
+				"DisplayName": "B11",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.707641541226099,
+				"LabelLongitude": 6.15982719543185,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.708212766075799,
+				"StandAllocationLongitude": 6.15955354427145,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782029",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783857",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801784811",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801785465",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786837",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801787719",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789727",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801790592",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801792272",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795268",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797035",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801797937",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801800046",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801800677",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801802994",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805378",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801806596",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801807902",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801808751",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810669",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801811437",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813528",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801815480",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816805",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B07",
+				"DisplayName": "B07",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7086934501082,
+				"LabelLongitude": 6.1635915020167399,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 288,
+				"StandAllocationLatitude": 50.708891429986199,
+				"StandAllocationLongitude": 6.162636743412,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783503",
+						"PictogramId": null
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801788864",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801793542",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795546",
+						"PictogramId": "767"
+					},
+					{
+						"EntityId": "StandAllocation.801800217",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801807145",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801808989",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801810738",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B12",
+				"DisplayName": "B12",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7075159214656,
+				"LabelLongitude": 6.15918566822001,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.7080954664396,
+				"StandAllocationLongitude": 6.15890433996078,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782444",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783222",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801786740",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801787653",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801788443",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801790050",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801791440",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801795391",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801797391",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801798659",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799438",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801800580",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803090",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801806021",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808392",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809333",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810306",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801811455",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812752",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801814048",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816608",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B08",
+				"DisplayName": "B08",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.708161880834797,
+				"LabelLongitude": 6.162550094293479,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.7087052025072,
+				"StandAllocationLongitude": 6.1622703978069,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802594808",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802653251",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.802653232",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798703",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801804177",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801809377",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801815540",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816573",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B09",
+				"DisplayName": "B09",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.7080093492038,
+				"LabelLongitude": 6.16176600764685,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.7085516725989,
+				"StandAllocationLongitude": 6.161420758403859,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784936",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801788784",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801792884",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801794355",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801801500",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801804198",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801805340",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801809476",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801812350",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816062",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A03R",
+				"DisplayName": "A03R",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.71013251155969,
+				"LabelLongitude": 6.1544887770501799,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.7102542226392,
+				"StandAllocationLongitude": 6.15549481415644,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801785676",
+						"PictogramId": "NARROW_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801787095",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801788328",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801789996",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801791615",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795079",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796529",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798678",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801800630",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801801157",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801802064",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803951",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806258",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807247",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809352",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801811701",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813502",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815150",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801817026",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A03L",
+				"DisplayName": "A03L",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7096967476178,
+				"LabelLongitude": 6.154689665915259,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.709921105086397,
+				"StandAllocationLongitude": 6.15562633582707,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783716",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801786557",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801789914",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801792346",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795494",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796555",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801799509",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801800951",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801801799",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801802558",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803895",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806203",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807564",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801810134",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801811186",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801811941",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801813396",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801814619",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801817215",
+						"PictogramId": "737"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A04L",
+				"DisplayName": "A04L",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7103946083758,
+				"LabelLongitude": 6.15437534214045,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.7105870842924,
+				"StandAllocationLongitude": 6.15535174932739,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.A04R",
+				"DisplayName": "A04R",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.71081033531279,
+				"LabelLongitude": 6.15420523855275,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.710911540335299,
+				"StandAllocationLongitude": 6.1552126563786,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.103",
+				"DisplayName": "103",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.713250102252299,
+				"LabelLongitude": 6.15810079411089,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.712647313076008,
+				"StandAllocationLongitude": 6.15759631996847,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802594113",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801786097",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801788894",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801790570",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801794509",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801795737",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801796652",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801799991",
+						"PictogramId": "767"
+					},
+					{
+						"EntityId": "StandAllocation.801802314",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801804217",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801808907",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801810991",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801813669",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801817264",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B09R",
+				"DisplayName": "B09R",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.708081107986007,
+				"LabelLongitude": 6.16215091616965,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.708600925232008,
+				"StandAllocationLongitude": 6.16167864965055,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801797411",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801798280",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.B10R",
+				"DisplayName": "B10R",
+				"LabelDirection": 342.6,
+				"LabelLatitude": 50.707865813020799,
+				"LabelLongitude": 6.1610104406915,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 345,
+				"StandAllocationLatitude": 50.708409689473899,
+				"StandAllocationLongitude": 6.16065179968051,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783042",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801784261",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801784743",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801785919",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801790239",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801791086",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801794873",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801806039",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810456",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801813423",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816591",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.102",
+				"DisplayName": "102",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7130294907127,
+				"LabelLongitude": 6.15872732332626,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7124382075919,
+				"StandAllocationLongitude": 6.15821717398495,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782048",
+						"PictogramId": "737"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801785208",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801788163",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801791697",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801794442",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801798160",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801800339",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801803484",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801806420",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801807434",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801809527",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801811625",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801815375",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816764",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.105",
+				"DisplayName": "105",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.713914991025,
+				"LabelLongitude": 6.15619271280089,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.71334307230549,
+				"StandAllocationLongitude": 6.155683887798769,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781644",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782703",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801784230",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801787065",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801789648",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801798630",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801799693",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801802282",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801803402",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806057",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807068",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801808011",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801809202",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801810342",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801812702",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801813618",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816177",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.110",
+				"DisplayName": "110",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7132731295114,
+				"LabelLongitude": 6.158955851677979,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.71386364401889,
+				"StandAllocationLongitude": 6.159473551928209,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782893",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801785093",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786044",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801789798",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801791935",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795047",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796313",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799633",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801805887",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801807352",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812458",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801813750",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801815613",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801816645",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.114",
+				"DisplayName": "114",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.714391266018399,
+				"LabelLongitude": 6.1557709686930999,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7149549820204,
+				"StandAllocationLongitude": 6.15628886756041,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781679",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783243",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801784566",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801786761",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801787541",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801790092",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801804455",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801805758",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807619",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801809151",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801810959",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801814819",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801816026",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801817312",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.109",
+				"DisplayName": "109",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7130524547429,
+				"LabelLongitude": 6.15958238075677,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7136405341491,
+				"StandAllocationLongitude": 6.160097225721049,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784782",
+						"PictogramId": "PROPELLER"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801786268",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801790788",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801792959",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801801933",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801804293",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801805264",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807163",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807920",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814506",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801815763",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801816863",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.106",
+				"DisplayName": "106",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.714135611842,
+				"LabelLongitude": 6.1555614335525699,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7135627497549,
+				"StandAllocationLongitude": 6.15506020659185,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784094",
+						"PictogramId": "330"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801786067",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801787573",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789305",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801790137",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801791310",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792849",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801795005",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795868",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801796497",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801800189",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801802091",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801803317",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801804428",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801805858",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806959",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801808041",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801808939",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801813101",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801816884",
+						"PictogramId": "737"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.111",
+				"DisplayName": "111",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.713493713953,
+				"LabelLongitude": 6.1583293224040809,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7140762722501,
+				"StandAllocationLongitude": 6.15885270552095,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781622",
+						"PictogramId": null
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783162",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801787010",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789180",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801790663",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801794600",
+						"PictogramId": "ERJ-170"
+					},
+					{
+						"EntityId": "StandAllocation.801796236",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801797330",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801805002",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801807590",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801813310",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801817005",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.112",
+				"DisplayName": "112",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7137142983946,
+				"LabelLongitude": 6.15770279313018,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7142959642219,
+				"StandAllocationLongitude": 6.158217909243629,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781742",
+						"PictogramId": "737"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782734",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801783382",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801784543",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.802592605",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801788922",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801790311",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801802164",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801806511",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801807704",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801813591",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801817050",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.107",
+				"DisplayName": "107",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7143562325686,
+				"LabelLongitude": 6.1549301543183,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7137753925087,
+				"StandAllocationLongitude": 6.154428245114179,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781542",
+						"PictogramId": "CRJ-200"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782863",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801785486",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801786338",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801788193",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.802594117",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801792242",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801794688",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801796936",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798191",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801801827",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801802762",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801804715",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801807673",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809664",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801812789",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813839",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815076",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801816975",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.113",
+				"DisplayName": "113",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.71416762693119,
+				"LabelLongitude": 6.15640701045605,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7147282590767,
+				"StandAllocationLongitude": 6.15691253354896,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783556",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801785285",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801787208",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801789003",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792509",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795791",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797779",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798403",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803920",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801806565",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807321",
+						"PictogramId": "MD80"
+					},
+					{
+						"EntityId": "StandAllocation.801811293",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801815275",
+						"PictogramId": "NARROW_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.108",
+				"DisplayName": "108",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7145768532952,
+				"LabelLongitude": 6.15429887508404,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.713998498840897,
+				"StandAllocationLongitude": 6.15380727883848,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782198",
+						"PictogramId": "737"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784988",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801788069",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789212",
+						"PictogramId": "CRJ-200"
+					},
+					{
+						"EntityId": "StandAllocation.801790339",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801791408",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801793149",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801795305",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796371",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801797053",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801798473",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801801410",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801802530",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801807811",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801809608",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813043",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801814448",
+						"PictogramId": "757"
+					},
+					{
+						"EntityId": "StandAllocation.801817156",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.120",
+				"DisplayName": "120",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.708547645198397,
+				"LabelLongitude": 6.17148575935199,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7079521403721,
+				"StandAllocationLongitude": 6.17098514847912,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801789428",
+						"PictogramId": "PROPELLER"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801791361",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801792803",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801794646",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801798049",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801800656",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801802847",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801812907",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801817291",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.115",
+				"DisplayName": "115",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7146149032616,
+				"LabelLongitude": 6.155134955426409,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.715165807438399,
+				"StandAllocationLongitude": 6.15566516723293,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782463",
+						"PictogramId": "737"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784830",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801791878",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801793509",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801794975",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801800308",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801801646",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803610",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801804583",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815789",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816822",
+						"PictogramId": null
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.121",
+				"DisplayName": "121",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7092184842983,
+				"LabelLongitude": 6.1696346914166499,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7086195608292,
+				"StandAllocationLongitude": 6.1691235280629,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782275",
+						"PictogramId": "NARROW_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801785421",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801787631",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801789941",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801794891",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801797351",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801799654",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801805395",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801808253",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801810777",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812731",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801816685",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.116",
+				"DisplayName": "116",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7148385405049,
+				"LabelLongitude": 6.154498942159739,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.715383692873199,
+				"StandAllocationLongitude": 6.15503036705346,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782227",
+						"PictogramId": "737"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801785172",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801786472",
+						"PictogramId": "ERJ-170"
+					},
+					{
+						"EntityId": "StandAllocation.801789113",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801792429",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795104",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801796728",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801801067",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803996",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801806227",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808612",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812514",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815200",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801817186",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.122",
+				"DisplayName": "122",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.709433103100199,
+				"LabelLongitude": 6.16898913958281,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.708842414427007,
+				"StandAllocationLongitude": 6.16848859611345,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783480",
+						"PictogramId": "ERJ-170"
+					},
+					{
+						"EntityId": "StandAllocation.801787319",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.802657756",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801792674",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801794557",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801795463",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797213",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799949",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801805564",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801812169",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801813462",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801816843",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.117",
+				"DisplayName": "117",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.70790384829859,
+				"LabelLongitude": 6.173379636090369,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.707292659554699,
+				"StandAllocationLongitude": 6.17285376860904,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784068",
+						"PictogramId": "330"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801785938",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801789242",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801790836",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792079",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801794578",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.802595013",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801805807",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801809452",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801810688",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801811518",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801812630",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814402",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801815429",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801816928",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.123",
+				"DisplayName": "123",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.70964770145849,
+				"LabelLongitude": 6.16835785208541,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.709056758123697,
+				"StandAllocationLongitude": 6.16786832341683,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782779",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801785539",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801786643",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801787986",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801788841",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801790114",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801791459",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801794851",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801797503",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801799804",
+						"PictogramId": "ERJ-170"
+					},
+					{
+						"EntityId": "StandAllocation.801805712",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801808410",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801809181",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801811679",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801812408",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801817113",
+						"PictogramId": "737"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.118",
+				"DisplayName": "118",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.708118459432899,
+				"LabelLongitude": 6.1727482488696598,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.7075125211953,
+				"StandAllocationLongitude": 6.17222738027518,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783139",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801784720",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786513",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801788462",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801789746",
+						"PictogramId": "ERJ-170"
+					},
+					{
+						"EntityId": "StandAllocation.801790978",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801794667",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801797573",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801798452",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801800025",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801808296",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801811349",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801813925",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801816665",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.124",
+				"DisplayName": "124",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7098622998166,
+				"LabelLongitude": 6.16772656458802,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.709275259462199,
+				"StandAllocationLongitude": 6.167246064682519,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802592601",
+						"PictogramId": "PROPELLER"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802595009",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801788131",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799610",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801800929",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801801754",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801803215",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801805787",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801813180",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801816744",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.119",
+				"DisplayName": "119",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.708333052315698,
+				"LabelLongitude": 6.17211700411082,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 209,
+				"StandAllocationLatitude": 50.70772569920759,
+				"StandAllocationLongitude": 6.17160055000063,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801781942",
+						"PictogramId": "MD80"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784023",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.802656106",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801794487",
+						"PictogramId": null
+					},
+					{
+						"EntityId": "StandAllocation.801797144",
+						"PictogramId": "330"
+					},
+					{
+						"EntityId": "StandAllocation.801800426",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801802438",
+						"PictogramId": "PROPELLER"
+					},
+					{
+						"EntityId": "StandAllocation.801813978",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801816706",
+						"PictogramId": "ERJ-170"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.H1",
+				"DisplayName": "H1",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.705031619271398,
+				"LabelLongitude": 6.1663338675737899,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 180,
+				"StandAllocationLatitude": 50.7048213562357,
+				"StandAllocationLongitude": 6.1663197332765,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.H2",
+				"DisplayName": "H2",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7050306697294,
+				"LabelLongitude": 6.167060622176379,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 180,
+				"StandAllocationLatitude": 50.7048203891923,
+				"StandAllocationLongitude": 6.16705988296392,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.H3",
+				"DisplayName": "H3",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7050297388058,
+				"LabelLongitude": 6.1677731266887199,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 180,
+				"StandAllocationLatitude": 50.70481944747001,
+				"StandAllocationLongitude": 6.167780652528609,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.H4",
+				"DisplayName": "H4",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7050288078823,
+				"LabelLongitude": 6.16848563120106,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 180,
+				"StandAllocationLatitude": 50.7048185236214,
+				"StandAllocationLongitude": 6.16848774200665,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.180",
+				"DisplayName": "180",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.714345969216598,
+				"LabelLongitude": 6.15126309858152,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 270,
+				"StandAllocationLatitude": 50.714338258946899,
+				"StandAllocationLongitude": 6.15011266889491,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.181",
+				"DisplayName": "181",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7138853022756,
+				"LabelLongitude": 6.1512621035324,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 270,
+				"StandAllocationLatitude": 50.7138814760606,
+				"StandAllocationLongitude": 6.15011168223543,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801804321",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.182",
+				"DisplayName": "182",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7134156026496,
+				"LabelLongitude": 6.15126108897253,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 270,
+				"StandAllocationLatitude": 50.713427764287299,
+				"StandAllocationLongitude": 6.150110702209609,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801783404",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801794050",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801815641",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.183",
+				"DisplayName": "183",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.712954935708697,
+				"LabelLongitude": 6.15126009392342,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 270,
+				"StandAllocationLatitude": 50.7129649295019,
+				"StandAllocationLongitude": 6.150109702477909,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.184",
+				"DisplayName": "184",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7124852360827,
+				"LabelLongitude": 6.15125907936355,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 270,
+				"StandAllocationLatitude": 50.7125111274017,
+				"StandAllocationLongitude": 6.150108722256979,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801792988",
+						"PictogramId": "WIDE_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.190",
+				"DisplayName": "190",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7062334318536,
+				"LabelLongitude": 6.165980210249609,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 0,
+				"StandAllocationLatitude": 50.70690158329529,
+				"StandAllocationLongitude": 6.165978803443001,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.191",
+				"DisplayName": "191",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.70623250093,
+				"LabelLongitude": 6.166692714761959,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 0,
+				"StandAllocationLatitude": 50.7069094099803,
+				"StandAllocationLongitude": 6.16669446190064,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.192",
+				"DisplayName": "192",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.706231570006497,
+				"LabelLongitude": 6.1674052192743,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 0,
+				"StandAllocationLatitude": 50.70690989598629,
+				"StandAllocationLongitude": 6.167428629671861,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.193",
+				"DisplayName": "193",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7062306390829,
+				"LabelLongitude": 6.16811772378664,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 0,
+				"StandAllocationLatitude": 50.706908960780399,
+				"StandAllocationLongitude": 6.1681444117049699,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.194",
+				"DisplayName": "194",
+				"LabelDirection": 0,
+				"LabelLatitude": 50.7062296895409,
+				"LabelLongitude": 6.16884447838923,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 0,
+				"StandAllocationLatitude": 50.7069050537254,
+				"StandAllocationLongitude": 6.1688533472561899,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.130",
+				"DisplayName": "130",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.709712818443197,
+				"LabelLongitude": 6.16921774586054,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7102849850279,
+				"StandAllocationLongitude": 6.16976638626256,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801795361",
+						"PictogramId": "NARROW_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.125",
+				"DisplayName": "125",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7081745141632,
+				"LabelLongitude": 6.17362245870139,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7087098697218,
+				"StandAllocationLongitude": 6.17411511632909,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782414",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802595011",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.131",
+				"DisplayName": "131",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7099274168014,
+				"LabelLongitude": 6.16858645836314,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7105048468547,
+				"StandAllocationLongitude": 6.169139855427799,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802593085",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801794768",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.126",
+				"DisplayName": "126",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.708389112521498,
+				"LabelLongitude": 6.172991171203989,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.70893650550379,
+				"StandAllocationLongitude": 6.17348902763011,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801793177",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": []
+			},
+			{
+				"EntityId": "Stand.INF.132",
+				"DisplayName": "132",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7101420151597,
+				"LabelLongitude": 6.16795517086574,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.71072092612479,
+				"StandAllocationLongitude": 6.168504766344349,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782590",
+						"PictogramId": "WIDE_BODY"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784472",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801796808",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.127",
+				"DisplayName": "127",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.7086037108797,
+				"LabelLongitude": 6.1723598837066009,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7091537506447,
+				"StandAllocationLongitude": 6.17286035362368,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802594115",
+						"PictogramId": "NARROW_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.128",
+				"DisplayName": "128",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.708818309238008,
+				"LabelLongitude": 6.1717285962091898,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7093709957856,
+				"StandAllocationLongitude": 6.17223167961727,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802592603",
+						"PictogramId": "PROPELLER"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.129",
+				"DisplayName": "129",
+				"LabelDirection": 29,
+				"LabelLatitude": 50.709498220085,
+				"LabelLongitude": 6.16984903335793,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 29,
+				"StandAllocationLatitude": 50.7100486738464,
+				"StandAllocationLongitude": 6.17040043413556,
+				"ActiveStandAllocations": [],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.802653230",
+						"PictogramId": "WIDE_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801795205",
+						"PictogramId": "NARROW_BODY"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A01",
+				"DisplayName": "A01",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.70897563898139,
+				"LabelLongitude": 6.155013533011149,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.7091376419534,
+				"StandAllocationLongitude": 6.15594584147285,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782639",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784443",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801785063",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801786127",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801787426",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801788672",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801791282",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792372",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795822",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801796837",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801798375",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801802371",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803666",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801807858",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801810493",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801813369",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801814376",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801815175",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801817239",
+						"PictogramId": "320"
+					}
+				]
+			},
+			{
+				"EntityId": "Stand.INF.A02",
+				"DisplayName": "A02",
+				"LabelDirection": 344.6,
+				"LabelLatitude": 50.7093823518517,
+				"LabelLongitude": 6.15482915982245,
+				"PictogramId": "OFFPIER_STAND_RECT",
+				"StandAllocationDirection": 75,
+				"StandAllocationLatitude": 50.709551469792298,
+				"StandAllocationLongitude": 6.15577744379874,
+				"ActiveStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801782387",
+						"PictogramId": "320"
+					}
+				],
+				"PlannedStandAllocations": [
+					{
+						"EntityId": "StandAllocation.801784887",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801785610",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801787180",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801788008",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801789595",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801791642",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801792903",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801795125",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801796399",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801798729",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801799228",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801800504",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801802345",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801803431",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806087",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801806893",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801808514",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801809097",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801810185",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801811492",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801812239",
+						"PictogramId": "737"
+					},
+					{
+						"EntityId": "StandAllocation.801813201",
+						"PictogramId": "NARROW_BODY"
+					},
+					{
+						"EntityId": "StandAllocation.801814592",
+						"PictogramId": "320"
+					},
+					{
+						"EntityId": "StandAllocation.801817089",
+						"PictogramId": "320"
+					}
+				]
+			}
+		]
+	}
+}

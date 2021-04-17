@@ -1,0 +1,112 @@
+<template>
+  <div id="app">
+    <div class="cell cell-map">
+      <MapContainer
+        :zoomlevel="14.6"
+        :longitude="6.166084"
+        :latitude="50.71366"
+        :wrapX="false"
+        :datalayers="sources"
+        :vectorLayers="layers"
+        @centerpoint="oncenterpoitchanged"
+      />
+    </div>
+    <div class="cell cell-edit">Edit</div>
+    <div class="cell cell-inspect">Inspect</div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, Ref, ref, onMounted, onBeforeMount } from "vue";
+import MapContainer from "@/components/MapContainer.vue";
+import { MbTileSource } from "./mapwrapper/MbTileSource";
+import { IPosition } from "./mapwrapper/IPosition";
+import { VehicleDataLayer } from "@/mapwrapper/VehicleDataLayer";
+import { TerminalResourceDataLayer } from "@/mapwrapper/TerminalResourceDataLayer";
+import { StandLabelDataLayer } from "@/mapwrapper/StandLabelDataLayer";
+import { StandAllocationDataLayer } from "@/mapwrapper/StandAllocationDataLayer";
+
+import VectorLayer from "ol/layer/Vector";
+
+export default defineComponent({
+  name: "App",
+  components: {
+    MapContainer,
+  },
+  setup() {
+    const layers: Ref<VectorLayer[]> = ref([]);
+    const sources: Ref<MbTileSource[]> = ref([]);
+
+    function oncenterpoitchanged(centerpoint: IPosition) {
+      console.log("centerpointchanged: " + centerpoint);
+    }
+
+    function setupDataLayers(): void {
+      let mbTileSource = new MbTileSource();
+      mbTileSource.url = "./tiles/{z}/{x}/{y}.png";
+      mbTileSource.maxZoom = 18;
+      mbTileSource.minZoom = 3;
+      sources.value.push(mbTileSource);
+    }
+
+    function setupDataVehicleLayer() {
+      layers.value.push(new VehicleDataLayer());
+      layers.value.push(new TerminalResourceDataLayer());
+      layers.value.push(new StandLabelDataLayer());
+      layers.value.push(new StandAllocationDataLayer());
+      layers.value.forEach((layer) => layer.init());
+    }
+
+    onBeforeMount(() => {
+      console.log("onBeforeMount");
+      setupDataLayers();
+      setupDataVehicleLayer();
+    });
+
+    return {
+      oncenterpoitchanged,
+      sources,
+      layers,
+    };
+  },
+});
+</script>
+
+<style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 170vh;
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+  box-sizing: border-box;
+}
+
+.cell {
+  border-radius: 4px;
+  background-color: lightgrey;
+}
+
+.cell-map {
+  grid-column: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.cell-edit {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.cell-inspect {
+  grid-column: 2;
+  grid-row: 2;
+}
+</style>

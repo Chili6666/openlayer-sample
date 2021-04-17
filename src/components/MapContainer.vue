@@ -1,0 +1,196 @@
+<template>
+  <div ref="root" style="width: 100%; height: 100%"></div>
+</template>
+
+<script lang="ts">
+import { ref, onMounted, defineComponent, toRefs } from "vue";
+import View from "ol/View";
+import Map from "ol/Map";
+import TileLayer from "ol/layer/Tile";
+import VectorSource from "ol/source/Vector";
+import VectorLayer from "ol/layer/Vector";
+import GeoJSON from "ol/format/GeoJSON";
+import XYZ from "ol/source/XYZ";
+
+import {
+  positionToPoint,
+  pointToPosition,
+  pointToArray,
+  arrayToPoint,
+} from "@/mapwrapper/MapHelper";
+
+// importing the OpenLayers stylesheet is required for having
+// good looking buttons!
+import "ol/ol.css";
+import { MbTileSource } from "@/mapwrapper/MbTileSource";
+import { IPosition } from "@/mapwrapper/IPosition";
+import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
+
+export default defineComponent({
+  props: {
+    zoomlevel: {
+      type: Number,
+      default: 0,
+    },
+    maxZoom: {
+      type: Number,
+      default: 20,
+    },
+    minZoom: {
+      type: Number,
+      default: 5,
+    },
+    latitude: {
+      type: Number,
+      default: 0,
+    },
+    longitude: {
+      type: Number,
+      default: 0,
+    },
+    wrapX: {
+      type: Boolean,
+      default: true,
+    },
+    datalayers: {
+      type: Array,
+      default: () => [],
+    },
+    vectorLayers: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  setup(props, context) {
+    const root = ref(null);
+    const { zoomlevel, latitude, longitude, datalayers, vectorLayers } = toRefs(
+      props
+    );
+    const isDragging = ref(true);
+    let internalMap = new Map();
+
+    onMounted(() => {
+      let centerpoint = positionToPoint({
+        Longitude: longitude.value,
+        Latitude: latitude.value,
+      });
+
+      let tileLayers = createTileSources(
+        datalayers.value as Array<MbTileSource>
+      );
+
+      let vl = vectorLayers.value as Array<IMapDataLayer>;
+      vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
+
+      tileLayers.push(createVectorLayer());
+
+      // this is where we create the OpenLayers map
+      internalMap = new Map({
+        // the map will be created using the 'root' ref
+        target: root.value,
+
+        layers: tileLayers,
+
+        view: new View({
+          zoom: zoomlevel.value,
+          center: pointToArray(centerpoint),
+          constrainResolution: false,
+          maxZoom: props.maxZoom,
+          minZoom: props.minZoom,
+          rotation: 0.0,
+        }),
+      });
+
+      internalMap.on("moveend", onMoveEnd);
+      internalMap.on("movestart", onMoveStart);
+      internalMap.on("pointermove", onMove);
+    });
+
+    function onMoveStart(value: any) {
+      //console.log("onMoveStart");
+      isDragging.value = true;
+    }
+
+    function onMove(value: any) {
+      if (isDragging.value) {
+        // console.log("onMove");
+      }
+    }
+
+    function onMoveEnd(value: any) {
+      // console.log("onMoveEnd");
+      isDragging.value = false;
+      context.emit("centerpoint", getCenterPoint());
+    }
+
+    function getCenterPoint(): IPosition {
+      let view = internalMap?.getView();
+      let center = view?.getCenter();
+      return pointToPosition(arrayToPoint(center));
+    }
+
+    function createTileSources(datalayers: Array<MbTileSource>) {
+      let tileLayers: Array<TileLayer> = new Array<TileLayer>(
+        datalayers.length
+      );
+      for (let index = 0; index < datalayers.length; index++) {
+        var datalayer = datalayers[index];
+
+        var tileItemSource = new XYZ({
+          url: datalayer.url,
+          maxZoom: datalayer.maxZoom,
+          minZoom: datalayer.minZoom,
+          crossOrigin: datalayer.crossOrigin,
+          wrapX: false,
+        });
+
+        var tileLayer: TileLayer = new TileLayer({ source: tileItemSource });
+        tileLayers[index] = tileLayer;
+      }
+
+      return tileLayers;
+    }
+
+    //test adding polygons ******************************************
+
+    const data = {
+      type: "Feature",
+      properties: {},
+      geometry: {
+        type: "Polygon",
+        coordinates: [
+          [
+            [-27.0703125, 43.58039085560784],
+            [-28.125, 23.563987128451217],
+            [-10.8984375, 32.84267363195431],
+            [-27.0703125, 43.58039085560784],
+          ],
+        ],
+      },
+    };
+
+    function createVectorLayer() {
+      const feature = new GeoJSON().readFeature(data, {
+        // this is required since GeoJSON uses latitude/longitude,
+        // but the map is rendered using “Web Mercator”
+        featureProjection: "EPSG:3857",
+      });
+
+      const vectorLayer = new VectorLayer({
+        source: new VectorSource({
+          features: [feature],
+        }),
+      });
+
+      return vectorLayer;
+    }
+
+    //test adding polygons ******************************************
+
+    return {
+      root,
+      isDragging,
+    };
+  },
+});
+</script>

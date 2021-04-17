@@ -1,0 +1,1149 @@
+{
+	"data": {
+		"TerminalResources": [
+			{
+				"EntityId": "TerminalResource.101",
+				"Id": "101",
+				"Direction": 29,
+				"Latitude": 50.7087920661389,
+				"Longitude": 6.1569017062806898,
+				"DisplayName": "101",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.SKY",
+				"Id": "SKY",
+				"Direction": null,
+				"Latitude": null,
+				"Longitude": null,
+				"DisplayName": "SKY TEAM",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.102",
+				"Id": "102",
+				"Direction": 29,
+				"Latitude": 50.7087408415595,
+				"Longitude": 6.1570469469653699,
+				"DisplayName": "102",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.103",
+				"Id": "103",
+				"Direction": 29,
+				"Latitude": 50.7086896169802,
+				"Longitude": 6.157192187650059,
+				"DisplayName": "103",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.104",
+				"Id": "104",
+				"Direction": 29,
+				"Latitude": 50.7086383924009,
+				"Longitude": 6.15733742833474,
+				"DisplayName": "104",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.105",
+				"Id": "105",
+				"Direction": 29,
+				"Latitude": 50.70858716782159,
+				"Longitude": 6.15748266901942,
+				"DisplayName": "105",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.110",
+				"Id": "110",
+				"Direction": 29,
+				"Latitude": 50.708805052534199,
+				"Longitude": 6.15643361754582,
+				"DisplayName": "110",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.106",
+				"Id": "106",
+				"Direction": 29,
+				"Latitude": 50.708535943242299,
+				"Longitude": 6.15762790970411,
+				"DisplayName": "106",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.111",
+				"Id": "111",
+				"Direction": 29,
+				"Latitude": 50.7087609904006,
+				"Longitude": 6.15655849601497,
+				"DisplayName": "111",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.107",
+				"Id": "107",
+				"Direction": 29,
+				"Latitude": 50.708484718663,
+				"Longitude": 6.15777315038879,
+				"DisplayName": "107",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.112",
+				"Id": "112",
+				"Direction": 29,
+				"Latitude": 50.708716928266898,
+				"Longitude": 6.1566833744841109,
+				"DisplayName": "112",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.108",
+				"Id": "108",
+				"Direction": 29,
+				"Latitude": 50.7084334940836,
+				"Longitude": 6.15791839107348,
+				"DisplayName": "108",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.113",
+				"Id": "113",
+				"Direction": 29,
+				"Latitude": 50.7086728661332,
+				"Longitude": 6.15680825295325,
+				"DisplayName": "113",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.109",
+				"Id": "109",
+				"Direction": 29,
+				"Latitude": 50.7083822695044,
+				"Longitude": 6.158063631758159,
+				"DisplayName": "109",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.114",
+				"Id": "114",
+				"Direction": 29,
+				"Latitude": 50.708628803999598,
+				"Longitude": 6.156933131422379,
+				"DisplayName": "114",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.09",
+				"Id": "09",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.707956149416499,
+				"Longitude": 6.15782316663781,
+				"DisplayName": "09",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.100",
+				"Id": "100",
+				"Direction": 29,
+				"Latitude": 50.70884329071809,
+				"Longitude": 6.1567564655960009,
+				"DisplayName": "100",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.02",
+				"Id": "02",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.7084829216073,
+				"Longitude": 6.156314075649,
+				"DisplayName": "02",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.115",
+				"Id": "115",
+				"Direction": 29,
+				"Latitude": 50.70858474186589,
+				"Longitude": 6.15705800989152,
+				"DisplayName": "115",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.120",
+				"Id": "120",
+				"Direction": 29,
+				"Latitude": 50.708364431197598,
+				"Longitude": 6.157682402237209,
+				"DisplayName": "120",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.116",
+				"Id": "116",
+				"Direction": 29,
+				"Latitude": 50.7085406797323,
+				"Longitude": 6.15718288836065,
+				"DisplayName": "116",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.121",
+				"Id": "121",
+				"Direction": 29,
+				"Latitude": 50.708320369064008,
+				"Longitude": 6.15780728070634,
+				"DisplayName": "121",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.117",
+				"Id": "117",
+				"Direction": 29,
+				"Latitude": 50.7084966175987,
+				"Longitude": 6.157307766829789,
+				"DisplayName": "117",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.122",
+				"Id": "122",
+				"Direction": 29,
+				"Latitude": 50.7082763069303,
+				"Longitude": 6.15793215917548,
+				"DisplayName": "122",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.118",
+				"Id": "118",
+				"Direction": 29,
+				"Latitude": 50.708452555465,
+				"Longitude": 6.15743264529892,
+				"DisplayName": "118",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.123",
+				"Id": "123",
+				"Direction": 29,
+				"Latitude": 50.7082322447967,
+				"Longitude": 6.158057037644619,
+				"DisplayName": "123",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.119",
+				"Id": "119",
+				"Direction": 29,
+				"Latitude": 50.7084084933313,
+				"Longitude": 6.15755752376806,
+				"DisplayName": "119",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.124",
+				"Id": "124",
+				"Direction": 29,
+				"Latitude": 50.7081881826631,
+				"Longitude": 6.15818191611375,
+				"DisplayName": "124",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.125",
+				"Id": "125",
+				"Direction": 29,
+				"Latitude": 50.7082686721379,
+				"Longitude": 6.15596348716071,
+				"DisplayName": "125",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.130",
+				"Id": "130",
+				"Direction": 29,
+				"Latitude": 50.7080483614697,
+				"Longitude": 6.1565878795064,
+				"DisplayName": "130",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.126",
+				"Id": "126",
+				"Direction": 29,
+				"Latitude": 50.708224610004297,
+				"Longitude": 6.15608836562984,
+				"DisplayName": "126",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.131",
+				"Id": "131",
+				"Direction": 29,
+				"Latitude": 50.708004299336007,
+				"Longitude": 6.15671275797554,
+				"DisplayName": "131",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.127",
+				"Id": "127",
+				"Direction": 29,
+				"Latitude": 50.7081805478706,
+				"Longitude": 6.15621324409899,
+				"DisplayName": "127",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.132",
+				"Id": "132",
+				"Direction": 29,
+				"Latitude": 50.7079602372024,
+				"Longitude": 6.15683763644467,
+				"DisplayName": "132",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.128",
+				"Id": "128",
+				"Direction": 29,
+				"Latitude": 50.708136485737,
+				"Longitude": 6.15633812256813,
+				"DisplayName": "128",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.133",
+				"Id": "133",
+				"Direction": 29,
+				"Latitude": 50.707916175068699,
+				"Longitude": 6.15696251491381,
+				"DisplayName": "133",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.129",
+				"Id": "129",
+				"Direction": 29,
+				"Latitude": 50.708092423603407,
+				"Longitude": 6.15646300103726,
+				"DisplayName": "129",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.134",
+				"Id": "134",
+				"Direction": 29,
+				"Latitude": 50.70787211293501,
+				"Longitude": 6.15708739338295,
+				"DisplayName": "134",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.135",
+				"Id": "135",
+				"Direction": 29,
+				"Latitude": 50.707828050801399,
+				"Longitude": 6.15721227185209,
+				"DisplayName": "135",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.140",
+				"Id": "140",
+				"Direction": 29,
+				"Latitude": 50.708040143052098,
+				"Longitude": 6.15617204294755,
+				"DisplayName": "140",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.136",
+				"Id": "136",
+				"Direction": 29,
+				"Latitude": 50.7077839886678,
+				"Longitude": 6.15733715032123,
+				"DisplayName": "136",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.141",
+				"Id": "141",
+				"Direction": 29,
+				"Latitude": 50.70799617124529,
+				"Longitude": 6.1562969216117999,
+				"DisplayName": "141",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.137",
+				"Id": "137",
+				"Direction": 29,
+				"Latitude": 50.707739926534099,
+				"Longitude": 6.15746202879037,
+				"DisplayName": "137",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.142",
+				"Id": "142",
+				"Direction": 29,
+				"Latitude": 50.7079521994385,
+				"Longitude": 6.15642180027605,
+				"DisplayName": "142",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.138",
+				"Id": "138",
+				"Direction": 29,
+				"Latitude": 50.7076958644005,
+				"Longitude": 6.1575869072595,
+				"DisplayName": "138",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.143",
+				"Id": "143",
+				"Direction": 29,
+				"Latitude": 50.7079082276317,
+				"Longitude": 6.156546678940289,
+				"DisplayName": "143",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.139",
+				"Id": "139",
+				"Direction": 29,
+				"Latitude": 50.707651802266799,
+				"Longitude": 6.15771178572864,
+				"DisplayName": "139",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.144",
+				"Id": "144",
+				"Direction": 29,
+				"Latitude": 50.7078642558249,
+				"Longitude": 6.156671557604529,
+				"DisplayName": "144",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.145",
+				"Id": "145",
+				"Direction": 29,
+				"Latitude": 50.7078202840181,
+				"Longitude": 6.15679643626879,
+				"DisplayName": "145",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.146",
+				"Id": "146",
+				"Direction": 29,
+				"Latitude": 50.707776312211297,
+				"Longitude": 6.1569213149330299,
+				"DisplayName": "146",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.03",
+				"Id": "03",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.708407668437207,
+				"Longitude": 6.15652966007597,
+				"DisplayName": "03",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.147",
+				"Id": "147",
+				"Direction": 29,
+				"Latitude": 50.7077323404045,
+				"Longitude": 6.157046193597269,
+				"DisplayName": "147",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.148",
+				"Id": "148",
+				"Direction": 29,
+				"Latitude": 50.7076883685977,
+				"Longitude": 6.15717107226152,
+				"DisplayName": "148",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.149",
+				"Id": "149",
+				"Direction": 29,
+				"Latitude": 50.7076443967908,
+				"Longitude": 6.15729595092576,
+				"DisplayName": "149",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.01",
+				"Id": "01",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.7085581282474,
+				"Longitude": 6.15609838497247,
+				"DisplayName": "01",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.04",
+				"Id": "04",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.7083324152671,
+				"Longitude": 6.15674524450296,
+				"DisplayName": "04",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.05",
+				"Id": "05",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.708257162097009,
+				"Longitude": 6.15696082892993,
+				"DisplayName": "05",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.10",
+				"Id": "10",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.707880896246397,
+				"Longitude": 6.15803875106478,
+				"DisplayName": "10",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.06",
+				"Id": "06",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.708181908926899,
+				"Longitude": 6.1571764133569,
+				"DisplayName": "06",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.A101",
+				"Id": "A101",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.709399287830198,
+				"Longitude": 6.1561775437489,
+				"DisplayName": "A101",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.07",
+				"Id": "07",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.7081066557568,
+				"Longitude": 6.157391997783869,
+				"DisplayName": "07",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.A102",
+				"Id": "A102",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7098083393308,
+				"Longitude": 6.15600072818083,
+				"DisplayName": "A102",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.08",
+				"Id": "08",
+				"Direction": 299.40000000000006,
+				"Latitude": 50.7080314025866,
+				"Longitude": 6.15760758221084,
+				"DisplayName": "08",
+				"PictogramId": "BAGGAGE_BELT"
+			},
+			{
+				"EntityId": "TerminalResource.A103",
+				"Id": "A103",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7104718011146,
+				"Longitude": 6.15571715866129,
+				"DisplayName": "A103",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A104",
+				"Id": "A104",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.71113463079659,
+				"Longitude": 6.155433445275089,
+				"DisplayName": "A104",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A110",
+				"Id": "A110",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.71036809613079,
+				"Longitude": 6.15600093975673,
+				"DisplayName": "A110",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A105",
+				"Id": "A105",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7113341778645,
+				"Longitude": 6.15535322056203,
+				"DisplayName": "A105",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A111",
+				"Id": "A111",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7099618531408,
+				"Longitude": 6.15617134883253,
+				"DisplayName": "A111",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A106",
+				"Id": "A106",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7114762888392,
+				"Longitude": 6.1554021204692399,
+				"DisplayName": "A106",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A112",
+				"Id": "A112",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7095587611643,
+				"Longitude": 6.156349744787629,
+				"DisplayName": "A112",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A107",
+				"Id": "A107",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.711370309431497,
+				"Longitude": 6.155560067999899,
+				"DisplayName": "A107",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A108",
+				"Id": "A108",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7111719222764,
+				"Longitude": 6.1556512678188499,
+				"DisplayName": "A108",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A109",
+				"Id": "A109",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.71077091061029,
+				"Longitude": 6.15582753074789,
+				"DisplayName": "A109",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A201",
+				"Id": "A201",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7093645011119,
+				"Longitude": 6.15597839428638,
+				"DisplayName": "A201",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A202",
+				"Id": "A202",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.709774723324098,
+				"Longitude": 6.15580428877185,
+				"DisplayName": "A202",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A203",
+				"Id": "A203",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.710437735335599,
+				"Longitude": 6.15551929326774,
+				"DisplayName": "A203",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A204",
+				"Id": "A204",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7110997535654,
+				"Longitude": 6.15523443811836,
+				"DisplayName": "A204",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A210",
+				"Id": "A210",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.710402254843199,
+				"Longitude": 6.15619681033275,
+				"DisplayName": "A210",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A205",
+				"Id": "A205",
+				"Direction": 5.3,
+				"Latitude": 50.7114334654244,
+				"Longitude": 6.1551319879976,
+				"DisplayName": "A205",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A211",
+				"Id": "A211",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7099967296272,
+				"Longitude": 6.15637092599286,
+				"DisplayName": "A211",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A206",
+				"Id": "A206",
+				"Direction": -15,
+				"Latitude": 50.7115990199158,
+				"Longitude": 6.155350942599659,
+				"DisplayName": "A206",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A212",
+				"Id": "A212",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7095928315979,
+				"Longitude": 6.15654404765861,
+				"DisplayName": "A212",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A207",
+				"Id": "A207",
+				"Direction": -28,
+				"Latitude": 50.7115010969948,
+				"Longitude": 6.15570299430939,
+				"DisplayName": "A207",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A208",
+				"Id": "A208",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7112083346918,
+				"Longitude": 6.15585056329421,
+				"DisplayName": "A208",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.A209",
+				"Id": "A209",
+				"Direction": -15.200000000000001,
+				"Latitude": 50.7108054311888,
+				"Longitude": 6.15602297460162,
+				"DisplayName": "A209",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B101",
+				"Id": "B101",
+				"Direction": -16.1,
+				"Latitude": 50.708623346807197,
+				"Longitude": 6.15986551148144,
+				"DisplayName": "B101",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B102",
+				"Id": "B102",
+				"Direction": -16.1,
+				"Latitude": 50.7087401165843,
+				"Longitude": 6.16050545206281,
+				"DisplayName": "B102",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B103",
+				"Id": "B103",
+				"Direction": -16.1,
+				"Latitude": 50.708857875115899,
+				"Longitude": 6.16114909981382,
+				"DisplayName": "B103",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B104",
+				"Id": "B104",
+				"Direction": -16.1,
+				"Latitude": 50.7089752777395,
+				"Longitude": 6.16178861425823,
+				"DisplayName": "B104",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B110",
+				"Id": "B110",
+				"Direction": -16.1,
+				"Latitude": 50.7084588878361,
+				"Longitude": 6.15977595043032,
+				"DisplayName": "B110",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B105",
+				"Id": "B105",
+				"Direction": -16.1,
+				"Latitude": 50.709031696755399,
+				"Longitude": 6.16209226390321,
+				"DisplayName": "B105",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B111",
+				"Id": "B111",
+				"Direction": -16.1,
+				"Latitude": 50.708341758985898,
+				"Longitude": 6.15913429905769,
+				"DisplayName": "B111",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B106",
+				"Id": "B106",
+				"Direction": -16.1,
+				"Latitude": 50.7090013963814,
+				"Longitude": 6.1623308881391,
+				"DisplayName": "B106",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B112",
+				"Id": "B112",
+				"Direction": -16.1,
+				"Latitude": 50.7082272322991,
+				"Longitude": 6.15850590592712,
+				"DisplayName": "B112",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B107",
+				"Id": "B107",
+				"Direction": -16.1,
+				"Latitude": 50.7088948579334,
+				"Longitude": 6.16215623641721,
+				"DisplayName": "B107",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B108",
+				"Id": "B108",
+				"Direction": -16.1,
+				"Latitude": 50.7088384389175,
+				"Longitude": 6.16185258677223,
+				"DisplayName": "B108",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B109",
+				"Id": "B109",
+				"Direction": -16.1,
+				"Latitude": 50.7086461508885,
+				"Longitude": 6.16080150930749,
+				"DisplayName": "B109",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B201",
+				"Id": "B201",
+				"Direction": -16.1,
+				"Latitude": 50.7087509631673,
+				"Longitude": 6.15980850161067,
+				"DisplayName": "B201",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B202",
+				"Id": "B202",
+				"Direction": -16.1,
+				"Latitude": 50.708867823457399,
+				"Longitude": 6.16044829988624,
+				"DisplayName": "B202",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B203",
+				"Id": "B203",
+				"Direction": -16.1,
+				"Latitude": 50.7089855818028,
+				"Longitude": 6.16109209013817,
+				"DisplayName": "B203",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B204",
+				"Id": "B204",
+				"Direction": -16.1,
+				"Latitude": 50.709102894099597,
+				"Longitude": 6.16173160438746,
+				"DisplayName": "B204",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B210",
+				"Id": "B210",
+				"Direction": -16.1,
+				"Latitude": 50.7083340716084,
+				"Longitude": 6.15983296634942,
+				"DisplayName": "B210",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B205",
+				"Id": "B205",
+				"Direction": 3.1,
+				"Latitude": 50.709176173598,
+				"Longitude": 6.1622661425649,
+				"DisplayName": "B205",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B211",
+				"Id": "B211",
+				"Direction": -16.1,
+				"Latitude": 50.7082168524313,
+				"Longitude": 6.15919131478168,
+				"DisplayName": "B211",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B206",
+				"Id": "B206",
+				"Direction": -24.7,
+				"Latitude": 50.709065006488199,
+				"Longitude": 6.162523117296749,
+				"DisplayName": "B206",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B212",
+				"Id": "B212",
+				"Direction": -16.1,
+				"Latitude": 50.7081023257446,
+				"Longitude": 6.15856292165111,
+				"DisplayName": "B212",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B207",
+				"Id": "B207",
+				"Direction": -26.2,
+				"Latitude": 50.7088088536338,
+				"Longitude": 6.1623735076371999,
+				"DisplayName": "B207",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B208",
+				"Id": "B208",
+				"Direction": -16.1,
+				"Latitude": 50.70871353236289,
+				"Longitude": 6.161909602496229,
+				"DisplayName": "B208",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.B209",
+				"Id": "B209",
+				"Direction": -16.1,
+				"Latitude": 50.7085212445201,
+				"Longitude": 6.160858382530579,
+				"DisplayName": "B209",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.ONE",
+				"Id": "ONE",
+				"Direction": null,
+				"Latitude": null,
+				"Longitude": null,
+				"DisplayName": "ONE WORLD",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.STAR",
+				"Id": "STAR",
+				"Direction": null,
+				"Latitude": null,
+				"Longitude": null,
+				"DisplayName": "STAR ALLIANCE",
+				"PictogramId": "CI_COUNTER"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_01",
+				"Id": "CAT_BAY_01",
+				"Direction": -20.5,
+				"Latitude": 50.705145068075008,
+				"Longitude": 6.18085357055414,
+				"DisplayName": "BAY 01 LOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.ARR_INT",
+				"Id": "ARR_INT",
+				"Direction": null,
+				"Latitude": null,
+				"Longitude": null,
+				"DisplayName": "ARR_INT",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.ARR_DOM",
+				"Id": "ARR_DOM",
+				"Direction": null,
+				"Latitude": null,
+				"Longitude": null,
+				"DisplayName": "ARR_DOM",
+				"PictogramId": "GATES"
+			},
+			{
+				"EntityId": "TerminalResource.N1",
+				"Id": "N1",
+				"Direction": 0.0010000000474974514,
+				"Latitude": 50.7177583356321,
+				"Longitude": 6.147662721076349,
+				"DisplayName": "N1",
+				"PictogramId": "NARROW_BODY"
+			},
+			{
+				"EntityId": "TerminalResource.N2",
+				"Id": "N2",
+				"Direction": 0.0010000000474974514,
+				"Latitude": 50.7177572066081,
+				"Longitude": 6.148526846548919,
+				"DisplayName": "N2",
+				"PictogramId": "NARROW_BODY"
+			},
+			{
+				"EntityId": "TerminalResource.N3",
+				"Id": "N3",
+				"Direction": 0.0010000000474974514,
+				"Latitude": 50.7177560723708,
+				"Longitude": 6.14939496204677,
+				"DisplayName": "N3",
+				"PictogramId": "NARROW_BODY"
+			},
+			{
+				"EntityId": "TerminalResource.S1",
+				"Id": "S1",
+				"Direction": 68,
+				"Latitude": 50.707466603959897,
+				"Longitude": 6.18011169302662,
+				"DisplayName": "S1",
+				"PictogramId": "NARROW_BODY"
+			},
+			{
+				"EntityId": "TerminalResource.S2",
+				"Id": "S2",
+				"Direction": 68,
+				"Latitude": 50.707010297617198,
+				"Longitude": 6.180416572196751,
+				"DisplayName": "S2",
+				"PictogramId": "NARROW_BODY"
+			},
+			{
+				"EntityId": "TerminalResource.S3",
+				"Id": "S3",
+				"Direction": 68,
+				"Latitude": 50.7065174091205,
+				"Longitude": 6.1807142900339,
+				"DisplayName": "S3",
+				"PictogramId": "NARROW_BODY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_02",
+				"Id": "CAT_BAY_02",
+				"Direction": -20.5,
+				"Latitude": 50.70499365330279,
+				"Longitude": 6.1809430193173509,
+				"DisplayName": "BAY 02 LOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_05",
+				"Id": "CAT_BAY_05",
+				"Direction": -20.5,
+				"Latitude": 50.7045397721559,
+				"Longitude": 6.18120994137838,
+				"DisplayName": "BAY 05 LOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_03",
+				"Id": "CAT_BAY_03",
+				"Direction": -20.5,
+				"Latitude": 50.7048426017001,
+				"Longitude": 6.18103104385197,
+				"DisplayName": "BAY 03 LOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_04",
+				"Id": "CAT_BAY_04",
+				"Direction": -20.5,
+				"Latitude": 50.7046908256207,
+				"Longitude": 6.18112049183474,
+				"DisplayName": "BAY 04 LOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_06",
+				"Id": "CAT_BAY_06",
+				"Direction": -20.5,
+				"Latitude": 50.70531111272759,
+				"Longitude": 6.1824257186037399,
+				"DisplayName": "BAY 06 OFFLOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_07",
+				"Id": "CAT_BAY_07",
+				"Direction": -20.5,
+				"Latitude": 50.7052128511046,
+				"Longitude": 6.182483931891709,
+				"DisplayName": "BAY 07 OFFLOAD",
+				"PictogramId": "CAT_BAY"
+			},
+			{
+				"EntityId": "TerminalResource.CAT_BAY_08",
+				"Id": "CAT_BAY_08",
+				"Direction": -20.5,
+				"Latitude": 50.705114320363,
+				"Longitude": 6.18254071958535,
+				"DisplayName": "BAY 08 OFFLOAD",
+				"PictogramId": "CAT_BAY"
+			}
+		]
+	}
+}

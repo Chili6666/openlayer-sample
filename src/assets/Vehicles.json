@@ -1,0 +1,294 @@
+{
+	"data": {
+		"Vehicles": [
+			{
+				"EntityId": "Vehicle.BUS5 - 80",
+				"Direction": 1.51,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70732027,
+					"Longitude": 6.16558352
+				}
+			},
+			{
+				"EntityId": "Vehicle.Fuel Truck 1",
+				"Direction": 0,
+				"PictogramId": "FUEL",
+				"Position": {
+					"Latitude": 50.70918934,
+					"Longitude": 6.16753393
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU01",
+				"Direction": 270,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.71232047,
+					"Longitude": 6.1584908800000008
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU02",
+				"Direction": 153.43,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.7136927,
+					"Longitude": 6.16011945
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU03",
+				"Direction": 206.57,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.70919321,
+					"Longitude": 6.16724756
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU04",
+				"Direction": 90,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.7078517,
+					"Longitude": 6.17126629
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU05",
+				"Direction": 153.43,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.70900993,
+					"Longitude": 6.17324647
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU06",
+				"Direction": 153.43,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.7140931,
+					"Longitude": 6.15890032
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU07",
+				"Direction": 90,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.71542638,
+					"Longitude": 6.15514264
+				}
+			},
+			{
+				"EntityId": "Vehicle.GPU08",
+				"Direction": 161.57,
+				"PictogramId": "GPU",
+				"Position": {
+					"Latitude": 50.71411786,
+					"Longitude": 6.14735182
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_1",
+				"Direction": 0,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.71799631,
+					"Longitude": 6.14670552
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_2",
+				"Direction": 178.57,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.71744931,
+					"Longitude": 6.14672707
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_3",
+				"Direction": 270,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.717482,
+					"Longitude": 6.14972039
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_4",
+				"Direction": 14.38,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.71781788,
+					"Longitude": 6.14892982
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_5",
+				"Direction": 116.57000000000001,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.70719577,
+					"Longitude": 6.18010673
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_6",
+				"Direction": 67.96000000000001,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.70732568,
+					"Longitude": 6.18064648
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_7",
+				"Direction": 243.43,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.70676293,
+					"Longitude": 6.18057853
+				}
+			},
+			{
+				"EntityId": "Vehicle.DT_8",
+				"Direction": 14.38,
+				"PictogramId": "DEICE",
+				"Position": {
+					"Latitude": 50.70767372,
+					"Longitude": 6.17971802
+				}
+			},
+			{
+				"EntityId": "Vehicle.Fuel Truck 2",
+				"Direction": 45,
+				"PictogramId": "FUEL",
+				"Position": {
+					"Latitude": 50.7129738,
+					"Longitude": 6.16150568
+				}
+			},
+			{
+				"EntityId": "Vehicle.TEC01",
+				"Direction": 0,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70923065,
+					"Longitude": 6.15034428
+				}
+			},
+			{
+				"EntityId": "Vehicle.TEC02",
+				"Direction": 336.8,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70939809,
+					"Longitude": 6.15023095
+				}
+			},
+			{
+				"EntityId": "Vehicle.TEC03",
+				"Direction": 334.06,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70960041,
+					"Longitude": 6.15007551
+				}
+			},
+			{
+				"EntityId": "Vehicle.TEC04",
+				"Direction": 332.88,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70982473,
+					"Longitude": 6.14989407
+				}
+			},
+			{
+				"EntityId": "Vehicle.BUS2 - 80",
+				"Direction": 70.87,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70907846,
+					"Longitude": 6.16149472
+				}
+			},
+			{
+				"EntityId": "Vehicle.CAT_40_28FT",
+				"Direction": 296.57,
+				"PictogramId": "CAT",
+				"Position": {
+					"Latitude": 50.70601442,
+					"Longitude": 6.1806809
+				}
+			},
+			{
+				"EntityId": "Vehicle.CAT_41_28FT",
+				"Direction": 90,
+				"PictogramId": "CAT",
+				"Position": {
+					"Latitude": 50.70612933,
+					"Longitude": 6.18115122
+				}
+			},
+			{
+				"EntityId": "Vehicle.CAT_42_28FT",
+				"Direction": 225,
+				"PictogramId": "CAT",
+				"Position": {
+					"Latitude": 50.70620726,
+					"Longitude": 6.18146861
+				}
+			},
+			{
+				"EntityId": "Vehicle.CAT_43_28FT",
+				"Direction": 45,
+				"PictogramId": "CAT",
+				"Position": {
+					"Latitude": 50.70637689,
+					"Longitude": 6.18205319
+				}
+			},
+			{
+				"EntityId": "Vehicle.BUS1 - 80",
+				"Direction": 90,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.71062775,
+					"Longitude": 6.16928297
+				}
+			},
+			{
+				"EntityId": "Vehicle.BUS3 - 80",
+				"Direction": 30.26,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.71267963,
+					"Longitude": 6.15566278
+				}
+			},
+			{
+				"EntityId": "Vehicle.BUS4 - 80",
+				"Direction": 310.22,
+				"PictogramId": "BUS",
+				"Position": {
+					"Latitude": 50.70925464,
+					"Longitude": 6.15740641
+				}
+			},
+			{
+				"EntityId": "Vehicle.",
+				"Direction": 1.51,
+				"PictogramId": null,
+				"Position": {
+					"Latitude": 50.0414552,
+					"Longitude": 8.5479322
+				}
+			}
+		]
+	}
+}
