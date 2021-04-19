@@ -11,7 +11,14 @@
         @centerpoint="oncenterpoitchanged"
       />
     </div>
-    <div class="cell cell-edit">Edit</div>
+    <div class="cell cell-edit">
+      
+        <div v-for="layer in layers" :key="layer.name">
+          {{ layer.name }}
+           <input type="checkbox" v-model="layer.isVisible" />
+        </div>
+      
+    </div>
     <div class="cell cell-inspect">Inspect</div>
   </div>
 </template>
@@ -25,6 +32,7 @@ import { VehicleDataLayer } from "@/mapwrapper/VehicleDataLayer";
 import { TerminalResourceDataLayer } from "@/mapwrapper/TerminalResourceDataLayer";
 import { StandLabelDataLayer } from "@/mapwrapper/StandLabelDataLayer";
 import { StandAllocationDataLayer } from "@/mapwrapper/StandAllocationDataLayer";
+import { GeofenceDataLayer } from "@/mapwrapper/GeofenceDataLayer";
 
 import VectorLayer from "ol/layer/Vector";
 
@@ -50,6 +58,7 @@ export default defineComponent({
     }
 
     function setupDataVehicleLayer() {
+      layers.value.push(new GeofenceDataLayer());
       layers.value.push(new VehicleDataLayer());
       layers.value.push(new TerminalResourceDataLayer());
       layers.value.push(new StandLabelDataLayer());

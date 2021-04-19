@@ -1,0 +1,2374 @@
+{
+  "DataMessage": [
+    {
+      "Name": "Terminal",
+      "VisibleAtStartup": true,
+      "GeoFences": [
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15884554845603,
+              "Latitude": 50.7093407740298
+            },
+            {
+              "Longitude": 6.16256465757467,
+              "Latitude": 50.7100400994882
+            },
+            {
+              "Longitude": 6.16362705473265,
+              "Latitude": 50.7096854180507
+            },
+            {
+              "Longitude": 6.16396114322153,
+              "Latitude": 50.7086930030264
+            },
+            {
+              "Longitude": 6.16364520737415,
+              "Latitude": 50.70824973269
+            },
+            {
+              "Longitude": 6.15837197469509,
+              "Latitude": 50.7072321460569
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Terminal B",
+          "Id": "TERMINALB",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14992370465126,
+              "Latitude": 50.7122580149539
+            },
+            {
+              "Longitude": 6.15128334341581,
+              "Latitude": 50.7122567666245
+            },
+            {
+              "Longitude": 6.15128790294711,
+              "Latitude": 50.7146020326992
+            },
+            {
+              "Longitude": 6.14991746742785,
+              "Latitude": 50.7146032799692
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Cargo Building",
+          "Id": "CARGOBUILDING",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15494262378114,
+              "Latitude": 50.7084035002659
+            },
+            {
+              "Longitude": 6.15781941054062,
+              "Latitude": 50.7097831813859
+            },
+            {
+              "Longitude": 6.1569469855273,
+              "Latitude": 50.7118279130885
+            },
+            {
+              "Longitude": 6.15616413412873,
+              "Latitude": 50.7124240741912
+            },
+            {
+              "Longitude": 6.15398594806704,
+              "Latitude": 50.7120461113887
+            },
+            {
+              "Longitude": 6.15374331936492,
+              "Latitude": 50.7112758687557
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Terminal A",
+          "Id": "TERMINALA",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16561541622446,
+              "Latitude": 50.7046763899184
+            },
+            {
+              "Longitude": 6.16934458663455,
+              "Latitude": 50.7046724152682
+            },
+            {
+              "Longitude": 6.16934634577849,
+              "Latitude": 50.705425616279
+            },
+            {
+              "Longitude": 6.16561711556048,
+              "Latitude": 50.70542959001
+            }
+          ],
+          "IsClosed": false,
+          "Name": "HBuilding",
+          "Id": "HBUILDING",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16560361861169,
+              "Latitude": 50.7070383682649
+            },
+            {
+              "Longitude": 6.16925302130469,
+              "Latitude": 50.7070344834387
+            },
+            {
+              "Longitude": 6.16925122800651,
+              "Latitude": 50.7062655779599
+            },
+            {
+              "Longitude": 6.16560456727394,
+              "Latitude": 50.7062694637044
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Remote Stand 01",
+          "Id": "REMOTESTAND01",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16822884909223,
+              "Latitude": 50.7109614080175
+            },
+            {
+              "Longitude": 6.17460622543539,
+              "Latitude": 50.7087105278528
+            },
+            {
+              "Longitude": 6.17313744689287,
+              "Latitude": 50.7070348402392
+            },
+            {
+              "Longitude": 6.16675265736888,
+              "Latitude": 50.7092904828684
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Remote Stand 02",
+          "Id": "REMOTESTAND02",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15477629088321,
+              "Latitude": 50.7156739655995
+            },
+            {
+              "Longitude": 6.16159088668887,
+              "Latitude": 50.7132767336107
+            },
+            {
+              "Longitude": 6.16015214244619,
+              "Latitude": 50.7116071631802
+            },
+            {
+              "Longitude": 6.15329880368178,
+              "Latitude": 50.714017654752
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Remote Stand 03",
+          "Id": "REMOTESTAND03",
+          "HasLocation": false
+        }
+      ]
+    },
+    {
+      "Name": "Stand",
+      "VisibleAtStartup": true,
+      "GeoFences": [
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15895101820041,
+              "Latitude": 50.7091362596603
+            },
+            {
+              "Longitude": 6.15959292009606,
+              "Latitude": 50.7092546355771
+            },
+            {
+              "Longitude": 6.15982101100411,
+              "Latitude": 50.708778199296
+            },
+            {
+              "Longitude": 6.15917243553671,
+              "Latitude": 50.7086611235123
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B01",
+          "Id": "B01",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15959292009606,
+              "Latitude": 50.7092546355771
+            },
+            {
+              "Longitude": 6.16023236305791,
+              "Latitude": 50.7093675527002
+            },
+            {
+              "Longitude": 6.16044313453352,
+              "Latitude": 50.7088899125928
+            },
+            {
+              "Longitude": 6.15982101100411,
+              "Latitude": 50.708778199296
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B02",
+          "Id": "B02",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16023236305791,
+              "Latitude": 50.7093675527002
+            },
+            {
+              "Longitude": 6.16087375218933,
+              "Latitude": 50.7094829041377
+            },
+            {
+              "Longitude": 6.16108834513829,
+              "Latitude": 50.7090028191828
+            },
+            {
+              "Longitude": 6.16044313453352,
+              "Latitude": 50.7088899125928
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B03",
+          "Id": "B03",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16087375218933,
+              "Latitude": 50.7094829041377
+            },
+            {
+              "Longitude": 6.16151705384627,
+              "Latitude": 50.709598259195
+            },
+            {
+              "Longitude": 6.16173357852163,
+              "Latitude": 50.709118161962
+            },
+            {
+              "Longitude": 6.16108834513829,
+              "Latitude": 50.7090028191828
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B04",
+          "Id": "B04",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16151705384627,
+              "Latitude": 50.709598259195
+            },
+            {
+              "Longitude": 6.16216037302424,
+              "Latitude": 50.7097136016983
+            },
+            {
+              "Longitude": 6.16228828463381,
+              "Latitude": 50.7092140666363
+            },
+            {
+              "Longitude": 6.16173357852163,
+              "Latitude": 50.709118161962
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B05",
+          "Id": "B05",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16264462900986,
+              "Latitude": 50.7096721290596
+            },
+            {
+              "Longitude": 6.16321318223069,
+              "Latitude": 50.7094137385484
+            },
+            {
+              "Longitude": 6.16257506600906,
+              "Latitude": 50.7090905853183
+            },
+            {
+              "Longitude": 6.16228828463381,
+              "Latitude": 50.7092140666363
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B06",
+          "Id": "B06",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16340242666814,
+              "Latitude": 50.708956707869
+            },
+            {
+              "Longitude": 6.16316898408172,
+              "Latitude": 50.708539283143
+            },
+            {
+              "Longitude": 6.16245737659784,
+              "Latitude": 50.7088091781483
+            },
+            {
+              "Longitude": 6.16257506600906,
+              "Latitude": 50.7090905853183
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B07",
+          "Id": "B07",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16278317114998,
+              "Latitude": 50.7083375693508
+            },
+            {
+              "Longitude": 6.16214227568562,
+              "Latitude": 50.7082216949669
+            },
+            {
+              "Longitude": 6.16191892304395,
+              "Latitude": 50.7086962881166
+            },
+            {
+              "Longitude": 6.16245737659784,
+              "Latitude": 50.7088091781483
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B08",
+          "Id": "B08",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16214227568562,
+              "Latitude": 50.7082216949669
+            },
+            {
+              "Longitude": 6.161300681504,
+              "Latitude": 50.7080675357338
+            },
+            {
+              "Longitude": 6.16107942427263,
+              "Latitude": 50.7085395316838
+            },
+            {
+              "Longitude": 6.16191892304395,
+              "Latitude": 50.7086962881166
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B09R",
+          "Id": "B09R",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16194328962958,
+              "Latitude": 50.7081867743499
+            },
+            {
+              "Longitude": 6.161300681504,
+              "Latitude": 50.7080675357338
+            },
+            {
+              "Longitude": 6.16107942427263,
+              "Latitude": 50.7085395316838
+            },
+            {
+              "Longitude": 6.1617062682344,
+              "Latitude": 50.7086532304385
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B09",
+          "Id": "B09",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16194328962958,
+              "Latitude": 50.7081867743499
+            },
+            {
+              "Longitude": 6.16110458575891,
+              "Latitude": 50.7080311017606
+            },
+            {
+              "Longitude": 6.16088156005562,
+              "Latitude": 50.7085030990918
+            },
+            {
+              "Longitude": 6.1617062682344,
+              "Latitude": 50.7086532304385
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B09L",
+          "Id": "B09L",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16110458575891,
+              "Latitude": 50.7080311017606
+            },
+            {
+              "Longitude": 6.16026238996396,
+              "Latitude": 50.7078787700653
+            },
+            {
+              "Longitude": 6.16004110907639,
+              "Latitude": 50.7083507548787
+            },
+            {
+              "Longitude": 6.16088156005562,
+              "Latitude": 50.7085030990918
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B10R",
+          "Id": "B10R",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16090497360418,
+              "Latitude": 50.7079957824421
+            },
+            {
+              "Longitude": 6.16026238996396,
+              "Latitude": 50.7078787700653
+            },
+            {
+              "Longitude": 6.16004110907639,
+              "Latitude": 50.7083507548787
+            },
+            {
+              "Longitude": 6.16066444050267,
+              "Latitude": 50.7084633512363
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B10",
+          "Id": "B10",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16090497360418,
+              "Latitude": 50.7079957824421
+            },
+            {
+              "Longitude": 6.16006628398443,
+              "Latitude": 50.7078434367791
+            },
+            {
+              "Longitude": 6.15983800106336,
+              "Latitude": 50.7083132143536
+            },
+            {
+              "Longitude": 6.16066444050267,
+              "Latitude": 50.7084633512363
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B10L",
+          "Id": "B10L",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16006628398443,
+              "Latitude": 50.7078434367791
+            },
+            {
+              "Longitude": 6.15942544286823,
+              "Latitude": 50.7077264181103
+            },
+            {
+              "Longitude": 6.15919542304786,
+              "Latitude": 50.7081995213268
+            },
+            {
+              "Longitude": 6.15983800106336,
+              "Latitude": 50.7083132143536
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B11",
+          "Id": "B11",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15942544286823,
+              "Latitude": 50.7077264181103
+            },
+            {
+              "Longitude": 6.1587846216485,
+              "Latitude": 50.7076104983471
+            },
+            {
+              "Longitude": 6.15858084921999,
+              "Latitude": 50.708088020005
+            },
+            {
+              "Longitude": 6.15919542304786,
+              "Latitude": 50.7081995213268
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand B12",
+          "Id": "B12",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16563685796582,
+              "Latitude": 50.7070196829479
+            },
+            {
+              "Longitude": 6.16633309297973,
+              "Latitude": 50.7070207395645
+            },
+            {
+              "Longitude": 6.16635145338866,
+              "Latitude": 50.7064164689341
+            },
+            {
+              "Longitude": 6.16563549928103,
+              "Latitude": 50.7064172224185
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 190",
+          "Id": "190",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16633309297973,
+              "Latitude": 50.7070207395645
+            },
+            {
+              "Longitude": 6.16705185905615,
+              "Latitude": 50.7070181898245
+            },
+            {
+              "Longitude": 6.16706739749393,
+              "Latitude": 50.7064175002021
+            },
+            {
+              "Longitude": 6.16635145338866,
+              "Latitude": 50.7064164689341
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 191",
+          "Id": "191",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16705185905615,
+              "Latitude": 50.7070181898245
+            },
+            {
+              "Longitude": 6.16776783088575,
+              "Latitude": 50.7070210060606
+            },
+            {
+              "Longitude": 6.16778617284429,
+              "Latitude": 50.7064167349035
+            },
+            {
+              "Longitude": 6.16706739749393,
+              "Latitude": 50.7064175002021
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 192",
+          "Id": "192",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16776783088575,
+              "Latitude": 50.7070210060606
+            },
+            {
+              "Longitude": 6.16848941404545,
+              "Latitude": 50.7070166552975
+            },
+            {
+              "Longitude": 6.16850493410329,
+              "Latitude": 50.706415965184
+            },
+            {
+              "Longitude": 6.16778617284429,
+              "Latitude": 50.7064167349035
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 193",
+          "Id": "193",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16848941404545,
+              "Latitude": 50.7070166552975
+            },
+            {
+              "Longitude": 6.16921946842343,
+              "Latitude": 50.7070158692028
+            },
+            {
+              "Longitude": 6.16922089300823,
+              "Latitude": 50.7064169741641
+            },
+            {
+              "Longitude": 6.16850493410329,
+              "Latitude": 50.706415965184
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 194",
+          "Id": "194",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16564539278294,
+              "Latitude": 50.7053274527058
+            },
+            {
+              "Longitude": 6.16667152579897,
+              "Latitude": 50.7053276450028
+            },
+            {
+              "Longitude": 6.16667026618595,
+              "Latitude": 50.7047748462754
+            },
+            {
+              "Longitude": 6.16564293215427,
+              "Latitude": 50.70477370665
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand H1",
+          "Id": "H1",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16667152579897,
+              "Latitude": 50.7053276450028
+            },
+            {
+              "Longitude": 6.16738733786641,
+              "Latitude": 50.7053279964505
+            },
+            {
+              "Longitude": 6.16738606727868,
+              "Latitude": 50.7047740861587
+            },
+            {
+              "Longitude": 6.16667026618595,
+              "Latitude": 50.7047748462754
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand H2",
+          "Id": "H2",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16738733786641,
+              "Latitude": 50.7053279964505
+            },
+            {
+              "Longitude": 6.16813115907925,
+              "Latitude": 50.7053283135001
+            },
+            {
+              "Longitude": 6.16812987971924,
+              "Latitude": 50.7047744030734
+            },
+            {
+              "Longitude": 6.16738606727868,
+              "Latitude": 50.7047740861587
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand H3",
+          "Id": "H3",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16813115907925,
+              "Latitude": 50.7053283135001
+            },
+            {
+              "Longitude": 6.16931950527333,
+              "Latitude": 50.7053281369121
+            },
+            {
+              "Longitude": 6.16931996421883,
+              "Latitude": 50.7047742243752
+            },
+            {
+              "Longitude": 6.16812987971924,
+              "Latitude": 50.7047744030734
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand H4",
+          "Id": "H4",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14998577475873,
+              "Latitude": 50.7127425053541
+            },
+            {
+              "Longitude": 6.15093778245363,
+              "Latitude": 50.7127416326127
+            },
+            {
+              "Longitude": 6.15093690613867,
+              "Latitude": 50.7122893357418
+            },
+            {
+              "Longitude": 6.14998490761464,
+              "Latitude": 50.7122902086263
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 184",
+          "Id": "184",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.1499866492763,
+              "Latitude": 50.7131987327086
+            },
+            {
+              "Longitude": 6.15093866622201,
+              "Latitude": 50.7131978601115
+            },
+            {
+              "Longitude": 6.15093778245363,
+              "Latitude": 50.7127416326127
+            },
+            {
+              "Longitude": 6.14998577475873,
+              "Latitude": 50.7127425053541
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 183",
+          "Id": "183",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14998751985592,
+              "Latitude": 50.7136529901854
+            },
+            {
+              "Longitude": 6.15093954601272,
+              "Latitude": 50.713652117732
+            },
+            {
+              "Longitude": 6.15093866622201,
+              "Latitude": 50.7131978601115
+            },
+            {
+              "Longitude": 6.1499866492763,
+              "Latitude": 50.7131987327086
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 182",
+          "Id": "182",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14998839027384,
+              "Latitude": 50.7141072476313
+            },
+            {
+              "Longitude": 6.15094042564198,
+              "Latitude": 50.7141063753216
+            },
+            {
+              "Longitude": 6.15093954601272,
+              "Latitude": 50.713652117732
+            },
+            {
+              "Longitude": 6.14998751985592,
+              "Latitude": 50.7136529901854
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 181",
+          "Id": "181",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14998926054738,
+              "Latitude": 50.7145615140821
+            },
+            {
+              "Longitude": 6.15094130512728,
+              "Latitude": 50.7145606419162
+            },
+            {
+              "Longitude": 6.15094042564198,
+              "Latitude": 50.7141063753216
+            },
+            {
+              "Longitude": 6.14998839027384,
+              "Latitude": 50.7141072476313
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 180",
+          "Id": "180",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16732113419384,
+              "Latitude": 50.7098381709164
+            },
+            {
+              "Longitude": 6.16794596455056,
+              "Latitude": 50.7096195280999
+            },
+            {
+              "Longitude": 6.16746901004259,
+              "Latitude": 50.7090962966613
+            },
+            {
+              "Longitude": 6.166855316812,
+              "Latitude": 50.7093169402722
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 124",
+          "Id": "124",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16794596455056,
+              "Latitude": 50.7096195280999
+            },
+            {
+              "Longitude": 6.16857238986503,
+              "Latitude": 50.7093968500208
+            },
+            {
+              "Longitude": 6.16810336409699,
+              "Latitude": 50.7088726005266
+            },
+            {
+              "Longitude": 6.16746901004259,
+              "Latitude": 50.7090962966613
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 123",
+          "Id": "123",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16857238986503,
+              "Latitude": 50.7093968500208
+            },
+            {
+              "Longitude": 6.16920037893101,
+              "Latitude": 50.7091751697799
+            },
+            {
+              "Longitude": 6.16872818519994,
+              "Latitude": 50.7086509351554
+            },
+            {
+              "Longitude": 6.16810336409699,
+              "Latitude": 50.7088726005266
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 122",
+          "Id": "122",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16920037893101,
+              "Latitude": 50.7091751697799
+            },
+            {
+              "Longitude": 6.16982520154743,
+              "Latitude": 50.7089545105538
+            },
+            {
+              "Longitude": 6.16936889139401,
+              "Latitude": 50.7084252009932
+            },
+            {
+              "Longitude": 6.16872818519994,
+              "Latitude": 50.7086509351554
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 121",
+          "Id": "121",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.1710725984427,
+              "Latitude": 50.7085216781026
+            },
+            {
+              "Longitude": 6.17169840072777,
+              "Latitude": 50.7083008176719
+            },
+            {
+              "Longitude": 6.17123705351401,
+              "Latitude": 50.7077747375134
+            },
+            {
+              "Longitude": 6.17061137242454,
+              "Latitude": 50.7079965171157
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 120",
+          "Id": "120",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17169840072777,
+              "Latitude": 50.7083008176719
+            },
+            {
+              "Longitude": 6.17232564825916,
+              "Latitude": 50.7080790304892
+            },
+            {
+              "Longitude": 6.17186151558284,
+              "Latitude": 50.7075520431388
+            },
+            {
+              "Longitude": 6.17123705351401,
+              "Latitude": 50.7077747375134
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 119",
+          "Id": "119",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17232564825916,
+              "Latitude": 50.7080790304892
+            },
+            {
+              "Longitude": 6.17295145098817,
+              "Latitude": 50.7078572504607
+            },
+            {
+              "Longitude": 6.17248874783261,
+              "Latitude": 50.7073284205555
+            },
+            {
+              "Longitude": 6.17186151558284,
+              "Latitude": 50.7075520431388
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 118",
+          "Id": "118",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17295145098817,
+              "Latitude": 50.7078572504607
+            },
+            {
+              "Longitude": 6.17357579685531,
+              "Latitude": 50.7076363721969
+            },
+            {
+              "Longitude": 6.17311309752374,
+              "Latitude": 50.7071112223563
+            },
+            {
+              "Longitude": 6.17248874783261,
+              "Latitude": 50.7073284205555
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 117",
+          "Id": "117",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16824844113984,
+              "Latitude": 50.7108936887886
+            },
+            {
+              "Longitude": 6.16887865943156,
+              "Latitude": 50.7106838455807
+            },
+            {
+              "Longitude": 6.16841306478512,
+              "Latitude": 50.7101467531997
+            },
+            {
+              "Longitude": 6.16778863338341,
+              "Latitude": 50.7103675937607
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 132",
+          "Id": "132",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16887865943156,
+              "Latitude": 50.7106838455807
+            },
+            {
+              "Longitude": 6.16949870743545,
+              "Latitude": 50.7104593352617
+            },
+            {
+              "Longitude": 6.1690418096944,
+              "Latitude": 50.7099268171789
+            },
+            {
+              "Longitude": 6.16841306478512,
+              "Latitude": 50.7101467531997
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 131",
+          "Id": "131",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.16949870743545,
+              "Latitude": 50.7104593352617
+            },
+            {
+              "Longitude": 6.17012745174077,
+              "Latitude": 50.7102393933763
+            },
+            {
+              "Longitude": 6.16967052813728,
+              "Latitude": 50.7097041307149
+            },
+            {
+              "Longitude": 6.1690418096944,
+              "Latitude": 50.7099268171789
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 130",
+          "Id": "130",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17012745174077,
+              "Latitude": 50.7102393933763
+            },
+            {
+              "Longitude": 6.17075328581442,
+              "Latitude": 50.7100203728458
+            },
+            {
+              "Longitude": 6.17029926573607,
+              "Latitude": 50.7094860220194
+            },
+            {
+              "Longitude": 6.16967052813728,
+              "Latitude": 50.7097041307149
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 129",
+          "Id": "129",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17199626737719,
+              "Latitude": 50.7095795749445
+            },
+            {
+              "Longitude": 6.17262932979143,
+              "Latitude": 50.7093577800287
+            },
+            {
+              "Longitude": 6.17216661623333,
+              "Latitude": 50.7088289578188
+            },
+            {
+              "Longitude": 6.17154079249172,
+              "Latitude": 50.7090489080421
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 128",
+          "Id": "128",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17262932979143,
+              "Latitude": 50.7093577800287
+            },
+            {
+              "Longitude": 6.17324935842176,
+              "Latitude": 50.7091396737674
+            },
+            {
+              "Longitude": 6.1727938710274,
+              "Latitude": 50.7086080898901
+            },
+            {
+              "Longitude": 6.17216661623333,
+              "Latitude": 50.7088289578188
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 127",
+          "Id": "127",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17324935842176,
+              "Latitude": 50.7091396737674
+            },
+            {
+              "Longitude": 6.17388384153226,
+              "Latitude": 50.7089151232575
+            },
+            {
+              "Longitude": 6.17342257548161,
+              "Latitude": 50.7083881295023
+            },
+            {
+              "Longitude": 6.1727938710274,
+              "Latitude": 50.7086080898901
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 126",
+          "Id": "126",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17388384153226,
+              "Latitude": 50.7089151232575
+            },
+            {
+              "Longitude": 6.17450965667299,
+              "Latitude": 50.7087024975406
+            },
+            {
+              "Longitude": 6.17404981866981,
+              "Latitude": 50.7081672546035
+            },
+            {
+              "Longitude": 6.17342257548161,
+              "Latitude": 50.7083881295023
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 125",
+          "Id": "125",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15390800054012,
+              "Latitude": 50.714571554762
+            },
+            {
+              "Longitude": 6.15453248044885,
+              "Latitude": 50.7143511793549
+            },
+            {
+              "Longitude": 6.15407105205189,
+              "Latitude": 50.7138221244726
+            },
+            {
+              "Longitude": 6.15344132587637,
+              "Latitude": 50.7140458367406
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 108",
+          "Id": "108",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15453248044885,
+              "Latitude": 50.7143511793549
+            },
+            {
+              "Longitude": 6.15515870274737,
+              "Latitude": 50.7141285759621
+            },
+            {
+              "Longitude": 6.15469376623753,
+              "Latitude": 50.7136006382318
+            },
+            {
+              "Longitude": 6.15407105205189,
+              "Latitude": 50.7138221244726
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 107",
+          "Id": "107",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15515870274737,
+              "Latitude": 50.7141285759621
+            },
+            {
+              "Longitude": 6.15578667637076,
+              "Latitude": 50.7139081812344
+            },
+            {
+              "Longitude": 6.15532873557967,
+              "Latitude": 50.7133824620676
+            },
+            {
+              "Longitude": 6.15469376623753,
+              "Latitude": 50.7136006382318
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 106",
+          "Id": "106",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15578667637076,
+              "Latitude": 50.7139081812344
+            },
+            {
+              "Longitude": 6.15641288700283,
+              "Latitude": 50.7136855708901
+            },
+            {
+              "Longitude": 6.15595143819014,
+              "Latitude": 50.713160968896
+            },
+            {
+              "Longitude": 6.15532873557967,
+              "Latitude": 50.7133824620676
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 105",
+          "Id": "105",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15706485273588,
+              "Latitude": 50.7134484653189
+            },
+            {
+              "Longitude": 6.15768977316661,
+              "Latitude": 50.7132278732111
+            },
+            {
+              "Longitude": 6.15723198263045,
+              "Latitude": 50.7126995315852
+            },
+            {
+              "Longitude": 6.15660228174427,
+              "Latitude": 50.7129211470451
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 104",
+          "Id": "104",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15768977316661,
+              "Latitude": 50.7132278732111
+            },
+            {
+              "Longitude": 6.15831787744721,
+              "Latitude": 50.7130062534361
+            },
+            {
+              "Longitude": 6.15786007971201,
+              "Latitude": 50.7124769111829
+            },
+            {
+              "Longitude": 6.15723198263045,
+              "Latitude": 50.7126995315852
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 103",
+          "Id": "103",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15831787744721,
+              "Latitude": 50.7130062534361
+            },
+            {
+              "Longitude": 6.15894439426643,
+              "Latitude": 50.712784631735
+            },
+            {
+              "Longitude": 6.15848020799752,
+              "Latitude": 50.7122552981391
+            },
+            {
+              "Longitude": 6.15786007971201,
+              "Latitude": 50.7124769111829
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 102",
+          "Id": "102",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15894439426643,
+              "Latitude": 50.712784631735
+            },
+            {
+              "Longitude": 6.15956929731402,
+              "Latitude": 50.7125640292326
+            },
+            {
+              "Longitude": 6.15910830407354,
+              "Latitude": 50.7120377219341
+            },
+            {
+              "Longitude": 6.15848020799752,
+              "Latitude": 50.7122552981391
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 101",
+          "Id": "101",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15479848137953,
+              "Latitude": 50.7155861721938
+            },
+            {
+              "Longitude": 6.15542386939712,
+              "Latitude": 50.715377914023
+            },
+            {
+              "Longitude": 6.15496643372364,
+              "Latitude": 50.7148459761028
+            },
+            {
+              "Longitude": 6.15433913948707,
+              "Latitude": 50.7150651455855
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 116",
+          "Id": "116",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15542386939713,
+              "Latitude": 50.715377914023
+            },
+            {
+              "Longitude": 6.15604921761857,
+              "Latitude": 50.7151550809784
+            },
+            {
+              "Longitude": 6.15559370548588,
+              "Latitude": 50.7146255923273
+            },
+            {
+              "Longitude": 6.15496643372364,
+              "Latitude": 50.7148459761029
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 115",
+          "Id": "115",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15604921761857,
+              "Latitude": 50.7151550809784
+            },
+            {
+              "Longitude": 6.15667650548277,
+              "Latitude": 50.7149359112143
+            },
+            {
+              "Longitude": 6.1562229068515,
+              "Latitude": 50.7144039743014
+            },
+            {
+              "Longitude": 6.15559370548588,
+              "Latitude": 50.7146255923273
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 114",
+          "Id": "114",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15667650548277,
+              "Latitude": 50.7149359112143
+            },
+            {
+              "Longitude": 6.15731340343296,
+              "Latitude": 50.7147154996952
+            },
+            {
+              "Longitude": 6.15685210490676,
+              "Latitude": 50.7141835816702
+            },
+            {
+              "Longitude": 6.1562229068515,
+              "Latitude": 50.7144039743014
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 113",
+          "Id": "113",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15797230750104,
+              "Latitude": 50.7144866323861
+            },
+            {
+              "Longitude": 6.15860181502978,
+              "Latitude": 50.7142675129971
+            },
+            {
+              "Longitude": 6.15813646494644,
+              "Latitude": 50.7137383869405
+            },
+            {
+              "Longitude": 6.15751091132667,
+              "Latitude": 50.7139583404065
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 112",
+          "Id": "112",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15860181502978,
+              "Latitude": 50.7142675129971
+            },
+            {
+              "Longitude": 6.15921947736749,
+              "Latitude": 50.714049224121
+            },
+            {
+              "Longitude": 6.15876594555503,
+              "Latitude": 50.7135184261274
+            },
+            {
+              "Longitude": 6.15813646494644,
+              "Latitude": 50.7137383869405
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 111",
+          "Id": "111",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15921947736749,
+              "Latitude": 50.714049224121
+            },
+            {
+              "Longitude": 6.15985422780683,
+              "Latitude": 50.7138284208803
+            },
+            {
+              "Longitude": 6.15939412193847,
+              "Latitude": 50.7132976317827
+            },
+            {
+              "Longitude": 6.15876594555503,
+              "Latitude": 50.7135184261274
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 110",
+          "Id": "110",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15985422780683,
+              "Latitude": 50.7138284208803
+            },
+            {
+              "Longitude": 6.16048108192286,
+              "Latitude": 50.713609293654
+            },
+            {
+              "Longitude": 6.16002360518698,
+              "Latitude": 50.7130776639515
+            },
+            {
+              "Longitude": 6.15939412193847,
+              "Latitude": 50.7132976317827
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand 109",
+          "Id": "109",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15537832582472,
+              "Latitude": 50.7088220653968
+            },
+            {
+              "Longitude": 6.1552012587411,
+              "Latitude": 50.7092305555725
+            },
+            {
+              "Longitude": 6.15594488724485,
+              "Latitude": 50.7093587844849
+            },
+            {
+              "Longitude": 6.15607981023093,
+              "Latitude": 50.7090577813203
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A01",
+          "Id": "A01",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.1552012587411,
+              "Latitude": 50.7092305555725
+            },
+            {
+              "Longitude": 6.15502418842547,
+              "Latitude": 50.7096390363675
+            },
+            {
+              "Longitude": 6.15576782830484,
+              "Latitude": 50.709769950197
+            },
+            {
+              "Longitude": 6.15594488724485,
+              "Latitude": 50.7093587844849
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A02",
+          "Id": "A02",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15502418842547,
+              "Latitude": 50.7096390363675
+            },
+            {
+              "Longitude": 6.15479442171532,
+              "Latitude": 50.7101724902636
+            },
+            {
+              "Longitude": 6.1555422927639,
+              "Latitude": 50.7102993715471
+            },
+            {
+              "Longitude": 6.15576782830484,
+              "Latitude": 50.709769950197
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A03L",
+          "Id": "A03L",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.1549714961968,
+              "Latitude": 50.7097640008806
+            },
+            {
+              "Longitude": 6.15479442171532,
+              "Latitude": 50.7101724902636
+            },
+            {
+              "Longitude": 6.1555422927639,
+              "Latitude": 50.7102993715471
+            },
+            {
+              "Longitude": 6.15571724933289,
+              "Latitude": 50.7098962594099
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A03",
+          "Id": "A03",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.1549714961968,
+              "Latitude": 50.7097640008806
+            },
+            {
+              "Longitude": 6.15473960795553,
+              "Latitude": 50.7102987939988
+            },
+            {
+              "Longitude": 6.15548325461837,
+              "Latitude": 50.71042837246
+            },
+            {
+              "Longitude": 6.15571724933289,
+              "Latitude": 50.7098962594099
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A03R",
+          "Id": "A03R",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15473960795553,
+              "Latitude": 50.7102987939988
+            },
+            {
+              "Longitude": 6.15450983450303,
+              "Latitude": 50.7108322471748
+            },
+            {
+              "Longitude": 6.15525772332792,
+              "Latitude": 50.7109631604938
+            },
+            {
+              "Longitude": 6.15548325461837,
+              "Latitude": 50.71042837246
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A04L",
+          "Id": "A04L",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15468457859683,
+              "Latitude": 50.7104243208079
+            },
+            {
+              "Longitude": 6.15450983450303,
+              "Latitude": 50.7108322471748
+            },
+            {
+              "Longitude": 6.15525772332792,
+              "Latitude": 50.7109631604938
+            },
+            {
+              "Longitude": 6.1554341685294,
+              "Latitude": 50.7105538758708
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A04",
+          "Id": "A04",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15468457859683,
+              "Latitude": 50.7104243208079
+            },
+            {
+              "Longitude": 6.15445420680508,
+              "Latitude": 50.7109584611512
+            },
+            {
+              "Longitude": 6.15520091394389,
+              "Latitude": 50.7110889332236
+            },
+            {
+              "Longitude": 6.1554341685294,
+              "Latitude": 50.7105538758708
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A04R",
+          "Id": "A04R",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15445420680508,
+              "Latitude": 50.7109584611512
+            },
+            {
+              "Longitude": 6.15427854761034,
+              "Latitude": 50.7113668668491
+            },
+            {
+              "Longitude": 6.15506988499932,
+              "Latitude": 50.711390880136
+            },
+            {
+              "Longitude": 6.15520091394389,
+              "Latitude": 50.7110889332236
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A05",
+          "Id": "A05",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15434768679312,
+              "Latitude": 50.7116814265575
+            },
+            {
+              "Longitude": 6.15478914613826,
+              "Latitude": 50.7120251161238
+            },
+            {
+              "Longitude": 6.15525456673728,
+              "Latitude": 50.7116190076128
+            },
+            {
+              "Longitude": 6.15510313008563,
+              "Latitude": 50.7114839284602
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A06",
+          "Id": "A06",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15550550116037,
+              "Latitude": 50.7121596545926
+            },
+            {
+              "Longitude": 6.15614801784219,
+              "Latitude": 50.7119854717398
+            },
+            {
+              "Longitude": 6.1556666311461,
+              "Latitude": 50.7115822781223
+            },
+            {
+              "Longitude": 6.1554153413604,
+              "Latitude": 50.7116440820275
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A07",
+          "Id": "A07",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.1564547838392,
+              "Latitude": 50.7117460093234
+            },
+            {
+              "Longitude": 6.15663475921607,
+              "Latitude": 50.7113385175521
+            },
+            {
+              "Longitude": 6.15588516746863,
+              "Latitude": 50.7112089699584
+            },
+            {
+              "Longitude": 6.15575270717258,
+              "Latitude": 50.7115127533975
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A08",
+          "Id": "A08",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15663475921607,
+              "Latitude": 50.7113385175521
+            },
+            {
+              "Longitude": 6.15681330648665,
+              "Latitude": 50.7109310177752
+            },
+            {
+              "Longitude": 6.15606226546613,
+              "Latitude": 50.7108005601866
+            },
+            {
+              "Longitude": 6.15588516746863,
+              "Latitude": 50.7112089699584
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A09",
+          "Id": "A09",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15681330648665,
+              "Latitude": 50.7109310177752
+            },
+            {
+              "Longitude": 6.15699183439058,
+              "Latitude": 50.7105226050248
+            },
+            {
+              "Longitude": 6.15624079931346,
+              "Latitude": 50.710392148678
+            },
+            {
+              "Longitude": 6.15606226546613,
+              "Latitude": 50.7108005601866
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A10",
+          "Id": "A10",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15699183439058,
+              "Latitude": 50.7105226050248
+            },
+            {
+              "Longitude": 6.15717036287599,
+              "Latitude": 50.710116035273
+            },
+            {
+              "Longitude": 6.15642222039578,
+              "Latitude": 50.7099828213796
+            },
+            {
+              "Longitude": 6.15624079931346,
+              "Latitude": 50.710392148678
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A11",
+          "Id": "A11",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.15717036287599,
+              "Latitude": 50.710116035273
+            },
+            {
+              "Longitude": 6.15734888239739,
+              "Latitude": 50.7097067001495
+            },
+            {
+              "Longitude": 6.15660220480381,
+              "Latitude": 50.709576242068
+            },
+            {
+              "Longitude": 6.15642222039578,
+              "Latitude": 50.7099828213796
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Stand A12",
+          "Id": "A12",
+          "HasLocation": true
+        }
+      ]
+    },
+    {
+      "Name": "INDOOR",
+      "VisibleAtStartup": true,
+      "GeoFences": []
+    },
+    {
+      "Name": "Apron",
+      "VisibleAtStartup": true,
+      "GeoFences": [
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14470745157132,
+              "Latitude": 50.7187386315596
+            },
+            {
+              "Longitude": 6.1447450594673,
+              "Latitude": 50.7157657335321
+            },
+            {
+              "Longitude": 6.14628403067826,
+              "Latitude": 50.715764389778
+            },
+            {
+              "Longitude": 6.14618262539551,
+              "Latitude": 50.7148608795172
+            },
+            {
+              "Longitude": 6.14617909357106,
+              "Latitude": 50.7129362154285
+            },
+            {
+              "Longitude": 6.1474187461974,
+              "Latitude": 50.7129351180642
+            },
+            {
+              "Longitude": 6.14741702953297,
+              "Latitude": 50.7120134473596
+            },
+            {
+              "Longitude": 6.14805821676825,
+              "Latitude": 50.7120128743831
+            },
+            {
+              "Longitude": 6.14818456890063,
+              "Latitude": 50.7110097643723
+            },
+            {
+              "Longitude": 6.14701530294723,
+              "Latitude": 50.7105228641213
+            },
+            {
+              "Longitude": 6.14764083657659,
+              "Latitude": 50.7097813544792
+            },
+            {
+              "Longitude": 6.14883843320017,
+              "Latitude": 50.7101868986084
+            },
+            {
+              "Longitude": 6.15078626912218,
+              "Latitude": 50.7080435856874
+            },
+            {
+              "Longitude": 6.15206946006269,
+              "Latitude": 50.7085122696964
+            },
+            {
+              "Longitude": 6.15379242083023,
+              "Latitude": 50.7080136693709
+            },
+            {
+              "Longitude": 6.15563089181833,
+              "Latitude": 50.7082829947562
+            },
+            {
+              "Longitude": 6.15793723266459,
+              "Latitude": 50.7074403994059
+            },
+            {
+              "Longitude": 6.15844774097602,
+              "Latitude": 50.706301354636
+            },
+            {
+              "Longitude": 6.15985664481245,
+              "Latitude": 50.7055770703571
+            },
+            {
+              "Longitude": 6.16066684167091,
+              "Latitude": 50.7047087958861
+            },
+            {
+              "Longitude": 6.16489797915495,
+              "Latitude": 50.7046773487161
+            },
+            {
+              "Longitude": 6.1648947381477,
+              "Latitude": 50.703231580542
+            },
+            {
+              "Longitude": 6.1723311694895,
+              "Latitude": 50.703223578279
+            },
+            {
+              "Longitude": 6.17233496464255,
+              "Latitude": 50.7048048910475
+            },
+            {
+              "Longitude": 6.17591060017297,
+              "Latitude": 50.7047014790902
+            },
+            {
+              "Longitude": 6.17925736112817,
+              "Latitude": 50.7055541596559
+            },
+            {
+              "Longitude": 6.18032393380019,
+              "Latitude": 50.7038253025992
+            },
+            {
+              "Longitude": 6.184142992686,
+              "Latitude": 50.7047486413287
+            },
+            {
+              "Longitude": 6.18290575024836,
+              "Latitude": 50.7066361410558
+            },
+            {
+              "Longitude": 6.17837029345473,
+              "Latitude": 50.7083763517642
+            },
+            {
+              "Longitude": 6.15177408163212,
+              "Latitude": 50.7177563888862
+            },
+            {
+              "Longitude": 6.14714447267736,
+              "Latitude": 50.7187093639384
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Apron",
+          "Id": "APRON",
+          "HasLocation": false
+        }
+      ]
+    },
+    {
+      "Name": "Workshop",
+      "VisibleAtStartup": true,
+      "GeoFences": [
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.14743127813681,
+              "Latitude": 50.7120134346652
+            },
+            {
+              "Longitude": 6.14841443195419,
+              "Latitude": 50.7120125545376
+            },
+            {
+              "Longitude": 6.14841979173196,
+              "Latitude": 50.714858891072
+            },
+            {
+              "Longitude": 6.14618262539551,
+              "Latitude": 50.7148608795171
+            },
+            {
+              "Longitude": 6.14617909357106,
+              "Latitude": 50.7129281364722
+            },
+            {
+              "Longitude": 6.14741874619739,
+              "Latitude": 50.7129351180642
+            }
+          ],
+          "IsClosed": false,
+          "Name": "Workshop 01",
+          "Id": "WORKSHOP01",
+          "HasLocation": false
+        }
+      ]
+    },
+    {
+      "Name": "Catering",
+      "VisibleAtStartup": true,
+      "GeoFences": [
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.17934722243322,
+              "Latitude": 50.705648162004
+            },
+            {
+              "Longitude": 6.18034483247306,
+              "Latitude": 50.7038972016035
+            },
+            {
+              "Longitude": 6.18400530482986,
+              "Latitude": 50.7047658198704
+            },
+            {
+              "Longitude": 6.18294131384976,
+              "Latitude": 50.7064824331644
+            }
+          ],
+          "IsClosed": false,
+          "Name": "CATERING",
+          "Id": "CATERING",
+          "HasLocation": true
+        }
+      ]
+    },
+    {
+      "Name": "CateringDetail ",
+      "VisibleAtStartup": true,
+      "GeoFences": [
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.18147519040792,
+              "Latitude": 50.7042743507823
+            },
+            {
+              "Longitude": 6.18090243637542,
+              "Latitude": 50.7041457483478
+            },
+            {
+              "Longitude": 6.1801650105628,
+              "Latitude": 50.7053596128598
+            },
+            {
+              "Longitude": 6.18074328539242,
+              "Latitude": 50.7054917018874
+            }
+          ],
+          "IsClosed": false,
+          "Name": "CATERING_LOAD",
+          "Id": "CATERING_LOAD",
+          "HasLocation": true
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.18246870452319,
+              "Latitude": 50.7054172166491
+            },
+            {
+              "Longitude": 6.18268221159044,
+              "Latitude": 50.7050696441782
+            },
+            {
+              "Longitude": 6.18306382644652,
+              "Latitude": 50.7051636271802
+            },
+            {
+              "Longitude": 6.18285986519246,
+              "Latitude": 50.7055043584236
+            }
+          ],
+          "IsClosed": false,
+          "Name": "CATERING_OFFLOAD",
+          "Id": "CATERING_OFFLOAD",
+          "HasLocation": false
+        },
+        {
+          "GeoFencePoints": [
+            {
+              "Longitude": 6.18278070140977,
+              "Latitude": 50.7050889173457
+            },
+            {
+              "Longitude": 6.18309519932242,
+              "Latitude": 50.7045883873891
+            },
+            {
+              "Longitude": 6.18386045479819,
+              "Latitude": 50.7047774813238
+            },
+            {
+              "Longitude": 6.1835599337223,
+              "Latitude": 50.7052755965895
+            }
+          ],
+          "IsClosed": false,
+          "Name": "CATERING_QUEUE",
+          "Id": "CATERING_QUEUE",
+          "HasLocation": false
+        }
+      ]
+    }
+  ],
+  "Header": {
+    "FingerPrintId": "StoredProcedure.getgeofencegroups",
+    "BackendStates": {
+      "RealtimeBackend": 4,
+      "FileBackend": 4
+    },
+    "ServerTime": "2020-09-18T06:21:27.5060347Z"
+  },
+  "ErrorId": 0
+}

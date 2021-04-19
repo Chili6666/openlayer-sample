@@ -7,8 +7,6 @@ import { ref, onMounted, defineComponent, toRefs } from "vue";
 import View from "ol/View";
 import Map from "ol/Map";
 import TileLayer from "ol/layer/Tile";
-import VectorSource from "ol/source/Vector";
-import VectorLayer from "ol/layer/Vector";
 import GeoJSON from "ol/format/GeoJSON";
 import XYZ from "ol/source/XYZ";
 
@@ -82,7 +80,7 @@ export default defineComponent({
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
 
-      tileLayers.push(createVectorLayer());
+     // tileLayers.push(createVectorLayer());
 
       // this is where we create the OpenLayers map
       internalMap = new Map({
@@ -150,42 +148,6 @@ export default defineComponent({
 
       return tileLayers;
     }
-
-    //test adding polygons ******************************************
-
-    const data = {
-      type: "Feature",
-      properties: {},
-      geometry: {
-        type: "Polygon",
-        coordinates: [
-          [
-            [-27.0703125, 43.58039085560784],
-            [-28.125, 23.563987128451217],
-            [-10.8984375, 32.84267363195431],
-            [-27.0703125, 43.58039085560784],
-          ],
-        ],
-      },
-    };
-
-    function createVectorLayer() {
-      const feature = new GeoJSON().readFeature(data, {
-        // this is required since GeoJSON uses latitude/longitude,
-        // but the map is rendered using “Web Mercator”
-        featureProjection: "EPSG:3857",
-      });
-
-      const vectorLayer = new VectorLayer({
-        source: new VectorSource({
-          features: [feature],
-        }),
-      });
-
-      return vectorLayer;
-    }
-
-    //test adding polygons ******************************************
 
     return {
       root,

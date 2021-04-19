@@ -53,6 +53,18 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     return this._vectorLayer;
   }
 
+  public get name(): string{
+    return 'Terminalresources';
+  }
+
+  public get isVisible(): boolean {
+    return this._vectorLayer.getVisible();
+  }
+
+  public set isVisible(value: boolean) {
+    this._vectorLayer.setVisible(value);
+  }
+
   private setupWithoutCluster(): void {
     this._style = new Style({
       image: new Icon({
@@ -73,6 +85,8 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     this._vectorSource = new VectorSource();
     this._vectorLayer = new VectorLayer({
       source: this._vectorSource,
+      maxZoom: 20,
+      minZoom: 14.5
     });
   }
 

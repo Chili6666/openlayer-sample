@@ -47,14 +47,27 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     this._pictograms.value = await BaseModelDataService.getPictrograms();
     this._mapDataItems.value = await BaseModelDataService.getStands();
     this._mapDataItems.value.forEach(item => {
-      if(item.ActiveStandAllocations.length > 0 )
-        return this.addMapDataItem([item.StandAllocationLongitude, item.StandAllocationLatitude]);
+      if (item.ActiveStandAllocations.length > 0)
+        this.addMapDataItem([item.StandAllocationLongitude, item.StandAllocationLatitude]);
     });
   }
 
   public getlayer(): VectorLayer {
     return this._vectorLayer;
   }
+
+  public get name(): string{
+    return 'StandAllocations';
+  }
+
+  public get isVisible(): boolean {
+    return this._vectorLayer.getVisible();
+  }
+
+  public set isVisible(value: boolean) {
+    this._vectorLayer.setVisible(value);
+  }
+
 
   private setupWithoutCluster(): void {
     this._style = new Style({
@@ -76,6 +89,8 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     this._vectorSource = new VectorSource();
     this._vectorLayer = new VectorLayer({
       source: this._vectorSource,
+      maxZoom: 20,
+      minZoom: 13
     });
   }
 

@@ -26,6 +26,7 @@ export class GeofenceDataLayer implements IMapDataLayer {
   public async init(): Promise<void> {
     this.setupMapItems();
     this._mapDataItems.value = await BaseModelDataService.getGeofenceGroups();
+
     this._mapDataItems.value.forEach(geofenceGroup => {
       if (geofenceGroup.geofences) {
         geofenceGroup.geofences.forEach(geofence => {
@@ -73,25 +74,22 @@ export class GeofenceDataLayer implements IMapDataLayer {
 
 
   private addGeofence(geofence: IGeofence): void {
-
     if (geofence && geofence.geoFencePoints) {
       const polygonpoints: Array<[number, number]> = new Array<[number, number]>();
       geofence.geoFencePoints.forEach(geofencePoint => {
         polygonpoints.push(fromLonLat([geofencePoint.longitude, geofencePoint.latitude]));
-        this.addFeature(polygonpoints);
       });
+      this.addFeature(polygonpoints);
     }
   }
 
   private addFeature(polygonpoints: Array<[number, number]>): void {
-
     const feature = new Feature({
-      name: 'My Polygon',
+      //name: 'My Polygon',
       geometry: new Polygon([polygonpoints]),
     });
 
     feature.setStyle(this._style);
-
     this._vectorSource.addFeature(feature);
   }
 }
