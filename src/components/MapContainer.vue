@@ -7,8 +7,8 @@ import { ref, onMounted, defineComponent, toRefs } from "vue";
 import View from "ol/View";
 import Map from "ol/Map";
 import TileLayer from "ol/layer/Tile";
-import GeoJSON from "ol/format/GeoJSON";
 import XYZ from "ol/source/XYZ";
+import OSM from "ol/source/OSM";
 
 import {
   positionToPoint,
@@ -73,14 +73,22 @@ export default defineComponent({
         Latitude: latitude.value,
       });
 
-      let tileLayers = createTileSources(
-        datalayers.value as Array<MbTileSource>
-      );
+
+      let tileLayers: Array<TileLayer> = new Array<TileLayer>();
+      tileLayers.push( new TileLayer({source: new OSM()}));
+
+
+      // let tileLayers = createTileSources(
+      //   datalayers.value as Array<MbTileSource>
+      // );
+
+
 
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
 
-     // tileLayers.push(createVectorLayer());
+
+
 
       // this is where we create the OpenLayers map
       internalMap = new Map({

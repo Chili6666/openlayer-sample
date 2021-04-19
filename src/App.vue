@@ -33,7 +33,6 @@ import { TerminalResourceDataLayer } from "@/mapwrapper/TerminalResourceDataLaye
 import { StandLabelDataLayer } from "@/mapwrapper/StandLabelDataLayer";
 import { StandAllocationDataLayer } from "@/mapwrapper/StandAllocationDataLayer";
 import { GeofenceDataLayer } from "@/mapwrapper/GeofenceDataLayer";
-
 import VectorLayer from "ol/layer/Vector";
 
 export default defineComponent({
