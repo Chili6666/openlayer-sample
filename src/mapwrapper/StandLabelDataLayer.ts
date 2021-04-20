@@ -27,7 +27,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
   private _mapDataItems: Ref<IStand[]> = ref([]);
   private _pictograms: Ref<IPictogram[]> = ref([]);
   private _rotateWithView = true;
-
+  private _style: Style;
 
   private icon = '<svg width="22.5" height="13.9" version="1.1" xmlns="http://www.w3.org/2000/svg">'
     + '<rect fill="%23ffffff" width="22.5" height="13.9" />'
@@ -41,6 +41,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
   }
 
   public async init(): Promise<void> {
+    this.setupStyle();
     this.setupDataLayer();
     this._pictograms.value = await BaseModelDataService.getPictrograms();
     this._mapDataItems.value = await BaseModelDataService.getStands();
@@ -63,6 +64,26 @@ export class StandLabelDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
+  private setupStyle(){
+    this._style = new Style({
+      image: new Icon({
+        opacity: 1,
+        src: "data:image/svg+xml;utf8," + this.icon,
+        scale: 1.0,
+        color: "#BBC4D3",
+        rotateWithView: this._rotateWithView,
+      }),
+      text: new Text({
+        text: 'B1',
+        rotateWithView: this._rotateWithView,
+        fill: new Fill({
+          color: '#000000',
+        }),
+        font: '8px sans-serif',
+      })
+    });
+  }
+
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
 
@@ -72,24 +93,14 @@ export class StandLabelDataLayer implements IMapDataLayer {
       source: this._vectorSource,
       style: function (feature, resolution) {
         //console.log(feature.getId());
-        return [new Style({
-          image: new Icon({
-            opacity: 1,
-            src: "data:image/svg+xml;utf8," + feature.get('shape'),
-            scale: 1.4 / resolution,
-            color: "#BBC4D3",
-            rotateWithView: feature.get('rotateWithView'),
-            rotation: feature.get('rotation'),
-          }),
-          text: new Text({
-            text: feature.get('displayName'),
-            fill: new Fill({
-              color: '#000000',
-            }),
-            rotateWithView: feature.get('rotateWithView'),
-            rotation: feature.get('rotation'),
-          }),
-        })];
+        //for better performance
+        const style = feature.get('style')
+        style.getText().setText(feature.get('displayName'));
+        style.getText().setScale(1.4 / resolution);
+        style.getText().setRotation(feature.get('rotation'));
+        style.getImage().setRotation(feature.get('rotation'));
+        style.getImage().setScale(1.4 / resolution);
+        return style
       },
       maxZoom: 20,
       minZoom: 14.5
@@ -101,11 +112,14 @@ export class StandLabelDataLayer implements IMapDataLayer {
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
+    
     iconFeature.set('displayName', mapDataItem.DisplayName);
-    iconFeature.set('rotation',  mapDataItem.LabelDirection * ( Math.PI/180));
+    iconFeature.set('rotation', mapDataItem.LabelDirection * (Math.PI / 180));
     iconFeature.set('shape', this.icon);
     iconFeature.set('rotateWithView', this.rotateWithView);
+    iconFeature.set('style', this._style);
     iconFeature.setId(mapDataItem.EntityId);
+
     this._vectorSource.addFeature(iconFeature);
   }
 
