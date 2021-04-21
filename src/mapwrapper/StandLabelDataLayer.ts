@@ -140,8 +140,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
               font: '4px sans-serif',
             }),
           })
-
-
+          
           //change colors and other relavent features
           styleCache[styleKey] = style;
         }
@@ -152,21 +151,6 @@ export class StandLabelDataLayer implements IMapDataLayer {
       minZoom: 14.5
     });
   }
-
-  // private addMapDataItem(mapDataItem: IStand): void {
-  //   const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.LabelLongitude, mapDataItem.LabelLatitude])));
-  //   const iconFeature = new Feature({
-  //     geometry: new Geopoint(mapPoint),
-  //   });
-
-  //   iconFeature.set('displayName', mapDataItem.DisplayName);
-  //   iconFeature.set('rotation', mapDataItem.LabelDirection * (Math.PI / 180));
-  //   iconFeature.set('rotateWithView', this.rotateWithView);
-  //   iconFeature.set('style', this._style);
-  //   iconFeature.setId(mapDataItem.EntityId);
-  //   this._vectorSource.addFeature(iconFeature);
-  // }
-
 
   private addMapDataItem(mapDataItem: IStand): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.LabelLongitude, mapDataItem.LabelLatitude])));

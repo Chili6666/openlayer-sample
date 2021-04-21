@@ -57,26 +57,6 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
-  // private setupStyle() {
-  //   const pictogram = PictogramService.getPictogram('OFFPIER_STAND_RECT');
-
-  //    this._style = new Style({
-  //     image: new Icon({
-  //       opacity: 1,
-  //       src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('AIRCRAFT'),
-  //       scale: 1.0,
-  //       color: "#00ff00",
-  //       rotateWithView: this._rotateWithView
-  //     }),
-  //     // text: new Text({
-  //     //   text: '',
-  //     //   fill: new Fill({
-  //     //     color: '#fff',
-  //     //   }),
-  //     // }),
-  //   });
-  // }
-
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
 
@@ -88,7 +68,7 @@ export class StandAllocationDataLayer implements IMapDataLayer {
       source: this._vectorSource,
       style: function (feature, resolution)  {
 
-        const mapDataItem: IStand = feature.get('mapDataItem');
+        //const mapDataItem: IStand = feature.get('mapDataItem');
         const standAllocation: IStand = feature.get('standAllocation');
 
         //3 we won't create a style for every resolution.
@@ -118,30 +98,6 @@ export class StandAllocationDataLayer implements IMapDataLayer {
       minZoom: 14.5
     });
   }
-
-  // private setupDataLayer(): void {
-  //   this._vectorSource = new VectorSource();
-
-  //   this._vectorLayer = new VectorLayer({
-  //     updateWhileAnimating: true,
-  //     updateWhileInteracting: true,
-  //     source: this._vectorSource,
-  //     style: function (feature, resolution) {
-  //       //console.log(feature.getId());
-  //       //for better performance
-  //       const style = feature.get('style')
-  //       // style.getText().setText(feature.get('displayName'));
-  //       // style.getText().setScale(1.4 / resolution);
-  //       // style.getText().setRotation(feature.get('rotation'));
-
-  //       style.getImage().setRotation(feature.get('rotation'));
-  //       style.getImage().setScale(1.4 / resolution);
-  //       return style
-  //     },
-  //     maxZoom: 20.0,
-  //     minZoom: 13.0
-  //   });
-  // }
   
   private addMapDataItem(mapDataItem: IStand, standAllocation : IStandAllocation): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.StandAllocationLongitude, mapDataItem.StandAllocationLatitude])));

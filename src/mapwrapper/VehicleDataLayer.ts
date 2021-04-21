@@ -89,6 +89,8 @@ export class VehicleDataLayer implements IMapDataLayer {
               }),
               scale: 1.5 / resolution,
               font: '4px sans-serif',
+              offsetX:0,
+              offsetY:13 * 1.5 / resolution,
             }),
           })
 
