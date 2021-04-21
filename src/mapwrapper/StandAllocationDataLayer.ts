@@ -83,7 +83,7 @@ export class StandAllocationDataLayer implements IMapDataLayer {
               opacity: 1,
               src: "data:image/svg+xml;utf8," + shape,
               scale: 1 / resolution,
-              rotateWithView: feature.get('rotateWithView'),
+              rotateWithView: true,
               rotation: feature.get('rotation'),
             }),
           })
