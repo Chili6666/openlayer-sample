@@ -3,6 +3,7 @@ import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
+import { IPictogram } from "@/models/IPictogram";
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -25,8 +26,9 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
   private _vectorSource: VectorSource;
   private _vectorLayer: VectorLayer;
   private _mapDataItems: Ref<ITerminalResource[]> = ref([]);
+  private _pictograms: Ref<IPictogram[]> = ref([]);
   private _rotateWithView = true;
-  private _styles = new Map<string, Style>();
+
 
   public set rotateWithView(value: boolean) {
     this._rotateWithView = value;
@@ -36,8 +38,8 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
   }
 
   public async init(): Promise<void> {
-    this.setupStyles();
     this.setupDataLayer();
+    this._pictograms.value = await BaseModelDataService.getPictrograms();
     this._mapDataItems.value = await BaseModelDataService.getTerminalResources();
     this._mapDataItems.value.forEach(item => this.addMapDataItem(item));
   }
@@ -58,123 +60,68 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
-  private setupStyles() {
-    this._styles.set('CI_COUNTER', new Style({
-      image: new Icon({
-        opacity: 1,
-        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('CI_COUNTER'),
-        scale: 1.0,
-        color: "#BBC4D3",
-        rotateWithView: this._rotateWithView,
-      }),
-      text: new Text({
-        text: '',
-        rotateWithView: this._rotateWithView,
-        fill: new Fill({
-          color: '#000000',
-        }),
-        font: '4px sans-serif',
-      })
-    }));
-
-
-    this._styles.set('GATES', new Style({
-      image: new Icon({
-        opacity: 1,
-        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('GATES'),
-        scale: 1.0,
-        color: "#BBC4D3",
-        rotateWithView: this._rotateWithView,
-      }),
-      text: new Text({
-        text: '',
-        rotateWithView: this._rotateWithView,
-        fill: new Fill({
-          color: '#000000',
-        }),
-        font: '4px sans-serif',
-      })
-    }));
-
-    this._styles.set('BAGGAGE_BELT', new Style({
-      image: new Icon({
-        opacity: 1,
-        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('BAGGAGE_BELT'),
-        scale: 1.0,
-        color: "#BBC4D3",
-        rotateWithView: this._rotateWithView,
-      }),
-      text: new Text({
-        text: '',
-        rotateWithView: this._rotateWithView,
-        fill: new Fill({
-          color: '#000000',
-        }),
-      })
-    }));
-
-
-    this._styles.set('DEFAULT', new Style({
-      image: new Icon({
-        opacity: 1,
-        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('DEFAULT'),
-        scale: 1.0,
-        color: "#BBC4D3",
-        rotateWithView: this._rotateWithView,
-      }),
-      text: new Text({
-        text: '',
-        rotateWithView: this._rotateWithView,
-        fill: new Fill({
-          color: '#000000',
-        }),
-      })
-    }));
-
-  }
-
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
+
+    const styleCache = {};
 
     this._vectorLayer = new VectorLayer({
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
-      style: function (feature, resolution) {
-        //for better performance
-        const style = feature.get('style')
-        style.getText().setText(feature.get('displayName'));
-        style.getText().setScale(1.5 / resolution);
-        style.getText().setRotation(feature.get('rotation'));
-        style.getImage().setRotation(feature.get('rotation'));
-        style.getImage().setScale(1.4 / resolution);
-        return style
+      style: function (feature, resolution)  {
+
+        const mapDataItem: ITerminalResource = feature.get('mapDataItem');
+        //3 we won't create a style for every resolution.
+        const styleKey = resolution.toFixed(3) + '_' + mapDataItem.PictogramId;
+
+        let style = styleCache[styleKey];
+        if(!style){
+          console.log('new style for: ' + styleKey);
+          const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
+
+          style = new Style({
+            image: new Icon({
+              opacity: 1,
+              src: "data:image/svg+xml;utf8," + shape,
+              scale: 1.5 / resolution,
+              // color: "yellow",
+              rotateWithView: feature.get('rotateWithView'),
+              rotation: feature.get('rotation'),
+            }),
+            text: new Text({
+              text: mapDataItem.DisplayName,
+              fill: new Fill({
+                color: '#000000',
+              }),
+              rotateWithView: feature.get('rotateWithView'),
+              rotation: feature.get('rotation'),
+              scale: 1.5 / resolution,
+              font: '4px sans-serif',
+            }),
+          })
+
+          //change colors and other relavent features
+          styleCache[styleKey] = style;
+        }
+
+        return style;
       },
       maxZoom: 20,
       minZoom: 14.5
     });
   }
 
+
   private addMapDataItem(mapDataItem: ITerminalResource): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.Longitude, mapDataItem.Latitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
-
-    iconFeature.set('displayName', mapDataItem.DisplayName);
     iconFeature.set('rotation', mapDataItem.Direction * (Math.PI / 180));
     iconFeature.set('rotateWithView', this.rotateWithView);
-
-    if (this._styles.has(mapDataItem.PictogramId)) {
-      iconFeature.set('style', this._styles.get(mapDataItem.PictogramId));
-    }
-    else {
-      iconFeature.set('style', this._styles.get('DEFAULT'));
-    }
-
+    iconFeature.set('mapDataItem', mapDataItem);
     iconFeature.setId(mapDataItem.EntityId);
-
     this._vectorSource.addFeature(iconFeature);
   }
-
 }
