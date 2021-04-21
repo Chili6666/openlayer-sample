@@ -3,7 +3,7 @@ import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
-import { IPictogram } from "@/models/IPictogram";
+
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -26,7 +26,6 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
   private _vectorSource: VectorSource;
   private _vectorLayer: VectorLayer;
   private _mapDataItems: Ref<ITerminalResource[]> = ref([]);
-  private _pictograms: Ref<IPictogram[]> = ref([]);
   private _rotateWithView = true;
 
 
@@ -39,7 +38,6 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
 
   public async init(): Promise<void> {
     this.setupDataLayer();
-    this._pictograms.value = await BaseModelDataService.getPictrograms();
     this._mapDataItems.value = await BaseModelDataService.getTerminalResources();
     this._mapDataItems.value.forEach(item => this.addMapDataItem(item));
   }
@@ -73,11 +71,10 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
 
         const mapDataItem: ITerminalResource = feature.get('mapDataItem');
         //3 we won't create a style for every resolution.
-        const styleKey = resolution.toFixed(3) + '_' + mapDataItem.PictogramId;
+        const styleKey = resolution.toFixed(3) + '_' + mapDataItem.EntityId;
 
         let style = styleCache[styleKey];
         if(!style){
-          console.log('new style for: ' + styleKey);
           const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
 
           style = new Style({
@@ -85,7 +82,6 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
               opacity: 1,
               src: "data:image/svg+xml;utf8," + shape,
               scale: 1.5 / resolution,
-              // color: "yellow",
               rotateWithView: feature.get('rotateWithView'),
               rotation: feature.get('rotation'),
             }),
