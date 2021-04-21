@@ -73,28 +73,17 @@ export default defineComponent({
         Latitude: latitude.value,
       });
 
-
       let tileLayers: Array<TileLayer> = new Array<TileLayer>();
-      tileLayers.push( new TileLayer({source: new OSM()}));
+      //tileLayers.push( new TileLayer({source: new OSM()}));
 
-
-      // let tileLayers = createTileSources(
-      //   datalayers.value as Array<MbTileSource>
-      // );
-
-
-
+      createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
-
-
-
 
       // this is where we create the OpenLayers map
       internalMap = new Map({
         // the map will be created using the 'root' ref
         target: root.value,
-
         layers: tileLayers,
 
         view: new View({
@@ -135,10 +124,10 @@ export default defineComponent({
       return pointToPosition(arrayToPoint(center));
     }
 
-    function createTileSources(datalayers: Array<MbTileSource>) {
-      let tileLayers: Array<TileLayer> = new Array<TileLayer>(
-        datalayers.length
-      );
+    function createTileSources(
+      datalayers: Array<MbTileSource>,
+      tilelayers: Array<TileLayer>
+    ) {
       for (let index = 0; index < datalayers.length; index++) {
         var datalayer = datalayers[index];
 
@@ -151,10 +140,8 @@ export default defineComponent({
         });
 
         var tileLayer: TileLayer = new TileLayer({ source: tileItemSource });
-        tileLayers[index] = tileLayer;
+        tilelayers.push(tileLayer);
       }
-
-      return tileLayers;
     }
 
     return {

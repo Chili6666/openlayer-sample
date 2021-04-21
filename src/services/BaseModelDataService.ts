@@ -1,4 +1,3 @@
-import { IGeofence } from "@/models/IGeofence";
 import { IGeofenceGroup } from "@/models/IGeofenceGroup";
 import { IPictogram } from "@/models/IPictogram";
 import { IStand } from "@/models/IStand";

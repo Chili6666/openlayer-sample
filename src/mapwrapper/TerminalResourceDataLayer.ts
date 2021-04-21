@@ -2,7 +2,7 @@ import { ITerminalResource } from "../models/ITerminalResource";
 import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
-import { IPictogram } from "@/models/IPictogram";
+import PictogramService from "@/services/PictogramService";
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -26,10 +26,7 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
   private _vectorLayer: VectorLayer;
   private _mapDataItems: Ref<ITerminalResource[]> = ref([]);
   private _rotateWithView = true;
-
-  private _counterStyle: Style;
-  private _gateStyle: Style;
-  private _baggageBeltStyle: Style;
+  private _styles = new Map<string, Style>();
 
   public set rotateWithView(value: boolean) {
     this._rotateWithView = value;
@@ -61,28 +58,11 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
-  
   private setupStyles() {
-
-    const counter = '<svg width="9.0" height="9.0" version="1.1" xmlns="http://www.w3.org/2000/svg">'
-      + '<rect fill="%237588A6" width="9.0" height="9.0" />'
-      + '</svg>';
-
-
-    const gates = '<svg width="13.25" height="13.25" version="1.1" xmlns="http://www.w3.org/2000/svg">'
-      + '<path  fill="yellow"  d="M 0.124756,0.124939L 13.1248,0.124939L 13.1248,13.125L 0.124756,13.1249L 0.124756,0.124939 Z" /> '
-      + '</svg>';
-
-
-    const baggageBelt = '<svg width="43.0" height="15.0" version="1.1" xmlns="http://www.w3.org/2000/svg">'
-      + '<path  fill="%237588A6"  d="M 5.5,0.5L 35.5004,0.5C 38.262,0.5 40.5005,2.73859 40.5005,5.5L 40.5005,8.49927C 40.5005,11.2607 38.262,13.4993 35.5004,13.4993L 5.5,13.4993C 2.73865,13.4993 0.5,11.2607 0.5,8.49927L 0.5,5.5C 0.5,2.73859 2.73865,0.5 5.5,0.5 Z " /> '
-      + '</svg>';
-
-
-    this._counterStyle = new Style({
+    this._styles.set('CI_COUNTER', new Style({
       image: new Icon({
         opacity: 1,
-        src: "data:image/svg+xml;utf8," + counter,
+        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('CI_COUNTER'),
         scale: 1.0,
         color: "#BBC4D3",
         rotateWithView: this._rotateWithView,
@@ -95,13 +75,13 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
         }),
         font: '4px sans-serif',
       })
-    });
+    }));
 
 
-    this._gateStyle = new Style({
+    this._styles.set('GATES', new Style({
       image: new Icon({
         opacity: 1,
-        src: "data:image/svg+xml;utf8," + gates,
+        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('GATES'),
         scale: 1.0,
         color: "#BBC4D3",
         rotateWithView: this._rotateWithView,
@@ -114,12 +94,12 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
         }),
         font: '4px sans-serif',
       })
-    });
+    }));
 
-    this._baggageBeltStyle = new Style({
+    this._styles.set('BAGGAGE_BELT', new Style({
       image: new Icon({
         opacity: 1,
-        src: "data:image/svg+xml;utf8," + baggageBelt,
+        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('BAGGAGE_BELT'),
         scale: 1.0,
         color: "#BBC4D3",
         rotateWithView: this._rotateWithView,
@@ -131,7 +111,26 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
           color: '#000000',
         }),
       })
-    });
+    }));
+
+
+    this._styles.set('DEFAULT', new Style({
+      image: new Icon({
+        opacity: 1,
+        src: "data:image/svg+xml;utf8," + PictogramService.getPictogram('DEFAULT'),
+        scale: 1.0,
+        color: "#BBC4D3",
+        rotateWithView: this._rotateWithView,
+      }),
+      text: new Text({
+        text: '',
+        rotateWithView: this._rotateWithView,
+        fill: new Fill({
+          color: '#000000',
+        }),
+      })
+    }));
+
   }
 
   private setupDataLayer(): void {
@@ -166,14 +165,12 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     iconFeature.set('rotation', mapDataItem.Direction * (Math.PI / 180));
     iconFeature.set('rotateWithView', this.rotateWithView);
 
-    if (mapDataItem.PictogramId === 'BAGGAGE_BELT')
-      iconFeature.set('style', this._baggageBeltStyle);
-    else if (mapDataItem.PictogramId === 'GATES')
-      iconFeature.set('style', this._gateStyle);
-    else if (mapDataItem.PictogramId === 'CI_COUNTER')
-      iconFeature.set('style', this._counterStyle);
-    else
-      iconFeature.set('style', this._counterStyle);
+    if (this._styles.has(mapDataItem.PictogramId)) {
+      iconFeature.set('style', this._styles.get(mapDataItem.PictogramId));
+    }
+    else {
+      iconFeature.set('style', this._styles.get('DEFAULT'));
+    }
 
     iconFeature.setId(mapDataItem.EntityId);
 

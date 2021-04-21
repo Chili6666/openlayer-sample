@@ -50,7 +50,8 @@ export class VehicleDataLayer implements IMapDataLayer {
   }
 
   public async init(): Promise<void> {
-    this.setupWithoutCluster();
+    this.setupStyle() ;
+    this.setupDataLayer();
     //this.setupWithCluster();
     this._pictograms.value = await BaseModelDataService.getPictrograms();
     this._mapDataItems.value = await BaseModelDataService.getVehicles();
@@ -73,30 +74,67 @@ export class VehicleDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
-  private setupWithoutCluster(): void {
-    this._style = new Style({
-      image: new Icon({
-        opacity: 1,
-        src: "data:image/svg+xml;utf8," + this.fuel,
-        scale: 1.0,
-        color: "#ff00ff",
-        rotateWithView: this._rotateWithView
-      }),
-      // text: new Text({
-      //   text: 'B1',
-      //   fill: new Fill({
-      //     color: '#fff',
-      //   }),
-      // }),
-    });
+  // private setupWithoutCluster(): void {
+  //   this._style = new Style({
+  //     image: new Icon({
+  //       opacity: 1,
+  //       src: "data:image/svg+xml;utf8," + this.fuel,
+  //       scale: 1.0,
+  //       color: "#ff00ff",
+  //       rotateWithView: this._rotateWithView
+  //     }),
+  //     text: new Text({
+  //       text: 'B1',
+  //       fill: new Fill({
+  //         color: '#fff',
+  //       }),
+  //     }),
+  //   });
 
+  //   this._vectorSource = new VectorSource();
+  //   this._vectorLayer = new VectorLayer({
+  //     source: this._vectorSource,
+  //     maxZoom: 20,
+  //     minZoom: 11.5
+  //   });
+  // }
+
+  private setupStyle() : void{
+    this._style = new Style({
+          image: new Icon({
+            opacity: 1,
+            src: "data:image/svg+xml;utf8," + this.fuel,
+            scale: 1.0,
+            color: "#ff00ff",
+            rotateWithView: this._rotateWithView
+          }),
+          text: new Text({
+            text: 'B1',
+            fill: new Fill({
+              color: '#fff',
+            }),
+          }),
+        });
+  }
+
+  private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
+
     this._vectorLayer = new VectorLayer({
+      updateWhileAnimating: true,
+      updateWhileInteracting: true,
       source: this._vectorSource,
+      style: function (feature, resolution) {
+        //for better performance
+        const style = feature.get('style')
+        style.getImage().setScale(1.4 / resolution);
+        return style
+      },
       maxZoom: 20,
       minZoom: 11.5
     });
   }
+
 
   private setupWithCluster(): void {
     this._style = new Style({
@@ -118,11 +156,10 @@ export class VehicleDataLayer implements IMapDataLayer {
       source: this._vectorSource,
     });
 
-
     this._vectorLayer = new VectorLayer({
       source: clusterSource,
 
-      style: function (feature) {
+      style: function (feature, resolution) {
         const size = feature.get('features').length;
         let style = styleCache[size];
         if (!style) {
@@ -145,11 +182,12 @@ export class VehicleDataLayer implements IMapDataLayer {
           });
           styleCache[size] = style;
         }
+        style.getImage().setScale(1.4 / resolution);
+
         return style;
       },
     });
   }
-
 
   private addMapDataItem(vehicle: IVehicle): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([vehicle.Position.Longitude, vehicle.Position.Latitude])));
@@ -158,6 +196,7 @@ export class VehicleDataLayer implements IMapDataLayer {
     });
     //unnötig wenn man clustered
     iconFeature.setStyle(this._style);
+    iconFeature.set('style', this._style);
     this._vectorSource.addFeature(iconFeature);
   }
 

@@ -2,6 +2,7 @@ import { IStand } from "../models/IStand";
 import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
+import PictogramService from "@/services/PictogramService";
 import { IPictogram } from "@/models/IPictogram";
 
 import VectorSource from "ol/source/Vector";
@@ -28,10 +29,6 @@ export class StandLabelDataLayer implements IMapDataLayer {
   private _pictograms: Ref<IPictogram[]> = ref([]);
   private _rotateWithView = true;
   private _style: Style;
-
-  private icon = '<svg width="22.5" height="13.9" version="1.1" xmlns="http://www.w3.org/2000/svg">'
-    + '<rect fill="%23ffffff" width="22.5" height="13.9" />'
-    + '</svg>';
 
   public set rotateWithView(value: boolean) {
     this._rotateWithView = value;
@@ -64,11 +61,13 @@ export class StandLabelDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
-  private setupStyle(){
+  private setupStyle() {
+    const pictogram = PictogramService.getPictogram('OFFPIER_STAND_RECT');
+
     this._style = new Style({
       image: new Icon({
         opacity: 1,
-        src: "data:image/svg+xml;utf8," + this.icon,
+        src: "data:image/svg+xml;utf8," + pictogram,
         scale: 1.0,
         color: "#BBC4D3",
         rotateWithView: this._rotateWithView,
@@ -112,14 +111,12 @@ export class StandLabelDataLayer implements IMapDataLayer {
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
-    
+
     iconFeature.set('displayName', mapDataItem.DisplayName);
     iconFeature.set('rotation', mapDataItem.LabelDirection * (Math.PI / 180));
-    iconFeature.set('shape', this.icon);
     iconFeature.set('rotateWithView', this.rotateWithView);
     iconFeature.set('style', this._style);
     iconFeature.setId(mapDataItem.EntityId);
-
     this._vectorSource.addFeature(iconFeature);
   }
 
