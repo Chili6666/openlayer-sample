@@ -99,7 +99,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
           font: '8px sans-serif',
         }),
       })
-      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
+      StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
     }
 
     //IMAGE--------------

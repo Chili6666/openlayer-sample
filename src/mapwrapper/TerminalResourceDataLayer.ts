@@ -100,7 +100,7 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
         }),
       })
 
-      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
+      StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
     }
 
     //change colors and other relavent features

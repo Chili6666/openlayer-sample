@@ -83,10 +83,10 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
 
-    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
+    let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+      const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
       style = new Style({
         image: new Icon({
           opacity: 1,
@@ -96,7 +96,7 @@ export class StandAllocationDataLayer implements IMapDataLayer {
           rotation: direction,
         })
       })
-      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
+      StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
     }
 
     //IMAGE--------------
