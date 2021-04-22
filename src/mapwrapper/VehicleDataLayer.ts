@@ -1,8 +1,11 @@
 import { IVehicle } from "../models/IVehicle";
 import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
+import { MapItemVisualization } from "@/models/MapItemVisualization";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
+import StyleService from "@/services/StyleService";
+
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -21,11 +24,15 @@ import {
 
 export class VehicleDataLayer implements IMapDataLayer {
 
-  // private _style: Style;
   private _vectorSource: VectorSource;
   private _vectorLayer: VectorLayer;
   private _mapDataItems: Ref<IVehicle[]> = ref([]);
   private _rotateWithView = false;
+
+  constructor() {
+    console.log('constructor');
+    this._rotateWithView = false;
+  }
 
   public set rotateWithView(value: boolean) {
     this._rotateWithView = value;
@@ -44,7 +51,7 @@ export class VehicleDataLayer implements IMapDataLayer {
     return this._vectorLayer;
   }
 
-  public get name(): string{
+  public get name(): string {
     return 'Vehicles';
   }
 
@@ -58,52 +65,60 @@ export class VehicleDataLayer implements IMapDataLayer {
 
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
-
-    const styleCache = {};
-
     this._vectorLayer = new VectorLayer({
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
-      style: function (feature, resolution)  {
-
-        const mapDataItem: IVehicle = feature.get('mapDataItem');
-        //3 we won't create a style for every resolution.
-        const styleKey = resolution.toFixed(3) + '_' + mapDataItem.EntityId;
-
-        let style = styleCache[styleKey];
-        if(!style){
-          const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
-
-          style = new Style({
-            image: new Icon({
-              opacity: 1,
-              src: "data:image/svg+xml;utf8," + shape,
-              scale: 1.5 / resolution,
-
-            }),
-            text: new Text({
-              text: mapDataItem.EntityId,
-              fill: new Fill({
-                color: '#000000',
-              }),
-              scale: 1.5 / resolution,
-              font: '4px sans-serif',
-              offsetX:0,
-              offsetY:13 * 1.5 / resolution,
-            }),
-          })
-
-          //change colors and other relavent features
-          styleCache[styleKey] = style;
-        }
-
-        return style;
-      },
       maxZoom: 20,
       minZoom: 14.5
     });
+    this._vectorLayer.setStyle(this.createStyle);
   }
+
+  private createStyle(feature: Feature, resolution: number): Style {
+    const mapDataItem: IVehicle = feature.get('mapDataItem');
+    const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
+    //const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
+   // const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
+    //const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
+    const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : '#000000');
+    const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#FFFFFF');
+
+
+    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
+
+    if (!style) {
+      console.log("create new style");
+      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+      style = new Style({
+        image: new Icon({
+          opacity: 1,
+          src: "data:image/svg+xml;utf8," + shape,
+          fill: new Fill({
+            color: "#8959A8",
+          }),
+        }),
+        text: new Text({
+          text: mapDataItem.EntityId,
+          padding: [3, 3, 3, 3],
+          font: '4px sans-serif',
+        }),
+      })
+      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
+    }
+
+    //IMAGE--------------
+    //change colors and other relavent features
+    style.getImage().setScale(1 / resolution);
+
+    style.getText().setFill(new Fill({ color: textColor }));
+    style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
+    style.getText().setOffsetY(18 * 1 / resolution);
+    style.getText().setScale(1 / resolution);
+    style.getText().setText(mapDataItem.EntityId);
+    return style;
+  }
+
 
   // private setupWithCluster(): void {
   //   this._style = new Style({
@@ -158,13 +173,29 @@ export class VehicleDataLayer implements IMapDataLayer {
   //   });
   // }
 
-  private addMapDataItem(mapDataItem: IVehicle): void {
-    const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.Position.Longitude, mapDataItem.Position.Latitude])));
+  private addMapDataItem(dataItem: IVehicle): void {
+    const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.Position.Longitude, dataItem.Position.Latitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
-    iconFeature.set('mapDataItem', mapDataItem);
-    iconFeature.setId(mapDataItem.EntityId);
+
+    iconFeature.set('mapDataItem', dataItem);
+    iconFeature.setId(dataItem.EntityId);
+
+    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
+    mapItemVisualization.direction = dataItem.Direction;
+    mapItemVisualization.textFillColor = '#FFFFFF';
+    mapItemVisualization.textColor = "#000000"
+
+    //fake
+    if (dataItem.EntityId.startsWith('Vehicle.BUS1'))
+      mapItemVisualization.shapeFillColor = 'orange';
+    else
+      mapItemVisualization.shapeFillColor = 'white';
+
+    iconFeature.set('mapItemVisualization', mapItemVisualization);
+
+
     this._vectorSource.addFeature(iconFeature);
   }
 }
