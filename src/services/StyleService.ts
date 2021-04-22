@@ -2,8 +2,6 @@ import Style from "ol/style/Style";
 //import MapService from "@/services/MapService";
 
 class StyleService {
-
-
     private styleCache = new Map<string, Style>();
 
     public getStyle(pictogramId: string, extension: string): Style | null {

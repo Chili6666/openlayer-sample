@@ -88,7 +88,7 @@ export class VehicleDataLayer implements IMapDataLayer {
     let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      console.log("create new style");
+      console.log("VehicleDataLayer - create new style");
       const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
       style = new Style({
         image: new Icon({

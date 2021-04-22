@@ -4,6 +4,7 @@ import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
 import StyleService from "@/services/StyleService";
+import { MapItemVisualization } from "@/models/MapItemVisualization";
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -59,79 +60,77 @@ export class StandLabelDataLayer implements IMapDataLayer {
 
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
-
-    const styleCache = {};
-
     this._vectorLayer = new VectorLayer({
-      renderMode: 'vector',
+      // renderMode: 'vector',
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
-      style: function (feature, resolution)  {
-
-        const mapDataItem: IStand = feature.get('mapDataItem');
-        //const shapeFillcolor = feature.get('fillcolor'), ? : '#000000';
-
-
-        let style = StyleService.getStyle(mapDataItem.PictogramId,feature.get('rotation'));
-        
-        if(!style){
-          const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
-
-          style = new Style({
-            image: new Icon({
-              opacity: 1,
-              src: "data:image/svg+xml;utf8," + shape,
-              color: "#BBC4D3",
-             // scale: 1.4 / resolution,
-              rotateWithView: feature.get('rotateWithView'),
-              //rotation: feature.get('rotation'),
-            }),
-            text: new Text({
-              text: mapDataItem.DisplayName,
-              fill: new Fill({
-                color: '#000000',
-              }),
-              rotateWithView: feature.get('rotateWithView'),
-              //rotation: feature.get('rotation'),
-              //scale: 1.4 / resolution,
-              font: '8px sans-serif',
-            }),
-          })
-          
-          //change colors and other relavent features
-          StyleService.setStyle(mapDataItem.PictogramId, feature.get('rotation'),style);
-        }
-
-        //IMAGE--------------
-        style.getImage().setScale(1 / resolution);
-      //  style.getImage().setRotation(feature.get('rotation'));
-
-        //TEXT-----------
-        //style.getText().setFill(new Fill({ color: '#FF0000' }));
-        // if (shouldTint)
-        //   style.getText().setBackgroundFill(new Fill({ color: '#FF0000' }));
-
-     //   style.getText().setRotation(feature.get('rotation'));
-        style.getText().setScale(1 / resolution);
-        style.getText().setText(mapDataItem.DisplayName);
-
-        return style;
-      },
       maxZoom: 20,
       minZoom: 14.5
     });
+    this._vectorLayer.setStyle(this.createStyle);
   }
 
-  private addMapDataItem(mapDataItem: IStand): void {
-    const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.LabelLongitude, mapDataItem.LabelLatitude])));
+  private createStyle(feature: Feature, resolution: number): Style {
+    const mapDataItem: IStand = feature.get('mapDataItem');
+    const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
+    const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+    const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
+    const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
+    const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
+    const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
+    const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
+
+    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
+
+    if (!style) {
+      console.log("StandLabelDataLayer - create new style");
+
+      style = new Style({
+        image: new Icon({
+          opacity: 1,
+          src: "data:image/svg+xml;utf8," + shape,
+          color: shapeFillColor,
+          rotateWithView: feature.get('rotateWithView'),
+          rotation: direction,
+        }),
+        text: new Text({
+          text: mapDataItem.DisplayName,
+          rotateWithView: feature.get('rotateWithView'),
+          rotation: direction,
+          font: '8px sans-serif',
+        }),
+      })
+      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
+    }
+
+    //IMAGE--------------
+    //change colors and other relavent features
+    style.getImage().setScale(1 / resolution);
+    style.getText().setFill(new Fill({ color: textColor }));
+    style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
+    style.getText().setScale(1 / resolution);
+    style.getText().setText(mapDataItem.DisplayName);
+ 
+    return style;
+  }
+
+  private addMapDataItem(dataItem: IStand): void {
+    const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.LabelLongitude, dataItem.LabelLatitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
-    iconFeature.set('rotation', mapDataItem.LabelDirection * (Math.PI / 180));
+
+    iconFeature.set('mapDataItem', dataItem);
+    iconFeature.setId(dataItem.EntityId);
     iconFeature.set('rotateWithView', this.rotateWithView);
-    iconFeature.set('mapDataItem', mapDataItem);
-    iconFeature.setId(mapDataItem.EntityId);
+
+    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
+    mapItemVisualization.direction = dataItem.LabelDirection * (Math.PI / 180);
+    mapItemVisualization.textColor = "#000000"
+    mapItemVisualization.shapeFillColor = "#BBC4D3"
+    iconFeature.set('mapItemVisualization', mapItemVisualization);
+
     this._vectorSource.addFeature(iconFeature);
   }
 }

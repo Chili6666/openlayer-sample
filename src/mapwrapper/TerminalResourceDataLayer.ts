@@ -113,7 +113,7 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     let style = StyleService.getStyle(mapDataItem.PictogramId, `${shouldTint}`);
 
     if (!style) {
-      console.log("create new style");
+      console.log("TerminalResourceDataLayer - create new style");
       const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
       style = new Style({
         image: new Icon({

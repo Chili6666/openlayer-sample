@@ -5,7 +5,7 @@ export class MapItemVisualization implements IMapItemVisualization {
     private _pictogramId: string;
     private _shapeFillColor!: string;
     private _shapeStrokeColor!: string;
-    private _textFillColor!: string;
+    private _textFillColor = "transparent";
     private _textColor!: string;
 
     constructor(pictogramId: string) {
