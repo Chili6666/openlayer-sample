@@ -3,6 +3,7 @@ import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
+import StyleService from "@/services/StyleService";
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -56,67 +57,24 @@ export class StandLabelDataLayer implements IMapDataLayer {
     this._vectorLayer.setVisible(value);
   }
 
-  // private setupStyle() {
-  //   const pictogram = PictogramService.getPictogram('OFFPIER_STAND_RECT');
-
-  //   this._style = new Style({
-  //     image: new Icon({
-  //       opacity: 1,
-  //       src: "data:image/svg+xml;utf8," + pictogram,
-  //       scale: 1.0,
-  //       color: "#BBC4D3",
-  //       rotateWithView: this._rotateWithView,
-  //     }),
-  //     text: new Text({
-  //       text: 'B1',
-  //       rotateWithView: this._rotateWithView,
-  //       fill: new Fill({
-  //         color: '#000000',
-  //       }),
-  //       font: '8px sans-serif',
-  //     })
-  //   });
-  // }
-
-  // private setupDataLayer(): void {
-  //   this._vectorSource = new VectorSource();
-
-  //   this._vectorLayer = new VectorLayer({
-  //     updateWhileAnimating: true,
-  //     updateWhileInteracting: true,
-  //     source: this._vectorSource,
-  //     style: function (feature, resolution) {
-  //       //console.log(feature.getId());
-  //       //for better performance
-  //       const style = feature.get('style')
-  //       style.getText().setText(feature.get('displayName'));
-  //       style.getText().setScale(1.4 / resolution);
-  //       style.getText().setRotation(feature.get('rotation'));
-  //       style.getImage().setRotation(feature.get('rotation'));
-  //       style.getImage().setScale(1.4 / resolution);
-  //       return style
-  //     },
-  //     maxZoom: 20,
-  //     minZoom: 14.5
-  //   });
-  // }
-
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
 
     const styleCache = {};
 
     this._vectorLayer = new VectorLayer({
+      renderMode: 'vector',
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
       style: function (feature, resolution)  {
 
         const mapDataItem: IStand = feature.get('mapDataItem');
-        //3 we won't create a style for every resolution.
-        const styleKey = resolution.toFixed(3) + '_' + mapDataItem.EntityId;
+        //const shapeFillcolor = feature.get('fillcolor'), ? : '#000000';
 
-        let style = styleCache[styleKey];
+
+        let style = StyleService.getStyle(mapDataItem.PictogramId,feature.get('rotation'));
+        
         if(!style){
           const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
 
@@ -125,9 +83,9 @@ export class StandLabelDataLayer implements IMapDataLayer {
               opacity: 1,
               src: "data:image/svg+xml;utf8," + shape,
               color: "#BBC4D3",
-              scale: 1.4 / resolution,
+             // scale: 1.4 / resolution,
               rotateWithView: feature.get('rotateWithView'),
-              rotation: feature.get('rotation'),
+              //rotation: feature.get('rotation'),
             }),
             text: new Text({
               text: mapDataItem.DisplayName,
@@ -135,15 +93,28 @@ export class StandLabelDataLayer implements IMapDataLayer {
                 color: '#000000',
               }),
               rotateWithView: feature.get('rotateWithView'),
-              rotation: feature.get('rotation'),
-              scale: 1.4 / resolution,
-              font: '4px sans-serif',
+              //rotation: feature.get('rotation'),
+              //scale: 1.4 / resolution,
+              font: '8px sans-serif',
             }),
           })
           
           //change colors and other relavent features
-          styleCache[styleKey] = style;
+          StyleService.setStyle(mapDataItem.PictogramId, feature.get('rotation'),style);
         }
+
+        //IMAGE--------------
+        style.getImage().setScale(1 / resolution);
+      //  style.getImage().setRotation(feature.get('rotation'));
+
+        //TEXT-----------
+        //style.getText().setFill(new Fill({ color: '#FF0000' }));
+        // if (shouldTint)
+        //   style.getText().setBackgroundFill(new Fill({ color: '#FF0000' }));
+
+     //   style.getText().setRotation(feature.get('rotation'));
+        style.getText().setScale(1 / resolution);
+        style.getText().setText(mapDataItem.DisplayName);
 
         return style;
       },

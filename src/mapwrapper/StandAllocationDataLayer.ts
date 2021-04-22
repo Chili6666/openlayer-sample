@@ -4,6 +4,8 @@ import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
+import StyleService from "@/services/StyleService";
+
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
@@ -60,37 +62,44 @@ export class StandAllocationDataLayer implements IMapDataLayer {
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
 
-    const styleCache = {};
-
     this._vectorLayer = new VectorLayer({
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
-      style: function (feature, resolution)  {
+      style: function (feature, resolution) {
 
-        //const mapDataItem: IStand = feature.get('mapDataItem');
-        const standAllocation: IStand = feature.get('standAllocation');
-
-        //3 we won't create a style for every resolution.
-        const styleKey = resolution.toFixed(3) + '_' + standAllocation.EntityId;
-
-        let style = styleCache[styleKey];
-        if(!style){
-          const shape =  PictogramService.getPictogram('AIRCRAFT');
+        const mapDataItem: IStand = feature.get('mapDataItem');
+        let style = StyleService.getStyle(mapDataItem.PictogramId, feature.get('rotation'));
+        if (!style) {
+          const shape = PictogramService.getPictogram('AIRCRAFT');
 
           style = new Style({
             image: new Icon({
               opacity: 1,
               src: "data:image/svg+xml;utf8," + shape,
-              scale: 1 / resolution,
+           //   scale: 1 / resolution,
               rotateWithView: true,
-              rotation: feature.get('rotation'),
+           //   rotation: feature.get('rotation'),
             }),
           })
 
           //change colors and other relavent features
-          styleCache[styleKey] = style;
+          StyleService.setStyle(mapDataItem.PictogramId, feature.get('rotation'), style);
         }
+
+
+        //IMAGE--------------
+        style.getImage().setScale(1 / resolution);
+       // style.getImage().setRotation(feature.get('rotation'));
+
+        //TEXT-----------
+        //style.getText().setFill(new Fill({ color: '#FF0000' }));
+        // if (shouldTint)
+        //   style.getText().setBackgroundFill(new Fill({ color: '#FF0000' }));
+
+       // style.getText().setRotation(feature.get('rotation'));
+     //   style.getText().setScale(1 / resolution);
+    //    style.getText().setText(mapDataItem.DisplayName);
 
         return style;
       },
@@ -98,19 +107,18 @@ export class StandAllocationDataLayer implements IMapDataLayer {
       minZoom: 14.5
     });
   }
-  
-  private addMapDataItem(mapDataItem: IStand, standAllocation : IStandAllocation): void {
+
+  private addMapDataItem(mapDataItem: IStand, standAllocation: IStandAllocation): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.StandAllocationLongitude, mapDataItem.StandAllocationLatitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
 
-    iconFeature.set('mapDataItem', mapDataItem);
-    iconFeature.set('standAllocation', standAllocation);
+    iconFeature.set('mapDataItem', standAllocation);
     iconFeature.set('rotation', mapDataItem.StandAllocationDirection * (Math.PI / 180));
 
     iconFeature.setId(standAllocation.EntityId);
     this._vectorSource.addFeature(iconFeature);
   }
-  
+
 }

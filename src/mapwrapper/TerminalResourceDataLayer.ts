@@ -3,6 +3,7 @@ import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
+import StyleService from "@/services/StyleService";
 
 
 import VectorSource from "ol/source/Vector";
@@ -61,53 +62,91 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
   private setupDataLayer(): void {
     this._vectorSource = new VectorSource();
 
-    const styleCache = {};
-
     this._vectorLayer = new VectorLayer({
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
-      style: function (feature, resolution)  {
+      // style: function (feature, resolution)  {
 
-        const mapDataItem: ITerminalResource = feature.get('mapDataItem');
-        //3 we won't create a style for every resolution.
-        const styleKey = resolution.toFixed(3) + '_' + mapDataItem.EntityId;
+      //   const mapDataItem: ITerminalResource = feature.get('mapDataItem');
+      //   let style = StyleService.getStyle(mapDataItem.PictogramId, mapDataItem.EntityId, resolution);
+      //   if(!style){
+      //     const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
 
-        let style = styleCache[styleKey];
-        if(!style){
-          const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
+      //     style = new Style({
+      //       image: new Icon({
+      //         opacity: 1,
+      //         src: "data:image/svg+xml;utf8," + shape,
+      //         scale: 1.5 / resolution,
+      //         rotateWithView: feature.get('rotateWithView'),
+      //         rotation: feature.get('rotation'),
+      //       }),
+      //       text: new Text({
+      //         text: mapDataItem.DisplayName,
+      //         fill: new Fill({
+      //           color: '#91A0B8',
+      //         }),
+      //         rotateWithView: feature.get('rotateWithView'),
+      //         rotation: feature.get('rotation'),
+      //         scale: 1.5 / resolution,
+      //         font: '4px sans-serif',
+      //       }),
+      //     })
 
-          style = new Style({
-            image: new Icon({
-              opacity: 1,
-              src: "data:image/svg+xml;utf8," + shape,
-              scale: 1.5 / resolution,
-              rotateWithView: feature.get('rotateWithView'),
-              rotation: feature.get('rotation'),
-            }),
-            text: new Text({
-              text: mapDataItem.DisplayName,
-              fill: new Fill({
-                color: '#000000',
-              }),
-              rotateWithView: feature.get('rotateWithView'),
-              rotation: feature.get('rotation'),
-              scale: 1.5 / resolution,
-              font: '4px sans-serif',
-            }),
-          })
+      //     //change colors and other relavent features
+      //     StyleService.setStyle(mapDataItem.PictogramId, mapDataItem.EntityId, resolution, style);
+      //   }
 
-          //change colors and other relavent features
-          styleCache[styleKey] = style;
-        }
-
-        return style;
-      },
+      //   return style;
+      //},
       maxZoom: 20,
       minZoom: 14.5
     });
+
+    this._vectorLayer.setStyle(this.createStyle);
   }
 
+  private createStyle(feature: Feature, resolution: number): Style {
+    const mapDataItem: ITerminalResource = feature.get('mapDataItem');
+    const shouldTint: boolean = feature.get('shouldTint');
+
+    let style = StyleService.getStyle(mapDataItem.PictogramId, `${shouldTint}`);
+
+    if (!style) {
+      console.log("create new style");
+      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+      style = new Style({
+        image: new Icon({
+          opacity: 1,
+          src: "data:image/svg+xml;utf8," + shape,
+          rotateWithView: true,
+        }),
+        text: new Text({
+          text: mapDataItem.EntityId,
+          fill: new Fill({
+            color: '#91A0B8',
+          }),
+          font: '4px sans-serif',
+          rotateWithView: true,
+        }),
+      })
+      StyleService.setStyle(mapDataItem.PictogramId, `${shouldTint}`,style);
+    }
+
+    //IMAGE--------------
+    style.getImage().setScale(1 / resolution);
+    style.getImage().setRotation(feature.get('rotation'));
+
+    //TEXT-----------
+    //style.getText().setFill(new Fill({ color: '#FF0000' }));
+    if (shouldTint)
+      style.getText().setBackgroundFill(new Fill({ color: '#FF0000' }));
+
+    style.getText().setRotation(feature.get('rotation'));
+    style.getText().setScale(1 / resolution);
+    style.getText().setText(mapDataItem.DisplayName);
+    return style;
+  }
 
   private addMapDataItem(mapDataItem: ITerminalResource): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.Longitude, mapDataItem.Latitude])));
@@ -117,6 +156,12 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     iconFeature.set('rotation', mapDataItem.Direction * (Math.PI / 180));
     iconFeature.set('rotateWithView', this.rotateWithView);
     iconFeature.set('mapDataItem', mapDataItem);
+
+    if (mapDataItem.DisplayName === "01")
+      iconFeature.set('shouldTint', true);
+    else
+      iconFeature.set('shouldTint', false);
+
     iconFeature.setId(mapDataItem.EntityId);
     this._vectorSource.addFeature(iconFeature);
   }

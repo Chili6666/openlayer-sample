@@ -9,6 +9,8 @@ import Map from "ol/Map";
 import TileLayer from "ol/layer/Tile";
 import XYZ from "ol/source/XYZ";
 import OSM from "ol/source/OSM";
+import MapService from "@/services/MapService";
+
 
 import {
   positionToPoint,
@@ -74,9 +76,9 @@ export default defineComponent({
       });
 
       let tileLayers: Array<TileLayer> = new Array<TileLayer>();
-      tileLayers.push( new TileLayer({source: new OSM()}));
+     // tileLayers.push( new TileLayer({source: new OSM()}));
 
-      //createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
+      createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
 
@@ -99,6 +101,8 @@ export default defineComponent({
       internalMap.on("moveend", onMoveEnd);
       internalMap.on("movestart", onMoveStart);
       internalMap.on("pointermove", onMove);
+
+      MapService.initializeService(internalMap);
     });
 
     function onMoveStart(value: any) {
@@ -116,6 +120,7 @@ export default defineComponent({
       // console.log("onMoveEnd");
       isDragging.value = false;
       context.emit("centerpoint", getCenterPoint());
+      context.emit("zoomlevel", internalMap?.getView().getZoom());
     }
 
     function getCenterPoint(): IPosition {

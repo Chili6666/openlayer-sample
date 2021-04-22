@@ -8,16 +8,20 @@
         :wrapX="false"
         :datalayers="sources"
         :vectorLayers="layers"
-        @centerpoint="oncenterpoitchanged"
+        @centerpoint="oncenterpointchanged"
+        @zoomlevel="onzoomlevelchanged"
       />
     </div>
+
+    <div class="volker-css-hack">
+      {{ styleCacheCount }}
+    </div>
+
     <div class="cell cell-edit">
-      
-        <div v-for="layer in layers" :key="layer.name">
-          {{ layer.name }}
-           <input type="checkbox" v-model="layer.isVisible" />
-        </div>
-      
+      <div v-for="layer in layers" :key="layer.name">
+        {{ layer.name }}
+        <input type="checkbox" v-model="layer.isVisible" />
+      </div>
     </div>
     <div class="cell cell-inspect">Inspect</div>
   </div>
@@ -33,6 +37,9 @@ import { TerminalResourceDataLayer } from "@/mapwrapper/TerminalResourceDataLaye
 import { StandLabelDataLayer } from "@/mapwrapper/StandLabelDataLayer";
 import { StandAllocationDataLayer } from "@/mapwrapper/StandAllocationDataLayer";
 import { GeofenceDataLayer } from "@/mapwrapper/GeofenceDataLayer";
+
+import StyleService from "@/services/StyleService";
+
 import VectorLayer from "ol/layer/Vector";
 
 export default defineComponent({
@@ -43,9 +50,15 @@ export default defineComponent({
   setup() {
     const layers: Ref<VectorLayer[]> = ref([]);
     const sources: Ref<MbTileSource[]> = ref([]);
+    const styleCacheCount = ref(0);
 
-    function oncenterpoitchanged(centerpoint: IPosition) {
-      console.log("centerpointchanged: " + centerpoint);
+    function oncenterpointchanged(centerpoint: IPosition) {
+      //console.log('StyleService.numberOfStyles: ' + StyleService.numberOfStyles);
+    styleCacheCount.value = StyleService.numberOfStyles;
+    }
+
+    function onzoomlevelchanged(zoomLevel: number) {
+      //console.log("onzoomlevelchanged: " + zoomLevel);
     }
 
     function setupDataLayers(): void {
@@ -58,10 +71,10 @@ export default defineComponent({
 
     function setupDataVehicleLayer() {
       layers.value.push(new GeofenceDataLayer());
-      layers.value.push(new VehicleDataLayer());
       layers.value.push(new TerminalResourceDataLayer());
       layers.value.push(new StandLabelDataLayer());
       layers.value.push(new StandAllocationDataLayer());
+      layers.value.push(new VehicleDataLayer());
       layers.value.forEach((layer) => layer.init());
     }
 
@@ -72,9 +85,11 @@ export default defineComponent({
     });
 
     return {
-      oncenterpoitchanged,
+      oncenterpointchanged,
+      onzoomlevelchanged,
       sources,
       layers,
+      styleCacheCount,
     };
   },
 });
@@ -116,5 +131,12 @@ body {
 .cell-inspect {
   grid-column: 2;
   grid-row: 2;
+}
+
+.volker-css-hack {
+  background-color: aqua;
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
 }
 </style>
