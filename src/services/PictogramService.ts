@@ -42,33 +42,32 @@ class PictogramService {
             "</svg>");
 
 
-            this._pictograms.set('GPU',
+        this._pictograms.set('GPU',
             '<svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">' +
-            '<rect width="16" height="16" fill="%23fefefe" stroke="%23333333" />' + 
+            '<rect width="16" height="16" fill="%23fefefe" stroke="%23333333" />' +
             '<path d="M 7.89502,2.10419L 11.2604,2.16144L 7.21497,7.5733L 12.5847,6.31201L 8.82074,13.4573L 10.6145,13.4323L 7.23389,15.2709L 6.48303,12.7065L 7.58807,13.2732L 9.57294,8.55725L 4.10278,9.70288L 7.89502,2.10419 Z " ' +
             'stroke="black" fill="transparent"/>' +
             "</svg>");
 
-            this._pictograms.set('BUS',
+        this._pictograms.set('BUS',
             '<svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">' +
-            '<rect width="16" height="16" fill="%23FFFFFF" stroke="%23333333" />' + 
+            '<rect width="16" height="16" fill="%23FFFFFF" stroke="%23333333" />' +
             "</svg>");
 
-            this._pictograms.set('DEICE',
+        this._pictograms.set('DEICE',
             '<svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">' +
-            '<rect width="16" height="16" fill="yellow" stroke="%23333333" />' + 
+            '<rect width="16" height="16" fill="yellow" stroke="%23333333" />' +
             "</svg>");
 
-            this._pictograms.set('CAT',
+        this._pictograms.set('CAT',
             '<svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">' +
-            '<rect width="16" height="16" fill="red" stroke="%23333333" />' + 
+            '<rect width="16" height="16" fill="red" stroke="%23333333" />' +
             "</svg>");
     }
 
     public getPictogram(id: string): string {
         if (this._pictograms.has(id))
             return this._pictograms.get(id) as string;
-        console.log('not found: ' + id);
         return this._pictograms.get('DEFAULT') as string;
     }
 }

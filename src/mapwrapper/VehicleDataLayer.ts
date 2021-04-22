@@ -84,12 +84,10 @@ export class VehicleDataLayer implements IMapDataLayer {
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : '#000000');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#FFFFFF');
 
-
-    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
+    let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      console.log("VehicleDataLayer - create new style");
-      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+      const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
       style = new Style({
         image: new Icon({
           opacity: 1,
@@ -104,7 +102,7 @@ export class VehicleDataLayer implements IMapDataLayer {
           font: '4px sans-serif',
         }),
       })
-      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
+      StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
     }
 
     //IMAGE--------------

@@ -74,7 +74,6 @@ export class StandLabelDataLayer implements IMapDataLayer {
   private createStyle(feature: Feature, resolution: number): Style {
     const mapDataItem: IStand = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
-    const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
     const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
     const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
     const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
@@ -84,8 +83,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
     let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      console.log("StandLabelDataLayer - create new style");
-
+      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
       style = new Style({
         image: new Icon({
           opacity: 1,
