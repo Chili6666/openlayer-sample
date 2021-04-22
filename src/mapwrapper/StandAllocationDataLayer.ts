@@ -14,6 +14,8 @@ import Feature from "ol/Feature";
 import Geopoint from "ol/geom/Point";
 import Style from "ol/style/Style";
 import Icon from "ol/style/Icon";
+import Stroke from "ol/style/Stroke";
+import Fill from "ol/style/Fill";
 
 import {
   positionToPoint,
@@ -91,11 +93,11 @@ export class StandAllocationDataLayer implements IMapDataLayer {
         image: new Icon({
           opacity: 1,
           src: "data:image/svg+xml;utf8," + shape,
-          //color: shapeFillColor,
           rotateWithView: feature.get('rotateWithView'),
           rotation: direction,
-        })
-      })
+        }),
+      });
+
       StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
     }
 
@@ -115,12 +117,21 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     iconFeature.setId(standAllocation.EntityId);
     iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const mapItemVisualization = new MapItemVisualization('AIRCRAFT'/*standAllocation.PictogramId*/);
+    const piuId = this.anna(mapDataItem.DisplayName);
+    const mapItemVisualization = new MapItemVisualization(piuId/*standAllocation.PictogramId*/);
     mapItemVisualization.direction = mapDataItem.StandAllocationDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
     iconFeature.set('mapItemVisualization', mapItemVisualization);
     this._vectorSource.addFeature(iconFeature);
   }
 
+  anna(standName : string) : string{
+    if (standName.startsWith('A08') || standName.startsWith('A01'))
+      return 'AIRCRAFT_ORANGE'
+    else if (standName.startsWith('A06'))
+      return 'AIRCRAFT_RED'
+    else
+      return 'AIRCRAFT_GREEN'
+  }
 
 }

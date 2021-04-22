@@ -76,9 +76,9 @@ export default defineComponent({
       });
 
       let tileLayers: Array<TileLayer> = new Array<TileLayer>();
-     // tileLayers.push( new TileLayer({source: new OSM()}));
+      tileLayers.push( new TileLayer({source: new OSM()}));
 
-      createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
+     // createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
 
