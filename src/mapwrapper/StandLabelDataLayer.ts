@@ -111,7 +111,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
     style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
     style.getText().setScale(1 / resolution);
     style.getText().setText(mapDataItem.DisplayName);
- 
+
     return style;
   }
 
@@ -127,8 +127,11 @@ export class StandLabelDataLayer implements IMapDataLayer {
 
     const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
     mapItemVisualization.direction = dataItem.LabelDirection * (Math.PI / 180);
-    mapItemVisualization.textColor = "#000000"
-    mapItemVisualization.shapeFillColor = "#BBC4D3"
+    mapItemVisualization.textColor = "#000000";
+    if (dataItem.DisplayName.startsWith('A05'))
+      mapItemVisualization.shapeFillColor = "#FFAA66";
+    else
+      mapItemVisualization.shapeFillColor = "#BBC4D3";
     iconFeature.set('mapItemVisualization', mapItemVisualization);
 
     this._vectorSource.addFeature(iconFeature);

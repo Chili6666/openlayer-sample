@@ -4,6 +4,7 @@ import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import PictogramService from "@/services/PictogramService";
 import StyleService from "@/services/StyleService";
+import { MapItemVisualization } from "@/models/MapItemVisualization";
 
 
 import VectorSource from "ol/source/Vector";
@@ -66,39 +67,6 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
       updateWhileAnimating: true,
       updateWhileInteracting: true,
       source: this._vectorSource,
-      // style: function (feature, resolution)  {
-
-      //   const mapDataItem: ITerminalResource = feature.get('mapDataItem');
-      //   let style = StyleService.getStyle(mapDataItem.PictogramId, mapDataItem.EntityId, resolution);
-      //   if(!style){
-      //     const shape =  PictogramService.getPictogram(mapDataItem.PictogramId);
-
-      //     style = new Style({
-      //       image: new Icon({
-      //         opacity: 1,
-      //         src: "data:image/svg+xml;utf8," + shape,
-      //         scale: 1.5 / resolution,
-      //         rotateWithView: feature.get('rotateWithView'),
-      //         rotation: feature.get('rotation'),
-      //       }),
-      //       text: new Text({
-      //         text: mapDataItem.DisplayName,
-      //         fill: new Fill({
-      //           color: '#91A0B8',
-      //         }),
-      //         rotateWithView: feature.get('rotateWithView'),
-      //         rotation: feature.get('rotation'),
-      //         scale: 1.5 / resolution,
-      //         font: '4px sans-serif',
-      //       }),
-      //     })
-
-      //     //change colors and other relavent features
-      //     StyleService.setStyle(mapDataItem.PictogramId, mapDataItem.EntityId, resolution, style);
-      //   }
-
-      //   return style;
-      //},
       maxZoom: 20,
       minZoom: 14.5
     });
@@ -108,61 +76,64 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
 
   private createStyle(feature: Feature, resolution: number): Style {
     const mapDataItem: ITerminalResource = feature.get('mapDataItem');
-    const shouldTint: boolean = feature.get('shouldTint');
+    const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
+    const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+    const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
+    const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
+    const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
+    const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
+    const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
 
-    let style = StyleService.getStyle(mapDataItem.PictogramId, `${shouldTint}`);
+    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      console.log("TerminalResourceDataLayer - create new style");
-      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+       console.log("TerminalResourceDataLayer - create new style");
       style = new Style({
         image: new Icon({
           opacity: 1,
           src: "data:image/svg+xml;utf8," + shape,
-          rotateWithView: true,
+          rotateWithView: feature.get('rotateWithView'),
+         // color: 'orange',
         }),
         text: new Text({
-          text: mapDataItem.EntityId,
-          fill: new Fill({
-            color: '#91A0B8',
-          }),
           font: '4px sans-serif',
-          rotateWithView: true,
+          rotateWithView: feature.get('rotateWithView'),
         }),
       })
-      StyleService.setStyle(mapDataItem.PictogramId, `${shouldTint}`,style);
+
+      StyleService.setStyle(mapDataItem.PictogramId, mapItemVisualization.toString(), style);
     }
 
+    //change colors and other relavent features
     //IMAGE--------------
     style.getImage().setScale(1 / resolution);
-    style.getImage().setRotation(feature.get('rotation'));
-
-    //TEXT-----------
-    //style.getText().setFill(new Fill({ color: '#FF0000' }));
-    if (shouldTint)
-      style.getText().setBackgroundFill(new Fill({ color: '#FF0000' }));
-
-    style.getText().setRotation(feature.get('rotation'));
+    style.getImage().setRotation(direction);
+    //TEXT--------------
+    style.getText().setFill(new Fill({ color: textColor }));
+    style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
+    style.getText().setRotation(direction);
     style.getText().setScale(1 / resolution);
     style.getText().setText(mapDataItem.DisplayName);
+
     return style;
   }
 
-  private addMapDataItem(mapDataItem: ITerminalResource): void {
-    const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.Longitude, mapDataItem.Latitude])));
+
+  private addMapDataItem(dataItem: ITerminalResource): void {
+    const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.Longitude, dataItem.Latitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
-    iconFeature.set('rotation', mapDataItem.Direction * (Math.PI / 180));
+
+    iconFeature.set('mapDataItem', dataItem);
+    iconFeature.setId(dataItem.EntityId);
     iconFeature.set('rotateWithView', this.rotateWithView);
-    iconFeature.set('mapDataItem', mapDataItem);
 
-    if (mapDataItem.DisplayName === "01")
-      iconFeature.set('shouldTint', true);
-    else
-      iconFeature.set('shouldTint', false);
-
-    iconFeature.setId(mapDataItem.EntityId);
+    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
+    mapItemVisualization.direction = dataItem.Direction * (Math.PI / 180);
+    mapItemVisualization.textColor = "#000000";
+    mapItemVisualization.shapeFillColor = "#7588A6";
+    iconFeature.set('mapItemVisualization', mapItemVisualization);
     this._vectorSource.addFeature(iconFeature);
   }
 }
