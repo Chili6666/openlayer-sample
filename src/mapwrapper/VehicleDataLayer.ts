@@ -78,9 +78,6 @@ export class VehicleDataLayer implements IMapDataLayer {
   private createStyle(feature: Feature, resolution: number): Style {
     const mapDataItem: IVehicle = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
-    //const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-   // const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
-    //const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : '#000000');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#FFFFFF');
 
@@ -92,12 +89,8 @@ export class VehicleDataLayer implements IMapDataLayer {
         image: new Icon({
           opacity: 1,
           src: "data:image/svg+xml;utf8," + shape,
-          fill: new Fill({
-            color: "#8959A8",
-          }),
         }),
         text: new Text({
-          text: mapDataItem.EntityId,
           padding: [3, 3, 3, 3],
           font: '4px sans-serif',
         }),
@@ -184,16 +177,7 @@ export class VehicleDataLayer implements IMapDataLayer {
     mapItemVisualization.direction = dataItem.Direction;
     mapItemVisualization.textFillColor = '#FFFFFF';
     mapItemVisualization.textColor = "#000000"
-
-    //fake
-    if (dataItem.EntityId.startsWith('Vehicle.BUS1'))
-      mapItemVisualization.shapeFillColor = 'orange';
-    else
-      mapItemVisualization.shapeFillColor = 'white';
-
     iconFeature.set('mapItemVisualization', mapItemVisualization);
-
-
     this._vectorSource.addFeature(iconFeature);
   }
 }

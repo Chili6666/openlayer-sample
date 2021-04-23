@@ -77,11 +77,8 @@ export class StandAllocationDataLayer implements IMapDataLayer {
   }
 
   private createStyle(feature: Feature, resolution: number): Style {
-    const mapDataItem: IStand = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
     const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-    const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
-    const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
 
@@ -117,21 +114,21 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     iconFeature.setId(standAllocation.EntityId);
     iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const piuId = this.anna(mapDataItem.DisplayName);
-    const mapItemVisualization = new MapItemVisualization(piuId/*standAllocation.PictogramId*/);
+    const pictogramId = this.computePictigramId("AIRCRAFT", mapDataItem.DisplayName/*,standAllocation.PictogramId*/);
+    const mapItemVisualization = new MapItemVisualization(pictogramId);
     mapItemVisualization.direction = mapDataItem.StandAllocationDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
     iconFeature.set('mapItemVisualization', mapItemVisualization);
     this._vectorSource.addFeature(iconFeature);
   }
 
-  anna(standName : string) : string{
+  computePictigramId(pictogramId: string, standName: string) : string{
     if (standName.startsWith('A08') || standName.startsWith('A01'))
-      return 'AIRCRAFT_ORANGE'
+      return pictogramId + '_ORANGE';
     else if (standName.startsWith('A06'))
-      return 'AIRCRAFT_RED'
+      return pictogramId + '_RED';
     else
-      return 'AIRCRAFT_GREEN'
+      return pictogramId + '_GREEN';
   }
 
 }

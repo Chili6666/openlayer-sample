@@ -75,25 +75,21 @@ export class StandLabelDataLayer implements IMapDataLayer {
     const mapDataItem: IStand = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
     const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-    const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
-    const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
 
-    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
+    let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+      const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
       style = new Style({
         image: new Icon({
           opacity: 1,
           src: "data:image/svg+xml;utf8," + shape,
-          color: shapeFillColor,
           rotateWithView: feature.get('rotateWithView'),
           rotation: direction,
         }),
         text: new Text({
-          text: mapDataItem.DisplayName,
           rotateWithView: feature.get('rotateWithView'),
           rotation: direction,
           font: '8px sans-serif',
@@ -123,15 +119,21 @@ export class StandLabelDataLayer implements IMapDataLayer {
     iconFeature.setId(dataItem.EntityId);
     iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
+    const pictogramId = this.computePictigramId(dataItem.PictogramId, dataItem.DisplayName);
+    const mapItemVisualization = new MapItemVisualization(pictogramId);
     mapItemVisualization.direction = dataItem.LabelDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
-    if (dataItem.DisplayName.startsWith('A05'))
-      mapItemVisualization.shapeFillColor = "#FFAA66";
-    else
-      mapItemVisualization.shapeFillColor = "#BBC4D3";
     iconFeature.set('mapItemVisualization', mapItemVisualization);
-
     this._vectorSource.addFeature(iconFeature);
   }
+
+  computePictigramId(pictogramId: string, standName : string) : string{
+    if (standName.startsWith('B12'))
+      return pictogramId + '_ORANGE';
+    else  if (standName.startsWith('B09'))
+      return pictogramId + '_GREEN';
+    else
+      return pictogramId;
+  }
+
 }

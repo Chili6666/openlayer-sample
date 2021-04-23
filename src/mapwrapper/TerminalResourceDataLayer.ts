@@ -78,21 +78,18 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     const mapDataItem: ITerminalResource = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
     const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-    const shapeFillColor = (mapItemVisualization.shapeFillColor !== undefined ? mapItemVisualization.shapeFillColor : '');
-    const shapeStrokeColor = (mapItemVisualization.shapeStrokeColor !== undefined ? mapItemVisualization.shapeStrokeColor : 'black');
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
 
-    let style = StyleService.getStyle(mapDataItem.PictogramId, mapItemVisualization.toString());
+    let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
     if (!style) {
-      const shape = PictogramService.getPictogram(mapDataItem.PictogramId);
+      const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
       style = new Style({
         image: new Icon({
           opacity: 1,
           src: "data:image/svg+xml;utf8," + shape,
           rotateWithView: feature.get('rotateWithView'),
-         // color: 'orange',
         }),
         text: new Text({
           font: '4px sans-serif',
@@ -117,7 +114,6 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     return style;
   }
 
-
   private addMapDataItem(dataItem: ITerminalResource): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.Longitude, dataItem.Latitude])));
     const iconFeature = new Feature({
@@ -128,11 +124,20 @@ export class TerminalResourceDataLayer implements IMapDataLayer {
     iconFeature.setId(dataItem.EntityId);
     iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
+    const pictogramId = this.computePictigramId(dataItem.PictogramId, dataItem.DisplayName);
+    const mapItemVisualization = new MapItemVisualization(pictogramId);
+
     mapItemVisualization.direction = dataItem.Direction * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
-    mapItemVisualization.shapeFillColor = "#7588A6";
     iconFeature.set('mapItemVisualization', mapItemVisualization);
     this._vectorSource.addFeature(iconFeature);
   }
+
+  computePictigramId(pictogramId: string, standName : string) : string{
+    if (standName.startsWith('01') || standName.startsWith('02') || standName.startsWith('03'))
+      return pictogramId + '_ORANGE';
+    else
+      return pictogramId;
+  }
+
 }
