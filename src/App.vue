@@ -24,9 +24,8 @@
             </div>
             <div>
               <div v-for="layer in layers" :key="layer.name">
-               
                 <input type="checkbox" v-model="layer.isVisible" />
-                 {{ layer.name }}
+                {{ layer.name }}
               </div>
             </div>
           </template>
@@ -49,10 +48,10 @@ import MapLayout from "@/components/MapLayout.vue";
 
 import { MbTileSource } from "./mapwrapper/MbTileSource";
 import { IPosition } from "./mapwrapper/IPosition";
-import { VehicleDataLayer } from "@/mapwrapper/VehicleDataLayer";
-import { TerminalResourceDataLayer } from "@/mapwrapper/TerminalResourceDataLayer";
-import { StandLabelDataLayer } from "@/mapwrapper/StandLabelDataLayer";
-import { StandAllocationDataLayer } from "@/mapwrapper/StandAllocationDataLayer";
+import { VehicleDataLayer } from "@/mapwrapper/datalayers/VehicleDataLayer";
+import { TerminalResourceDataLayer } from "@/mapwrapper/datalayers/TerminalResourceDataLayer";
+import { StandLabelDataLayer } from "@/mapwrapper/datalayers/StandLabelDataLayer";
+import { StandAllocationDataLayer } from "@/mapwrapper/datalayers/StandAllocationDataLayer";
 import { GeofenceDataLayer } from "@/mapwrapper/GeofenceDataLayer";
 
 import StyleService from "@/services/StyleService";
@@ -97,6 +96,7 @@ export default defineComponent({
       layers.value.push(new StandLabelDataLayer());
       layers.value.push(new StandAllocationDataLayer());
       layers.value.push(new VehicleDataLayer());
+
       layers.value.forEach((layer) => layer.init());
     }
 

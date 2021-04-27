@@ -11,7 +11,7 @@
 .container {
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 150px;
+  grid-template-rows: 1fr 20%;
   grid-template-columns: 100%;
 }
 .mapcell {
@@ -29,7 +29,6 @@
   grid-row-start: 2;
   grid-row-end: 3;
   overflow-y: auto;
-  height: 140px;
-  max-height: 140px;
+  height: 100%;
 }
 </style>

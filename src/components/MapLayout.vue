@@ -21,7 +21,7 @@
 .debugdisplay-container {
   background-color: rgba(211, 211, 211, 0.616);
   position: absolute;
-  top: 0;
+  top: 40px;
   right: 0;
   margin: 5px;
 }
