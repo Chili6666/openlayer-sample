@@ -68,10 +68,10 @@ export class StandLabelDataLayer implements IMapDataLayer {
       maxZoom: 20,
       minZoom: 14.5
     });
-    this._vectorLayer.setStyle(this.createStyle);
+    this._vectorLayer.setStyle(this.createStyles);
   }
 
-  private createStyle(feature: Feature, resolution: number): Style {
+  private createStyles(feature: Feature, resolution: number): Style[] {
     const mapDataItem: IStand = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
     const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
@@ -106,7 +106,7 @@ export class StandLabelDataLayer implements IMapDataLayer {
     style.getText().setScale(1 / resolution);
     style.getText().setText(mapDataItem.DisplayName);
 
-    return style;
+    return [style];
   }
 
   private addMapDataItem(dataItem: IStand): void {

@@ -6,289 +6,488 @@
 				"Direction": 1.51,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70732027,
-					"Longitude": 6.16558352
-				}
-			},
-			{
+				  "Latitude": 50.70732027,
+				  "Longitude": 6.16558352
+				},
+				"DisplayName": "BUS5",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "BUS"
+			  },
+			  {
 				"EntityId": "Vehicle.Fuel Truck 1",
 				"Direction": 0,
 				"PictogramId": "FUEL",
 				"Position": {
-					"Latitude": 50.70918934,
-					"Longitude": 6.16753393
-				}
-			},
-			{
+				  "Latitude": 50.70918934,
+				  "Longitude": 6.16753393
+				},
+				"DisplayName": "Fuel 1",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "FUELING"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU01",
 				"Direction": 270,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.71232047,
-					"Longitude": 6.1584908800000008
-				}
-			},
-			{
+				  "Latitude": 50.71232047,
+				  "Longitude": 6.1584908800000004
+				},
+				"DisplayName": "GPU1",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU02",
 				"Direction": 153.43,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.7136927,
-					"Longitude": 6.16011945
-				}
-			},
-			{
+				  "Latitude": 50.7136927,
+				  "Longitude": 6.16011945
+				},
+				"DisplayName": "GPU2",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU03",
 				"Direction": 206.57,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.70919321,
-					"Longitude": 6.16724756
-				}
-			},
-			{
+				  "Latitude": 50.70919321,
+				  "Longitude": 6.16724756
+				},
+				"DisplayName": "GPU3",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU04",
 				"Direction": 90,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.7078517,
-					"Longitude": 6.17126629
-				}
-			},
-			{
+				  "Latitude": 50.7078517,
+				  "Longitude": 6.17126629
+				},
+				"DisplayName": "GPU4",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU05",
 				"Direction": 153.43,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.70900993,
-					"Longitude": 6.17324647
-				}
-			},
-			{
+				  "Latitude": 50.70900993,
+				  "Longitude": 6.17324647
+				},
+				"DisplayName": "GPU5",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU06",
 				"Direction": 153.43,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.7140931,
-					"Longitude": 6.15890032
-				}
-			},
-			{
+				  "Latitude": 50.7140931,
+				  "Longitude": 6.15890032
+				},
+				"DisplayName": "GPU6",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU07",
 				"Direction": 90,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.71542638,
-					"Longitude": 6.15514264
-				}
-			},
-			{
+				  "Latitude": 50.71542638,
+				  "Longitude": 6.15514264
+				},
+				"DisplayName": "GPU7",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.GPU08",
 				"Direction": 161.57,
 				"PictogramId": "GPU",
 				"Position": {
-					"Latitude": 50.71411786,
-					"Longitude": 6.14735182
-				}
-			},
-			{
+				  "Latitude": 50.71411786,
+				  "Longitude": 6.14735182
+				},
+				"DisplayName": "GPU8",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "GPU"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_1",
 				"Direction": 0,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.71799631,
-					"Longitude": 6.14670552
-				}
-			},
-			{
+				  "Latitude": 50.71799631,
+				  "Longitude": 6.14670552
+				},
+				"DisplayName": "DT_1",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_2",
 				"Direction": 178.57,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.71744931,
-					"Longitude": 6.14672707
-				}
-			},
-			{
+				  "Latitude": 50.71744931,
+				  "Longitude": 6.14672707
+				},
+				"DisplayName": "DT_2",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_3",
 				"Direction": 270,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.717482,
-					"Longitude": 6.14972039
-				}
-			},
-			{
+				  "Latitude": 50.717482,
+				  "Longitude": 6.14972039
+				},
+				"DisplayName": "DT_3",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_4",
 				"Direction": 14.38,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.71781788,
-					"Longitude": 6.14892982
-				}
-			},
-			{
+				  "Latitude": 50.71781788,
+				  "Longitude": 6.14892982
+				},
+				"DisplayName": "DT_4",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_5",
 				"Direction": 116.57000000000001,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.70719577,
-					"Longitude": 6.18010673
-				}
-			},
-			{
+				  "Latitude": 50.70719577,
+				  "Longitude": 6.18010673
+				},
+				"DisplayName": "DT_5",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_6",
 				"Direction": 67.96000000000001,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.70732568,
-					"Longitude": 6.18064648
-				}
-			},
-			{
+				  "Latitude": 50.70732568,
+				  "Longitude": 6.18064648
+				},
+				"DisplayName": "DT_6",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_7",
 				"Direction": 243.43,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.70676293,
-					"Longitude": 6.18057853
-				}
-			},
-			{
+				  "Latitude": 50.70676293,
+				  "Longitude": 6.18057853
+				},
+				"DisplayName": "DT_7",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.DT_8",
 				"Direction": 14.38,
 				"PictogramId": "DEICE",
 				"Position": {
-					"Latitude": 50.70767372,
-					"Longitude": 6.17971802
-				}
-			},
-			{
+				  "Latitude": 50.70767372,
+				  "Longitude": 6.17971802
+				},
+				"DisplayName": "DT_8",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "DEICING"
+			  },
+			  {
 				"EntityId": "Vehicle.Fuel Truck 2",
 				"Direction": 45,
 				"PictogramId": "FUEL",
 				"Position": {
-					"Latitude": 50.7129738,
-					"Longitude": 6.16150568
-				}
-			},
-			{
+				  "Latitude": 50.7129738,
+				  "Longitude": 6.16150568
+				},
+				"DisplayName": "Fuel 2",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "FUELING"
+			  },
+			  {
 				"EntityId": "Vehicle.TEC01",
 				"Direction": 0,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70923065,
-					"Longitude": 6.15034428
-				}
-			},
-			{
+				  "Latitude": 50.70923065,
+				  "Longitude": 6.15034428
+				},
+				"DisplayName": "TEC01",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "FLEET"
+			  },
+			  {
 				"EntityId": "Vehicle.TEC02",
 				"Direction": 336.8,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70939809,
-					"Longitude": 6.15023095
-				}
-			},
-			{
+				  "Latitude": 50.70939809,
+				  "Longitude": 6.15023095
+				},
+				"DisplayName": "TEC02",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "FLEET"
+			  },
+			  {
 				"EntityId": "Vehicle.TEC03",
 				"Direction": 334.06,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70960041,
-					"Longitude": 6.15007551
-				}
-			},
-			{
+				  "Latitude": 50.70960041,
+				  "Longitude": 6.15007551
+				},
+				"DisplayName": "TEC03",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "FLEET"
+			  },
+			  {
 				"EntityId": "Vehicle.TEC04",
 				"Direction": 332.88,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70982473,
-					"Longitude": 6.14989407
-				}
-			},
-			{
+				  "Latitude": 50.70982473,
+				  "Longitude": 6.14989407
+				},
+				"DisplayName": "TEC04",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "FLEET"
+			  },
+			  {
 				"EntityId": "Vehicle.BUS2 - 80",
 				"Direction": 70.87,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70907846,
-					"Longitude": 6.16149472
-				}
-			},
-			{
+				  "Latitude": 50.70907846,
+				  "Longitude": 6.16149472
+				},
+				"DisplayName": "BUS2",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "BUS"
+			  },
+			  {
 				"EntityId": "Vehicle.CAT_40_28FT",
 				"Direction": 296.57,
 				"PictogramId": "CAT",
 				"Position": {
-					"Latitude": 50.70601442,
-					"Longitude": 6.1806809
-				}
-			},
-			{
+				  "Latitude": 50.70601442,
+				  "Longitude": 6.1806809
+				},
+				"DisplayName": "CAT_40",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "CATERING"
+			  },
+			  {
 				"EntityId": "Vehicle.CAT_41_28FT",
 				"Direction": 90,
 				"PictogramId": "CAT",
 				"Position": {
-					"Latitude": 50.70612933,
-					"Longitude": 6.18115122
-				}
-			},
-			{
+				  "Latitude": 50.70612933,
+				  "Longitude": 6.18115122
+				},
+				"DisplayName": "CAT_41",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "CATERING"
+			  },
+			  {
 				"EntityId": "Vehicle.CAT_42_28FT",
 				"Direction": 225,
 				"PictogramId": "CAT",
 				"Position": {
-					"Latitude": 50.70620726,
-					"Longitude": 6.18146861
-				}
-			},
-			{
+				  "Latitude": 50.70620726,
+				  "Longitude": 6.18146861
+				},
+				"DisplayName": "CAT_42",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "CATERING"
+			  },
+			  {
 				"EntityId": "Vehicle.CAT_43_28FT",
 				"Direction": 45,
 				"PictogramId": "CAT",
 				"Position": {
-					"Latitude": 50.70637689,
-					"Longitude": 6.18205319
-				}
-			},
-			{
+				  "Latitude": 50.70637689,
+				  "Longitude": 6.18205319
+				},
+				"DisplayName": "CAT_43",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "CATERING"
+			  },
+			  {
 				"EntityId": "Vehicle.BUS1 - 80",
 				"Direction": 90,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.71062775,
-					"Longitude": 6.16928297
-				}
-			},
-			{
+				  "Latitude": 50.71062775,
+				  "Longitude": 6.16928297
+				},
+				"DisplayName": "BUS1",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "BUS"
+			  },
+			  {
 				"EntityId": "Vehicle.BUS3 - 80",
 				"Direction": 30.26,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.71267963,
-					"Longitude": 6.15566278
-				}
-			},
-			{
+				  "Latitude": 50.71267963,
+				  "Longitude": 6.15566278
+				},
+				"DisplayName": "BUS3",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [
+				  {
+					"EntityId": "Occurrence.Occurrence.801952508",
+					"Id": "Occurrence.801952508",
+					"MessageText": "Apron Speed limit violation (BUS3), Max speed: 37.69, Start: 18.09.2020 12:06:29, End: ",
+					"IsClosed": false
+				  }
+				],
+				"Orientation": 0,
+				"TypeName": "BUS"
+			  },
+			  {
 				"EntityId": "Vehicle.BUS4 - 80",
 				"Direction": 310.22,
 				"PictogramId": "BUS",
 				"Position": {
-					"Latitude": 50.70925464,
-					"Longitude": 6.15740641
-				}
-			},
-			{
+				  "Latitude": 50.70925464,
+				  "Longitude": 6.15740641
+				},
+				"DisplayName": "BUS4",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": [],
+				"Orientation": 0,
+				"TypeName": "BUS"
+			  },
+			  {
 				"EntityId": "Vehicle.",
 				"Direction": 1.51,
 				"PictogramId": null,
 				"Position": {
-					"Latitude": 50.0414552,
-					"Longitude": 8.5479322
-				}
-			}
+				  "Latitude": 50.0414552,
+				  "Longitude": 8.5479322
+				},
+				"DisplayName": "BUS5 (FRA)",
+				"Mileage": null,
+				"CurrentDriverName": null,
+				"Occurrences": null,
+				"Orientation": 0,
+				"TypeName": "BUS"
+			  }
 		]
 	}
 }

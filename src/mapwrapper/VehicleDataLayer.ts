@@ -13,8 +13,11 @@ import Feature from "ol/Feature";
 import Geopoint from "ol/geom/Point";
 import Style from "ol/style/Style";
 import Fill from "ol/style/Fill";
+import Stroke from "ol/style/Stroke";
 import Text from "ol/style/Text";
 import Icon from "ol/style/Icon";
+import Circle from "ol/style/Circle";
+
 
 import {
   positionToPoint,
@@ -32,6 +35,10 @@ export class VehicleDataLayer implements IMapDataLayer {
   constructor() {
     console.log('constructor');
     this._rotateWithView = false;
+  }
+
+  public get vehicles() : Ref<IVehicle[]>{
+      return this._mapDataItems;
   }
 
   public set rotateWithView(value: boolean) {
@@ -72,14 +79,31 @@ export class VehicleDataLayer implements IMapDataLayer {
       maxZoom: 20,
       minZoom: 14.5
     });
-    this._vectorLayer.setStyle(this.createStyle);
+    this._vectorLayer.setStyle(this.createStyles);
   }
 
-  private createStyle(feature: Feature, resolution: number): Style {
+  private createStyles(feature: Feature, resolution: number): Style[] {
     const mapDataItem: IVehicle = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
     const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : '#000000');
     const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#FFFFFF');
+
+    let alertStyle = StyleService.getStyle('VEHICLE_ALERT', '');
+    if (!alertStyle) {
+      alertStyle = new Style({
+        image: new Circle({
+          radius: 15,
+          stroke: new Stroke({
+            color: '#fff',
+          }),
+          fill: new Fill({
+            color: 'red',
+          }),
+        })
+      });
+      console.log('create V alertstyle');
+      StyleService.setStyle('VEHICLE_ALERT', '', alertStyle);
+    }
 
     let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
@@ -91,7 +115,7 @@ export class VehicleDataLayer implements IMapDataLayer {
           src: "data:image/svg+xml;utf8," + shape,
         }),
         text: new Text({
-          padding: [3, 3, 3, 3],
+          padding: [3, 3, 3, 3],//should be resolution dependent
           font: '4px sans-serif',
         }),
       })
@@ -104,10 +128,18 @@ export class VehicleDataLayer implements IMapDataLayer {
 
     style.getText().setFill(new Fill({ color: textColor }));
     style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
-    style.getText().setOffsetY(18 * 1 / resolution);
+    style.getText().setOffsetY(16 * 1 / resolution);
+    style.getText().setOffsetX(16 * 1 / resolution);
     style.getText().setScale(1 / resolution);
-    style.getText().setText(mapDataItem.EntityId);
-    return style;
+    style.getText().setText(mapDataItem.DisplayName);
+
+    if (mapDataItem.Occurrences.length > 0) {
+      alertStyle.getImage().setScale(1 / resolution);
+      style.getText().setBackgroundFill(new Fill({ color: 'red' }));
+      return [alertStyle, style];
+    }
+    else
+      return [style];
   }
 
 

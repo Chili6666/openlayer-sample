@@ -16,6 +16,8 @@ import Style from "ol/style/Style";
 import Icon from "ol/style/Icon";
 import Stroke from "ol/style/Stroke";
 import Fill from "ol/style/Fill";
+import Circle from "ol/style/Circle";
+import Text from "ol/style/Text";
 
 import {
   positionToPoint,
@@ -73,16 +75,38 @@ export class StandAllocationDataLayer implements IMapDataLayer {
       minZoom: 14.5
     });
 
-    this._vectorLayer.setStyle(this.createStyle);
+    this._vectorLayer.setStyle(this.createStyles);
   }
 
-  private createStyle(feature: Feature, resolution: number): Style {
+  private createStyles(feature: Feature, resolution: number): Style[] {
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
     const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-    const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
-    const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
+    const standAllocation: IStandAllocation = feature.get('mapDataItem');
+
 
     let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
+    let alertStyle = StyleService.getStyle(mapItemVisualization.pictogramId + 'STANDALLOCATION_ALERT', mapItemVisualization.toString());
+    if (!alertStyle) {
+      alertStyle = new Style({
+        image: new Circle({
+          radius: 5,
+          stroke: new Stroke({
+            color: '#fff',
+          }),
+          fill: new Fill({
+            color: 'red',
+          }),
+        }),
+        text: new Text({
+          text: '1',
+          fill: new Fill({
+            color: '#fff',
+          }),
+        }),
+      });
+      console.log('create SA alertstyle');
+      StyleService.setStyle(mapItemVisualization.pictogramId + 'STANDALLOCATION_ALERT', mapItemVisualization.toString(), alertStyle);
+    }
 
     if (!style) {
       const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
@@ -100,8 +124,15 @@ export class StandAllocationDataLayer implements IMapDataLayer {
 
     //IMAGE--------------
     //change colors and other relavent features
-    style.getImage().setScale(1 / resolution);
-    return style;
+    if(standAllocation.EntityId === 'StandAllocation.801782836'){
+      style.getImage().setScale(1 / resolution);
+      alertStyle.getImage().setScale(1 / resolution);
+      return [style, alertStyle];
+    }
+    else{
+      style.getImage().setScale(1 / resolution);
+      return [style];
+    }
   }
 
   private addMapDataItem2(mapDataItem: IStand, standAllocation: IStandAllocation): void {
@@ -122,7 +153,7 @@ export class StandAllocationDataLayer implements IMapDataLayer {
     this._vectorSource.addFeature(iconFeature);
   }
 
-  computePictigramId(pictogramId: string, standName: string) : string{
+  computePictigramId(pictogramId: string, standName: string): string {
     if (standName.startsWith('A08') || standName.startsWith('A01'))
       return pictogramId + '_ORANGE';
     else if (standName.startsWith('A06'))

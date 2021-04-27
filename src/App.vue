@@ -1,35 +1,52 @@
 <template>
   <div id="app">
-    <div class="cell cell-map">
-      <MapContainer
-        :zoomlevel="14.6"
-        :longitude="6.166084"
-        :latitude="50.71366"
-        :wrapX="false"
-        :datalayers="sources"
-        :vectorLayers="layers"
-        @centerpoint="oncenterpointchanged"
-        @zoomlevel="onzoomlevelchanged"
-      />
-    </div>
-
-    <div class="volker-css-hack">
-      {{ styleCacheCount }}
-    </div>
-
-    <div class="cell cell-edit">
-      <div v-for="layer in layers" :key="layer.name">
-        {{ layer.name }}
-        <input type="checkbox" v-model="layer.isVisible" />
-      </div>
-    </div>
-    <div class="cell cell-inspect">Inspect</div>
+    <Layout>
+      <template v-slot:default>
+        <MapLayout>
+          <template v-slot:default>
+            <MapContainer
+              :zoomlevel="14.6"
+              :longitude="6.166084"
+              :latitude="50.71366"
+              :wrapX="false"
+              :datalayers="sources"
+              :vectorLayers="layers"
+              @centerpoint="oncenterpointchanged"
+              @zoomlevel="onzoomlevelchanged"
+            />
+          </template>
+          <template v-slot:hotSpotSlot>
+            <HotspotViewer />
+          </template>
+          <template v-slot:debugDisplaySlot>
+            <div>
+              {{ styleCacheCount }}
+            </div>
+            <div>
+              <div v-for="layer in layers" :key="layer.name">
+               
+                <input type="checkbox" v-model="layer.isVisible" />
+                 {{ layer.name }}
+              </div>
+            </div>
+          </template>
+        </MapLayout>
+      </template>
+      <template v-slot:objectBrowserSlot>
+        <ObjectBrowser />
+      </template>
+    </Layout>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, Ref, ref, onMounted, onBeforeMount } from "vue";
+import { defineComponent, Ref, ref, onBeforeMount } from "vue";
 import MapContainer from "@/components/MapContainer.vue";
+import Layout from "@/components/Layout.vue";
+import ObjectBrowser from "@/components/ObjectBrowser.vue";
+import HotspotViewer from "@/components/HotspotViewer.vue";
+import MapLayout from "@/components/MapLayout.vue";
+
 import { MbTileSource } from "./mapwrapper/MbTileSource";
 import { IPosition } from "./mapwrapper/IPosition";
 import { VehicleDataLayer } from "@/mapwrapper/VehicleDataLayer";
@@ -46,22 +63,27 @@ export default defineComponent({
   name: "App",
   components: {
     MapContainer,
+    Layout,
+    ObjectBrowser,
+    HotspotViewer,
+    MapLayout,
   },
   setup() {
     const layers: Ref<VectorLayer[]> = ref([]);
     const sources: Ref<MbTileSource[]> = ref([]);
     const styleCacheCount = ref(0);
+    const isloading = ref(true);
 
     function oncenterpointchanged(centerpoint: IPosition) {
       //console.log('StyleService.numberOfStyles: ' + StyleService.numberOfStyles);
-    styleCacheCount.value = StyleService.numberOfStyles;
+      styleCacheCount.value = StyleService.numberOfStyles;
     }
 
     function onzoomlevelchanged(zoomLevel: number) {
       //console.log("onzoomlevelchanged: " + zoomLevel);
     }
 
-    function setupDataLayers(): void {
+    function setupMapBackgroundLayers(): void {
       let mbTileSource = new MbTileSource();
       mbTileSource.url = "./tiles/{z}/{x}/{y}.png";
       mbTileSource.maxZoom = 18;
@@ -69,7 +91,7 @@ export default defineComponent({
       sources.value.push(mbTileSource);
     }
 
-    function setupDataVehicleLayer() {
+    function setupDataLayers() {
       layers.value.push(new GeofenceDataLayer());
       layers.value.push(new TerminalResourceDataLayer());
       layers.value.push(new StandLabelDataLayer());
@@ -78,10 +100,12 @@ export default defineComponent({
       layers.value.forEach((layer) => layer.init());
     }
 
-    onBeforeMount(() => {
+    onBeforeMount(async () => {
+      isloading.value = true;
       console.log("onBeforeMount");
+      setupMapBackgroundLayers();
       setupDataLayers();
-      setupDataVehicleLayer();
+      isloading.value = false;
     });
 
     return {
@@ -90,6 +114,7 @@ export default defineComponent({
       sources,
       layers,
       styleCacheCount,
+      isloading,
     };
   },
 });
@@ -106,37 +131,6 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100%;
   display: grid;
-  grid-template-columns: 170vh;
-  grid-auto-rows: 1fr;
-  grid-gap: 1rem;
-  box-sizing: border-box;
-}
-
-.cell {
-  border-radius: 4px;
-  background-color: lightgrey;
-}
-
-.cell-map {
-  grid-column: 1;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.cell-edit {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.cell-inspect {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.volker-css-hack {
-  background-color: aqua;
-  position: absolute;
-  bottom: 0;
-  margin: 5px;
+  width: 100%;
 }
 </style>

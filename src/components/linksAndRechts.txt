@@ -1,21 +1,4 @@
 
+Grid:
 
-function onMoveEnd(value) {
-      console.log("onMoveEnd");
-
-      isDragging.value = false;
-      // let map = mappy;// value.map;
-      // //console.log('onMoveEnd: ' + value);
-      // let view = map.getView();
-      // let size = map.getSize();
-      // //var extent = olMap.getView().calculateExtent(olMap.getSize());
-      // let extend = view.calculateExtent(size);
-
-      // let center = view.getCenter();
-      // let centerpoint = toLonLat(center);
-      // context.emit("centerpoint", centerpoint);
-
-       let centerpoint = getCenterPoint();
-       context.emit("centerpoint", centerpoint);
-    }
-    
+https://blog.kulturbanause.de/2013/12/css-grid-layout-module/

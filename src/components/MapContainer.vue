@@ -11,7 +11,6 @@ import XYZ from "ol/source/XYZ";
 import OSM from "ol/source/OSM";
 import MapService from "@/services/MapService";
 
-
 import {
   positionToPoint,
   pointToPosition,
@@ -76,9 +75,9 @@ export default defineComponent({
       });
 
       let tileLayers: Array<TileLayer> = new Array<TileLayer>();
-     // tileLayers.push( new TileLayer({source: new OSM()}));
+       tileLayers.push( new TileLayer({source: new OSM()}));
 
-      createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
+      //createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
 
@@ -129,10 +128,7 @@ export default defineComponent({
       return pointToPosition(arrayToPoint(center));
     }
 
-    function createTileSources(
-      datalayers: Array<MbTileSource>,
-      tilelayers: Array<TileLayer>
-    ) {
+    function createTileSources( datalayers: Array<MbTileSource>, tilelayers: Array<TileLayer>) {
       for (let index = 0; index < datalayers.length; index++) {
         var datalayer = datalayers[index];
 

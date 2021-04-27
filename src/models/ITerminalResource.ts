@@ -6,4 +6,5 @@ export interface ITerminalResource {
     Longitude: number;
     DisplayName: string;
     PictogramId: string;
+    SubType : string;
 }

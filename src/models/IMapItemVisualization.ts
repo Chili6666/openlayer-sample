@@ -3,4 +3,5 @@ export interface IMapItemVisualization{
     pictogramId: string;
     textFillColor : string;
     textColor : string;
+    fontSize : string; 
 }
