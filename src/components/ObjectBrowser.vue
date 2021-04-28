@@ -3,14 +3,14 @@
   <div v-else>
     <table class="tableFixHead">
       <thead>
-        <th>DisplayName</th>
-        <th>Position</th>
+        <th v-for="header in headers" :key="header">{{ header }}</th>
       </thead>
-      <tr v-for="vehicle in vehicles" :key="vehicle.EntityId" @dblclick="centerItem(vehicle)">
-        <td>{{ vehicle.DisplayName }}</td>
-        <td>
-          {{ vehicle.Position.Latitude }}-{{ vehicle.Position.Longitude }}
-        </td>
+      <tr
+        v-for="(vehicle, index) in vehicles"
+        :key="index"
+        @dblclick="centerItem(vehicle)"
+      >
+        <td v-for="header in headers" :key="header">{{ vehicle[header] }}</td>
       </tr>
     </table>
   </div>
@@ -26,31 +26,35 @@ export default defineComponent({
   name: "object-browser",
   setup() {
     const vehicles: Ref<IVehicle[]> = ref([]);
+    const headers: Ref<string[]> = ref([]);
+
     const isloading = ref(true);
 
     onBeforeMount(async () => {
       isloading.value = true;
-      console.log("onBeforeMount");
       vehicles.value = await BaseModelDataService.getVehicles();
-      console.log("vehiclecount: " + vehicles.value.length);
 
-      const propNames = Object.getOwnPropertyNames(vehicles.value[0]);
-      propNames.forEach((element) => {
-        console.log("Prop: " + element);
-      });
+      headers.value.push("DisplayName");
+      headers.value.push("TypeName");
+      headers.value.push("OperationalStatusName");
+      headers.value.push("Department");
+      // const propNames = Object.getOwnPropertyNames(vehicles.value[0]);
+      // propNames.forEach((element) => {
+      //   headers.value.push(element);
+      // });
 
       isloading.value = false;
     });
 
-    function centerItem(item: IVehicle){
-
+    function centerItem(item: IVehicle) {
       MapService.moveMapToPosition(item.Position);
     }
 
     return {
       vehicles,
       isloading,
-      centerItem
+      centerItem,
+      headers,
     };
   },
 });
@@ -62,7 +66,7 @@ export default defineComponent({
 }
 .tableFixHead thead th {
   position: sticky;
-  top: 0;
+  top: 17px;
 }
 table {
   border-collapse: collapse;
@@ -78,7 +82,7 @@ th {
   background: #eee;
 }
 
-tr:hover{
+tr:hover {
   background: #eee;
 }
 </style>

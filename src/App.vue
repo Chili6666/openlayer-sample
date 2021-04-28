@@ -32,7 +32,11 @@
         </MapLayout>
       </template>
       <template v-slot:objectBrowserSlot>
-        <ObjectBrowser />
+        <ObjectBrowserContainer>
+          <template v-slot:default>
+            <ObjectBrowser/>
+          </template>
+        </ObjectBrowserContainer>
       </template>
     </Layout>
   </div>
@@ -45,6 +49,7 @@ import Layout from "@/components/Layout.vue";
 import ObjectBrowser from "@/components/ObjectBrowser.vue";
 import HotspotViewer from "@/components/HotspotViewer.vue";
 import MapLayout from "@/components/MapLayout.vue";
+import ObjectBrowserContainer from "@/components/ObjectBrowserContainer.vue";
 
 import { MbTileSource } from "./mapwrapper/MbTileSource";
 import { IPosition } from "./mapwrapper/IPosition";
@@ -66,6 +71,7 @@ export default defineComponent({
     ObjectBrowser,
     HotspotViewer,
     MapLayout,
+    ObjectBrowserContainer,
   },
   setup() {
     const layers: Ref<VectorLayer[]> = ref([]);

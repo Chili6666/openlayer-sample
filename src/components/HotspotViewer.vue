@@ -1,10 +1,11 @@
 <template>
-  <div
-    v-for="hotspot in hotspots"
-    :key="hotspot.name" >
-    <button @click="centerMap(hotspot)" class="hotspot-item">
-      {{ hotspot.name }}
-    </button>
+<div class="hotspot-header">Hotspots</div>
+  <div class="hotspot-container">
+    <div v-for="hotspot in hotspots" :key="hotspot.name">
+      <button @click="centerMap(hotspot)" class="hotspot-item">
+        {{ hotspot.name }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -73,6 +74,24 @@ export default defineComponent({
 
 <style scoped>
 
+.hotspot-header{
+  color:white;
+  border-color: black;
+  background-color: #444455DD;
+  height: 16px;
+  text-align: center;
+  font-size: 12px;
+  padding: 2px;
+}
+
+.hotspot-container {
+  background-color: white;
+  border-color: #444455DD; 
+  border-style: solid;
+  border-width: 1px;
+  padding: 1px;
+  display: flex;
+}
 
 .hotspot-item {
   margin: 3px;

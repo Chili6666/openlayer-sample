@@ -51,7 +51,7 @@ export class TerminalResourceDataLayer extends MapDataLayerBase {
     const mapItemVisualization = new MapItemVisualization(pictogramId);
 
     mapItemVisualization.direction = dataItem.Direction * (Math.PI / 180);
-    mapItemVisualization.textColor = "#000000";
+    mapItemVisualization.textColor = "#C6D6F1";
 
     if (dataItem.SubType === 'CARROUSELS')
       mapItemVisualization.fontSize = '10px';

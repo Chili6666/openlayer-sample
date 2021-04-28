@@ -12,7 +12,6 @@
 
 <style scoped>
 .hotspots-container {
-  display: flex;
   position: fixed;
   top: 0;
   left: 50%;
