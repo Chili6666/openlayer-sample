@@ -10,6 +10,7 @@ import { IVehicle } from "@/models/IVehicle";
 import { MapItemVisualization } from "@/models/MapItemVisualization";
 import StyleService from "@/services/StyleService";
 import PictogramService from "@/services/PictogramService";
+import MapService from "@/services/MapService";
 
 export class VehicleStyleFactory implements IStyleFactory {
 
@@ -23,7 +24,7 @@ export class VehicleStyleFactory implements IStyleFactory {
         if (!alertStyle) {
             alertStyle = new Style({
                 image: new Circle({
-                    radius: 15,
+                    radius: 14,
                     stroke: new Stroke({
                         color: '#fff',
                     }),
@@ -46,31 +47,37 @@ export class VehicleStyleFactory implements IStyleFactory {
                     src: "data:image/svg+xml;utf8," + shape,
                 }),
                 text: new Text({
-                    padding: [3, 3, 3, 3],//should be resolution dependent
-                    font: '4px sans-serif',
+                    padding: [1, 1, 1, 1],//should be resolution dependent
+                    font: '10px sans-serif',
                 }),
             })
             StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
         }
 
-        //IMAGE--------------
-        //change colors and other relavent features
-        style.getImage().setScale(1 / resolution);
+        const zoomLevel = MapService.view.getZoomForResolution(resolution);
+
+        if (zoomLevel > 14 && zoomLevel < 18) {
+            const zz = 1 / resolution + 1;
+            style.getImage().setScale(zz);
+            style.getText().setOffsetY(16 * zz);
+            style.getText().setOffsetX(16 * zz);
+        }
 
         style.getText().setFill(new Fill({ color: textColor }));
         style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
-        style.getText().setOffsetY(16 * 1 / resolution);
-        style.getText().setOffsetX(16 * 1 / resolution);
-        style.getText().setScale(1 / resolution);
         style.getText().setText(mapDataItem.DisplayName);
 
         if (mapDataItem.Occurrences.length > 0) {
-            alertStyle.getImage().setScale(1 / resolution);
+
+            if (zoomLevel > 14 && zoomLevel < 18) {
+                const zz = 1 / resolution + 1;
+                alertStyle.getImage().setScale(zz);
+            }
             style.getText().setBackgroundFill(new Fill({ color: 'red' }));
             return [alertStyle, style];
         }
-        else
-            return [style];
+
+        return [style];
     }
 }
 
