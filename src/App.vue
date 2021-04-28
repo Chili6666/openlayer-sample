@@ -20,7 +20,10 @@
           </template>
           <template v-slot:debugDisplaySlot>
             <div>
-              {{ styleCacheCount }}
+             Zoom: {{zoom}}
+            </div>
+            <div>
+              Styles: {{ styleCacheCount }}
             </div>
             <div>
               <div v-for="layer in layers" :key="layer.name">
@@ -78,6 +81,7 @@ export default defineComponent({
     const sources: Ref<MbTileSource[]> = ref([]);
     const styleCacheCount = ref(0);
     const isloading = ref(true);
+    const zoom = ref('');
 
     function oncenterpointchanged(centerpoint: IPosition) {
       //console.log('StyleService.numberOfStyles: ' + StyleService.numberOfStyles);
@@ -85,7 +89,7 @@ export default defineComponent({
     }
 
     function onzoomlevelchanged(zoomLevel: number) {
-      //console.log("onzoomlevelchanged: " + zoomLevel);
+      zoom.value = zoomLevel.toFixed(2);
     }
 
     function setupMapBackgroundLayers(): void {
@@ -121,6 +125,7 @@ export default defineComponent({
       layers,
       styleCacheCount,
       isloading,
+      zoom,
     };
   },
 });
