@@ -3,6 +3,9 @@
     <slot class="mapcell">mapcontrol</slot>
     <div class="objectbrowsercell">
       <slot name="objectBrowserSlot">object browser</slot>
+      <div class="interactiveLegend-container">
+        <slot name="interactiveLegendSlot">legend</slot>
+      </div>
     </div>
   </div>
 </template>
@@ -30,5 +33,12 @@
   grid-row-end: 3;
   overflow-y: auto;
   height: 100%;
+}
+.interactiveLegend-container {
+    background-color: rgba(211, 211, 211, 0.8);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(0px, -200px);
 }
 </style>

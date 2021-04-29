@@ -1,7 +1,7 @@
+import { IMapDataItem } from "./IMapDataItem";
 import { IStandAllocation } from "./IStandAllocation";
 
-export interface IStand {
-    EntityId: string
+export interface IStand  extends IMapDataItem {
     DisplayName: string
     LabelDirection: number
     LabelLatitude: number

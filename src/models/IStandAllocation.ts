@@ -1,4 +1,5 @@
-export interface IStandAllocation {
-    EntityId: string
+import { IMapDataItem } from "./IMapDataItem";
+
+export interface IStandAllocation  extends IMapDataItem {
     PictogramId: string
 }

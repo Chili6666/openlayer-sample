@@ -7,6 +7,7 @@
     <div class="debugdisplay-container">
       <slot name="debugDisplaySlot">debug display</slot>
     </div>
+
   </div>
 </template>
 
@@ -18,10 +19,12 @@
 }
 
 .debugdisplay-container {
-  background-color: rgba(211, 211, 211, 0.616);
+  background-color: rgba(211, 211, 211, 0.7);
   position: absolute;
   top: 40px;
   right: 0;
   margin: 5px;
 }
+
+
 </style>

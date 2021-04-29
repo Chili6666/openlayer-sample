@@ -11,12 +11,7 @@ import XYZ from "ol/source/XYZ";
 import OSM from "ol/source/OSM";
 import MapService from "@/services/MapService";
 
-import {
-  positionToPoint,
-  pointToPosition,
-  pointToArray,
-  arrayToPoint,
-} from "@/mapwrapper/MapHelper";
+import { positionToPoint, pointToArray } from "@/mapwrapper/MapHelper";
 
 // importing the OpenLayers stylesheet is required for having
 // good looking buttons!
@@ -24,6 +19,7 @@ import "ol/ol.css";
 import { MbTileSource } from "@/mapwrapper/MbTileSource";
 import { IPosition } from "@/mapwrapper/IPosition";
 import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
+import { IMapDataItem } from "@/models/IMapDataItem";
 
 export default defineComponent({
   props: {
@@ -75,32 +71,36 @@ export default defineComponent({
       });
 
       let tileLayers: Array<TileLayer> = new Array<TileLayer>();
-       tileLayers.push( new TileLayer({source: new OSM()}));
+      // tileLayers.push( new TileLayer({source: new OSM()}));
 
-      //createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
+      createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
       let vl = vectorLayers.value as Array<IMapDataLayer>;
       vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
 
       // this is where we create the OpenLayers map
       internalMap = new Map({
         // the map will be created using the 'root' ref
-        target: root.value,
+        //target: root.value,
         layers: tileLayers,
+      });
 
-        view: new View({
+      internalMap.setTarget(root.value);
+
+      internalMap.setView(
+        new View({
           zoom: zoomlevel.value,
           center: pointToArray(centerpoint),
           constrainResolution: false,
           maxZoom: props.maxZoom,
           minZoom: props.minZoom,
           rotation: 0.0,
-        }),
-      });
+        })
+      );
 
       internalMap.on("moveend", onMoveEnd);
       internalMap.on("movestart", onMoveStart);
       internalMap.on("pointermove", onMove);
-
+      internalMap.on("singleclick", onSingleClick);
       MapService.initializeService(internalMap);
     });
 
@@ -122,13 +122,24 @@ export default defineComponent({
       context.emit("zoomlevel", internalMap?.getView().getZoom());
     }
 
-    function getCenterPoint(): IPosition {
-      let view = internalMap?.getView();
-      let center = view?.getCenter();
-      return pointToPosition(arrayToPoint(center));
+    function onSingleClick(value: any): void {
+      isDragging.value = false;
+      const mapDataItem: IMapDataItem = MapService.GetMapDataItemAtPixel(
+        value.pixel
+      );
+      if (mapDataItem) {
+        context.emit("mapDataitemSelected", mapDataItem);
+      }
     }
 
-    function createTileSources( datalayers: Array<MbTileSource>, tilelayers: Array<TileLayer>) {
+    function getCenterPoint(): IPosition {
+      return MapService.centerPoint;
+    }
+
+    function createTileSources(
+      datalayers: Array<MbTileSource>,
+      tilelayers: Array<TileLayer>
+    ) {
       for (let index = 0; index < datalayers.length; index++) {
         var datalayer = datalayers[index];
 

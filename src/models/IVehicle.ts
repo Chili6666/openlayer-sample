@@ -1,8 +1,8 @@
 import { IPosition } from "../mapwrapper/IPosition";
+import { IMapDataItem } from "./IMapDataItem";
 import { IOccurrence } from "./IOccurrence";
 
-export interface IVehicle {
-    EntityId: string;
+export interface IVehicle extends IMapDataItem {
     Direction: number;
     PictogramId: string;
     Position: IPosition;

@@ -1,5 +1,6 @@
-export interface ITerminalResource {
-    EntityId: string;
+import { IMapDataItem } from "./IMapDataItem";
+
+export interface ITerminalResource  extends IMapDataItem {
     Id: string;
     Direction: number;
     Latitude: number;

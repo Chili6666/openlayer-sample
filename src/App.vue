@@ -13,6 +13,7 @@
               :vectorLayers="layers"
               @centerpoint="oncenterpointchanged"
               @zoomlevel="onzoomlevelchanged"
+              @mapDataitemSelected="onMapDataitemSelected"
             />
           </template>
           <template v-slot:hotSpotSlot>
@@ -41,6 +42,9 @@
           </template>
         </ObjectBrowserContainer>
       </template>
+      <template v-slot:interactiveLegendSlot>
+        {{selectedMapDataItem?.EntityId}}
+      </template>
     </Layout>
   </div>
 </template>
@@ -65,6 +69,7 @@ import { GeofenceDataLayer } from "@/mapwrapper/GeofenceDataLayer";
 import StyleService from "@/services/StyleService";
 
 import VectorLayer from "ol/layer/Vector";
+import { IMapDataItem } from "./models/IMapDataItem";
 
 export default defineComponent({
   name: "App",
@@ -82,6 +87,7 @@ export default defineComponent({
     const styleCacheCount = ref(0);
     const isloading = ref(true);
     const zoom = ref('');
+    const selectedMapDataItem: Ref<IMapDataItem | null> = ref(null);
 
     function oncenterpointchanged(centerpoint: IPosition) {
       //console.log('StyleService.numberOfStyles: ' + StyleService.numberOfStyles);
@@ -90,6 +96,10 @@ export default defineComponent({
 
     function onzoomlevelchanged(zoomLevel: number) {
       zoom.value = zoomLevel.toFixed(2);
+    }
+
+    function onMapDataitemSelected(mapDataItem : IMapDataItem){
+        selectedMapDataItem.value = mapDataItem ;
     }
 
     function setupMapBackgroundLayers(): void {
@@ -106,7 +116,6 @@ export default defineComponent({
       layers.value.push(new StandLabelDataLayer());
       layers.value.push(new StandAllocationDataLayer());
       layers.value.push(new VehicleDataLayer());
-
       layers.value.forEach((layer) => layer.init());
     }
 
@@ -126,6 +135,8 @@ export default defineComponent({
       styleCacheCount,
       isloading,
       zoom,
+      onMapDataitemSelected,
+      selectedMapDataItem
     };
   },
 });
