@@ -3,7 +3,6 @@ import { IMapDataLayer } from "../IMapDataLayer";
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
-import Style from "ol/style/Style";
 import Feature from "ol/Feature";
 import { IStyleFactory } from "../IStyleFactory";
 
@@ -28,12 +27,16 @@ export abstract class MapDataLayerBase implements IMapDataLayer {
         this.setupDataLayer();
         this.onSetupDataSource && this.onSetupDataSource();
     }
-    public addFeature(feature : Feature){
+    public addFeature(feature: Feature) {
         this._vectorSource.addFeature(feature);
     }
 
-    public removeFeature(feature : Feature){
+    public removeFeature(feature: Feature) {
         this._vectorSource.removeFeature(feature);
+    }
+
+    public getFeatureById(id: string): Feature {
+        return this._vectorSource.getFeatureById(id)
     }
 
     abstract name: string;
@@ -55,11 +58,11 @@ export abstract class MapDataLayerBase implements IMapDataLayer {
             maxZoom: 20,
             minZoom: 14.5
         });
-      //  this._vectorLayer.setStyle(this.createStyles);
-      this._vectorLayer.setStyle(this.styleFactory.createStyles)
+        this._vectorLayer.setStyle(this.styleFactory.createStyles)
     }
 
-    abstract styleFactory : IStyleFactory;
+    abstract styleFactory: IStyleFactory;
 
-    protected onSetupDataSource?():void; 
+    protected onSetupDataSource?(): void;
+
 }

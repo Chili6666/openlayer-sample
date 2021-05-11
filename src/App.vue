@@ -20,12 +20,8 @@
             <HotspotViewer />
           </template>
           <template v-slot:debugDisplaySlot>
-            <div>
-             Zoom: {{zoom}}
-            </div>
-            <div>
-              Styles: {{ styleCacheCount }}
-            </div>
+            <div>Zoom: {{ zoom }}</div>
+            <div>Styles: {{ styleCacheCount }}</div>
             <div>
               <div v-for="layer in layers" :key="layer.name">
                 <input type="checkbox" v-model="layer.isVisible" />
@@ -38,12 +34,12 @@
       <template v-slot:objectBrowserSlot>
         <ObjectBrowserContainer>
           <template v-slot:default>
-            <ObjectBrowser/>
+            <ObjectBrowser />
           </template>
         </ObjectBrowserContainer>
       </template>
       <template v-slot:interactiveLegendSlot>
-        {{selectedMapDataItem?.EntityId}}
+        {{ selectedMapDataItem?.EntityId }}
       </template>
     </Layout>
   </div>
@@ -64,7 +60,7 @@ import { VehicleDataLayer } from "@/mapwrapper/datalayers/VehicleDataLayer";
 import { TerminalResourceDataLayer } from "@/mapwrapper/datalayers/TerminalResourceDataLayer";
 import { StandLabelDataLayer } from "@/mapwrapper/datalayers/StandLabelDataLayer";
 import { StandAllocationDataLayer } from "@/mapwrapper/datalayers/StandAllocationDataLayer";
-import { GeofenceDataLayer } from "@/mapwrapper/GeofenceDataLayer";
+import { GeofenceDataLayer } from "@/mapwrapper/datalayers/GeofenceDataLayer";
 
 import StyleService from "@/services/StyleService";
 
@@ -86,7 +82,7 @@ export default defineComponent({
     const sources: Ref<MbTileSource[]> = ref([]);
     const styleCacheCount = ref(0);
     const isloading = ref(true);
-    const zoom = ref('');
+    const zoom = ref("");
     const selectedMapDataItem: Ref<IMapDataItem | null> = ref(null);
 
     function oncenterpointchanged(centerpoint: IPosition) {
@@ -98,8 +94,8 @@ export default defineComponent({
       zoom.value = zoomLevel.toFixed(2);
     }
 
-    function onMapDataitemSelected(mapDataItem : IMapDataItem){
-        selectedMapDataItem.value = mapDataItem ;
+    function onMapDataitemSelected(mapDataItem: IMapDataItem) {
+      selectedMapDataItem.value = mapDataItem;
     }
 
     function setupMapBackgroundLayers(): void {
@@ -136,7 +132,7 @@ export default defineComponent({
       isloading,
       zoom,
       onMapDataitemSelected,
-      selectedMapDataItem
+      selectedMapDataItem,
     };
   },
 });

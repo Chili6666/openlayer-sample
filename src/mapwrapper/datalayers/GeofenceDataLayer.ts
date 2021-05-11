@@ -1,7 +1,6 @@
 import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { IGeofenceGroup } from "@/models/IGeofenceGroup";
 import { IGeofence } from "@/models/IGeofence";
-import { IGeoFencePoint } from "@/models/IGeoFencePoint";
 
 import BaseModelDataService from "@/services/BaseModelDataService";
 
