@@ -62,6 +62,9 @@ import { StandLabelDataLayer } from "@/mapwrapper/datalayers/StandLabelDataLayer
 import { StandAllocationDataLayer } from "@/mapwrapper/datalayers/StandAllocationDataLayer";
 import { GeofenceDataLayer } from "@/mapwrapper/datalayers/GeofenceDataLayer";
 
+import PictogramService from "@/services/PictogramService";
+
+
 import StyleService from "@/services/StyleService";
 
 import VectorLayer from "ol/layer/Vector";
@@ -118,6 +121,7 @@ export default defineComponent({
     onBeforeMount(async () => {
       isloading.value = true;
       console.log("onBeforeMount");
+      PictogramService.InitService();
       setupMapBackgroundLayers();
       setupDataLayers();
       isloading.value = false;
