@@ -38,7 +38,7 @@ export class StandAllocationStyleFactory implements IStyleFactory {
                     }),
                 }),
             });
-            console.log('create SA alertstyle');
+            //console.log('create SA alertstyle');
             StyleService.setStyle(mapItemVisualization.pictogramId + 'STANDALLOCATION_ALERT', mapItemVisualization.toString(), alertStyle);
         }
 

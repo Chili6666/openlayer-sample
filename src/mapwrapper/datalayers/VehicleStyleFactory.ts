@@ -37,10 +37,11 @@ export class VehicleStyleFactory implements IStyleFactory {
             StyleService.setStyle('VEHICLE_ALERT', '', alertStyle);
         }
 
-        let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
+        let style: any = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
         if (!style) {
-            const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
+
+            const shape = PictogramService.getPictogramForVehicle(mapDataItem, mapItemVisualization);
             style = new Style({
                 image: new Icon({
                     opacity: 1,

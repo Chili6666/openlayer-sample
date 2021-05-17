@@ -6,6 +6,7 @@ export class MapItemVisualization implements IMapItemVisualization {
     private _textFillColor = "transparent";
     private _textColor!: string;
     private _fontSize = '10px';
+    private _fillColor!: string;
 
     constructor(pictogramId: string) {
         this._pictogramId = pictogramId;
@@ -47,7 +48,16 @@ export class MapItemVisualization implements IMapItemVisualization {
         this._fontSize = value;
     }
 
+    public get fillColor(): string {
+        return this._fillColor;
+    }
+
+    public set fillColor(value: string) {
+        this._fillColor = value;
+    }
+    
+    //identifier
     public toString(): string {
-        return `${this._pictogramId}_${this._direction}_${this._textFillColor}_${this._textColor}_${this._fontSize}`;
+        return `${this._pictogramId}_${this._direction}_${this._textFillColor}_${this._textColor}_${this._fontSize}_${this._fillColor}`;
     }
 }

@@ -73,32 +73,18 @@ export class VehicleDataLayer extends MapDataLayerBase {
         mapItemVisualization.direction = dataItem.Direction;
         mapItemVisualization.textFillColor = '#FFFFFF';
         mapItemVisualization.textColor = "#000000"
+        //fake fillcolor
+        this.fakeFillColorForVehicle(mapItemVisualization, dataItem);
         iconFeature.set('mapItemVisualization', mapItemVisualization);
         this.addFeature(iconFeature);
     }
 
-
-    private updatePositions() {
-        const id = 'Vehicle.BUS5 - 80';
-        console.log(this._mapDataItems.value.length);
-        //    clearInterval(this._interVal);
-
-        const vehicleFeature = this.getFeatureById(id)
-
-
-        if (vehicleFeature) {
-            const mapDataItem: IVehicle = vehicleFeature.get('mapDataItem');
-            //const zz2 = vehicleFeature.getGeometry().getCoordinates();
-
-            const newPosition: IPosition = { Latitude: mapDataItem.Position.Latitude + 0.001, Longitude: mapDataItem.Position.Longitude + 0.001 }
-            mapDataItem.Position = newPosition;
-            vehicleFeature.getGeometry().setCoordinates(pointToArray(positionToPoint(mapDataItem.Position)));
-        }
-        else {
-            console.log(`Vehicle with id: ${id} not found.`);
-        }
-
-
-        //setTimeout(this.updatePositions, 1000);
+    private fakeFillColorForVehicle(mapItemVisualization: MapItemVisualization, vehicle: IVehicle): void {
+        if (vehicle.OperationalStatusName === 'Parking')
+            mapItemVisualization.fillColor = 'ORANGE';
+        else if (vehicle.OperationalStatusName === 'LOADING')
+            mapItemVisualization.fillColor = 'GREEN';
+        else if (vehicle.OperationalStatusName === 'Working')
+            mapItemVisualization.fillColor = 'YELLOW';
     }
 }
