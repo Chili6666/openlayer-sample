@@ -43,7 +43,7 @@ export class StandAllocationStyleFactory implements IStyleFactory {
         }
 
         if (!style) {
-            const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
+            const shape = PictogramService.getPictogram(mapItemVisualization);
             style = new Style({
                 image: new Icon({
                     opacity: 1,

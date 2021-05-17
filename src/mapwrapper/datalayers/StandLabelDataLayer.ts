@@ -41,25 +41,28 @@ export class StandLabelDataLayer extends MapDataLayerBase {
       geometry: new Geopoint(mapPoint),
     });
 
-    iconFeature.set('mapDataItem', dataItem);
-    iconFeature.setId(dataItem.EntityId);
-    iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const pictogramId = this.computePictigramId(dataItem.PictogramId, dataItem.DisplayName);
-    const mapItemVisualization = new MapItemVisualization(pictogramId);
+    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
     mapItemVisualization.direction = dataItem.LabelDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
+    //fake fillcolor
+    this.fakeFillColorDataItem(mapItemVisualization, dataItem);
+
+
+    iconFeature.setId(dataItem.EntityId);
+    iconFeature.set('mapDataItem', dataItem);
+    iconFeature.set('rotateWithView', this.rotateWithView);
     iconFeature.set('mapItemVisualization', mapItemVisualization);
     this.addFeature(iconFeature);
   }
 
-  private computePictigramId(pictogramId: string, standName: string): string {
-    if (standName.startsWith('B12'))
-      return pictogramId + '_ORANGE';
-    else if (standName.startsWith('B09'))
-      return pictogramId + '_GREEN';
+  private fakeFillColorDataItem(mapItemVisualization: MapItemVisualization, stand: IStand): void {
+    if (stand.DisplayName === 'B12')
+      mapItemVisualization.fillColor = 'ORANGE';
+    else if (stand.DisplayName === 'B09')
+      mapItemVisualization.fillColor = '%2346ff46';
     else
-      return pictogramId;
+      mapItemVisualization.fillColor = '%23BBC4D3';
   }
 
 }

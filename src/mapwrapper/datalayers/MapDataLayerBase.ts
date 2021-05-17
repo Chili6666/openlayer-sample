@@ -1,10 +1,9 @@
 import { IMapDataLayer } from "../IMapDataLayer";
-
+import { IStyleFactory } from "../IStyleFactory";
 
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
 import Feature from "ol/Feature";
-import { IStyleFactory } from "../IStyleFactory";
 
 export abstract class MapDataLayerBase implements IMapDataLayer {
 

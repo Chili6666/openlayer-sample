@@ -66,8 +66,6 @@ export class VehicleDataLayer extends MapDataLayerBase {
             geometry: new Geopoint(mapPoint),
         });
 
-        iconFeature.set('mapDataItem', dataItem);
-        iconFeature.setId(dataItem.EntityId);
 
         const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
         mapItemVisualization.direction = dataItem.Direction;
@@ -75,6 +73,9 @@ export class VehicleDataLayer extends MapDataLayerBase {
         mapItemVisualization.textColor = "#000000"
         //fake fillcolor
         this.fakeFillColorForVehicle(mapItemVisualization, dataItem);
+
+        iconFeature.setId(dataItem.EntityId);
+        iconFeature.set('mapDataItem', dataItem);
         iconFeature.set('mapItemVisualization', mapItemVisualization);
         this.addFeature(iconFeature);
     }
@@ -86,5 +87,7 @@ export class VehicleDataLayer extends MapDataLayerBase {
             mapItemVisualization.fillColor = 'GREEN';
         else if (vehicle.OperationalStatusName === 'Working')
             mapItemVisualization.fillColor = 'YELLOW';
+        else
+            mapItemVisualization.fillColor = '%23FEFEFE';
     }
 }

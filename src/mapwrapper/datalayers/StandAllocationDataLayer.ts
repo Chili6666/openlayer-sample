@@ -40,30 +40,33 @@ export class StandAllocationDataLayer extends MapDataLayerBase {
   }
 
   private addMapDataItem(mapDataItem: IStand, standAllocation: IStandAllocation): void {
+
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.StandAllocationLongitude, mapDataItem.StandAllocationLatitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
 
-    iconFeature.set('mapDataItem', standAllocation);
-    iconFeature.setId(standAllocation.EntityId);
-    iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const pictogramId = this.computePictigramId("AIRCRAFT", mapDataItem.DisplayName/*,standAllocation.PictogramId*/);
-    const mapItemVisualization = new MapItemVisualization(pictogramId);
+    const mapItemVisualization = new MapItemVisualization('AIRCRAFT' /*standAllocation.PictogramId*/);
     mapItemVisualization.direction = mapDataItem.StandAllocationDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
+    this.fakeFillColorDataItem(mapItemVisualization, mapDataItem);
+
+
+    iconFeature.setId(standAllocation.EntityId);
+    iconFeature.set('mapDataItem', standAllocation);
+    iconFeature.set('rotateWithView', this.rotateWithView);
     iconFeature.set('mapItemVisualization', mapItemVisualization);
     this.addFeature(iconFeature);
   }
 
-  computePictigramId(pictogramId: string, standName: string): string {
-    if (standName.startsWith('A08') || standName.startsWith('A01'))
-      return pictogramId + '_ORANGE';
-    else if (standName.startsWith('A06'))
-      return pictogramId + '_RED';
+  private fakeFillColorDataItem(mapItemVisualization: MapItemVisualization, mapDataItem: IStand): void {
+    if (mapDataItem.DisplayName.startsWith('A08') || mapDataItem.DisplayName.startsWith('A01'))
+      mapItemVisualization.fillColor = 'ORANGE';
+    else if (mapDataItem.DisplayName.startsWith('A06'))
+      mapItemVisualization.fillColor = 'Red';
     else
-      return pictogramId + '_GREEN';
+      mapItemVisualization.fillColor = '%2346ff46';
   }
 
 }

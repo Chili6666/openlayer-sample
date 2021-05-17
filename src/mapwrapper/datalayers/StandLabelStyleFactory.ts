@@ -21,7 +21,7 @@ export class StandLabelStyleFactory implements IStyleFactory {
         let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
         if (!style) {
-            const shape = PictogramService.getPictogram(mapItemVisualization.pictogramId);
+            const shape = PictogramService.getPictogram(mapItemVisualization);
             style = new Style({
                 image: new Icon({
                     opacity: 1,

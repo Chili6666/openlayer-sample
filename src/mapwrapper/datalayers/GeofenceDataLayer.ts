@@ -71,7 +71,6 @@ export class GeofenceDataLayer implements IMapDataLayer {
     });
   }
 
-
   private addGeofence(geofence: IGeofence): void {
     if (geofence && geofence.geoFencePoints) {
       const polygonpoints: Array<[number, number]> = new Array<[number, number]>();

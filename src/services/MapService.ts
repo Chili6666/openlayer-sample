@@ -46,7 +46,7 @@ class MapService {
         return pointToPosition(arrayToPoint(center));
     }
 
-    public moveMapTo(position: IPosition, rotation: number, zoomLevel: number) {
+    public moveMapTo(position: IPosition, rotation: number, zoomLevel: number) : void {
         this.view.animate({
             center: pointToArray(positionToPoint(position)),
             duration: 1500,
@@ -55,14 +55,14 @@ class MapService {
         }, this.animationFinished);
     }
 
-    public moveMapToPosition(position: IPosition) {
+    public moveMapToPosition(position: IPosition) : void {
         this.view.animate({
             center: pointToArray(positionToPoint(position)),
             duration: 500,
         }, this.animationFinished);
     }
 
-    private animationFinished() {
+    private animationFinished() : void {
         console.log('animationFinished');
     }
 

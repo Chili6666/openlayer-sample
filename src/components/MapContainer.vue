@@ -47,18 +47,18 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
-    datalayers: {
+    tilelayers: {
       type: Array,
       default: () => [],
     },
-    vectorLayers: {
+    dataLayers: {
       type: Array,
       default: () => [],
     },
   },
   setup(props, context) {
     const root = ref(null);
-    const { zoomlevel, latitude, longitude, datalayers, vectorLayers } = toRefs(
+    const { zoomlevel, latitude, longitude, tilelayers, dataLayers } = toRefs(
       props
     );
     const isDragging = ref(true);
@@ -70,20 +70,19 @@ export default defineComponent({
         Latitude: latitude.value,
       });
 
-      let tileLayers: Array<TileLayer> = new Array<TileLayer>();
-       tileLayers.push( new TileLayer({source: new OSM()}));
+      let layers: Array<TileLayer> = new Array<TileLayer>();
+   //    layers.push( new TileLayer({source: new OSM()}));
 
-    //  createTileSources(datalayers.value as Array<MbTileSource>, tileLayers);
-      let vl = vectorLayers.value as Array<IMapDataLayer>;
-      vl.forEach((datalayer) => tileLayers.push(datalayer.getlayer()));
+      createTileSources(tilelayers.value as Array<MbTileSource>, layers);
+      let vl = dataLayers.value as Array<IMapDataLayer>;
+      vl.forEach((datalayer) => layers.push(datalayer.getlayer()));
 
       // this is where we create the OpenLayers map
       internalMap = new Map({
-        // the map will be created using the 'root' ref
-        //target: root.value,
-        layers: tileLayers,
+        layers: layers,
       });
 
+      // the map will be created using the 'root' ref
       internalMap.setTarget(root.value);
 
       internalMap.setView(

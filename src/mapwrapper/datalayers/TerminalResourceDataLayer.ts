@@ -1,5 +1,4 @@
 import { ITerminalResource } from "../../models/ITerminalResource";
-import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { ref, Ref } from "vue";
 import BaseModelDataService from "@/services/BaseModelDataService";
 import { MapItemVisualization } from "@/models/MapItemVisualization";
@@ -38,36 +37,37 @@ export class TerminalResourceDataLayer extends MapDataLayerBase {
   }
 
   private addMapDataItem(dataItem: ITerminalResource): void {
+
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.Longitude, dataItem.Latitude])));
     const iconFeature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
 
-    iconFeature.set('mapDataItem', dataItem);
-    iconFeature.setId(dataItem.EntityId);
-    iconFeature.set('rotateWithView', this.rotateWithView);
 
-    const pictogramId = this.computePictigramId(dataItem.PictogramId, dataItem.DisplayName);
-    const mapItemVisualization = new MapItemVisualization(pictogramId);
-
+    const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
     mapItemVisualization.direction = dataItem.Direction * (Math.PI / 180);
     mapItemVisualization.textColor = "#C6D6F1";
-
-    if (dataItem.SubType === 'CARROUSELS')
-      mapItemVisualization.fontSize = '10px';
-    else
-      mapItemVisualization.fontSize = '4px';
+    this.fakeFillColorDataItem(mapItemVisualization, dataItem);
 
 
+    iconFeature.setId(dataItem.EntityId);
+    iconFeature.set('mapDataItem', dataItem);
+    iconFeature.set('rotateWithView', this.rotateWithView);
     iconFeature.set('mapItemVisualization', mapItemVisualization);
     this.addFeature(iconFeature);
   }
 
-  computePictigramId(pictogramId: string, standName: string): string {
-    if (standName.startsWith('01') || standName.startsWith('02') || standName.startsWith('03'))
-      return pictogramId + '_ORANGE';
+  private fakeFillColorDataItem(mapItemVisualization: MapItemVisualization, mapDataItem: ITerminalResource): void {
+    if (mapDataItem.DisplayName.startsWith('01') || mapDataItem.DisplayName.startsWith('02') || mapDataItem.DisplayName.startsWith('03'))
+      mapItemVisualization.fillColor = 'ORANGE';
     else
-      return pictogramId;
+      mapItemVisualization.fillColor = '%237588A6';
+
+    if (mapDataItem.SubType === 'CARROUSELS')
+      mapItemVisualization.fontSize = '10px';
+    else
+      mapItemVisualization.fontSize = '4px';
+
   }
 
 }
