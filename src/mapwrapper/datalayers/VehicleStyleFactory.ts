@@ -33,7 +33,7 @@ export class VehicleStyleFactory implements IStyleFactory {
                     }),
                 })
             });
-            console.log('create V alertstyle');
+          //  console.log('create V alertstyle');
             StyleService.setStyle('VEHICLE_ALERT', '', alertStyle);
         }
 
@@ -41,7 +41,7 @@ export class VehicleStyleFactory implements IStyleFactory {
 
         if (!style) {
 
-            const shape = PictogramService.getPictogramForVehicle(mapDataItem, mapItemVisualization);
+            const shape = PictogramService.getPictogram(mapItemVisualization);
             style = new Style({
                 image: new Icon({
                     opacity: 1,
