@@ -5,7 +5,10 @@ import BaseModelDataService from "@/services/BaseModelDataService";
 import { MapItemVisualization } from "@/models/MapItemVisualization";
 import Feature from "ol/Feature";
 import Geopoint from "ol/geom/Point";
-
+import { getVectorContext } from 'ol/render';
+import { easeOut } from 'ol/easing';
+import Circle from "ol/style/Circle";
+import Fill from "ol/style/Fill";
 
 import {
     positionToPoint,
@@ -40,14 +43,13 @@ export class VehicleDataLayer extends MapDataLayerBase {
         //console.log(this._mapDataItems.value.length);
         //setTimeout(this.updatePositions, 5000);
 
-        this._interval = setInterval(() => {
+       // let start = new Date().getTime();
 
+        this._interval = setInterval(() => {
             const id = 'Vehicle.BUS5 - 80';
             const vehicleFeature = this.getFeatureById(id)
             if (vehicleFeature) {
                 const mapDataItem: IVehicle = vehicleFeature.get('mapDataItem');
-                //const zz2 = vehicleFeature.getGeometry().getCoordinates();
-
                 const newPosition: IPosition = { Latitude: mapDataItem.Position.Latitude + 0.0001, Longitude: mapDataItem.Position.Longitude + 0.0001 }
                 mapDataItem.Position = newPosition;
                 vehicleFeature.getGeometry().setCoordinates(pointToArray(positionToPoint(mapDataItem.Position)));
@@ -55,8 +57,45 @@ export class VehicleDataLayer extends MapDataLayerBase {
             else {
                 console.log(`Vehicle with id: ${id} not found.`);
             }
-
         }, 1000);
+
+        //attach to renderevent
+        //const listenerKey = this.getlayer().on('postrender', this.animate);
+       // this.getlayer().on('postrender', (event) => {
+            // this._mapDataItems.value.forEach(item => {
+            //     if (item.Occurrences) {
+            //         if (item.Occurrences.length > 0) {
+            //             const feature = this.getFeatureById(item.EntityId)
+            //             if (feature) {
+
+            //                 const alertStyle = feature.get('alertstyle');
+            //                 const duration = feature.get('alertstyleAnimationDuration');
+            //                 if (!feature.getGeometry()) return
+            //                 if (!alertStyle) return
+            //                 const alertCircle = alertStyle.getImage() as Circle;
+
+            //                 const frameState = event.frameState;
+            //                 const elapsed = frameState.time - start;
+            //                 const elapsedRatio = elapsed / duration;
+
+            //                 if (feature.get('zoomLevel') > 14 && feature.get('zoomLevel') < 18) {
+            //                     const radius = (easeOut(elapsedRatio) * 15 + 5) * (1 / feature.get('resolution') + 1);
+            //                     alertCircle.setRadius(radius);
+            //                 }
+            //                 else if (feature.get('zoomLevel') > 18) {
+            //                     const radius = (easeOut(elapsedRatio) * 15 + 5) * 1.7;
+            //                     alertCircle.setRadius(radius);
+            //                 }
+
+            //                 if (elapsed > duration) {
+            //                     start = new Date().getTime();
+            //                 }
+            //             }
+            //         }
+            //     }
+            // });
+      //  });
+
     }
 
     private addMapDataItem(dataItem: IVehicle): void {

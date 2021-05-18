@@ -20,22 +20,31 @@ export class VehicleStyleFactory implements IStyleFactory {
         const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : '#000000');
         const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#FFFFFF');
 
+
+        const zoomLevel = MapService.view.getZoomForResolution(resolution);
+        feature.set('resolution', resolution);
+        feature.set('zoomLevel', zoomLevel);
+
         let alertStyle = StyleService.getStyle('VEHICLE_ALERT', '');
         if (!alertStyle) {
             alertStyle = new Style({
                 image: new Circle({
                     radius: 14,
                     stroke: new Stroke({
-                        color: '#fff',
+                        color: 'white',
                     }),
                     fill: new Fill({
-                        color: 'red',
+                        color:  [255, 0, 0, .3],
                     }),
                 })
             });
           //  console.log('create V alertstyle');
             StyleService.setStyle('VEHICLE_ALERT', '', alertStyle);
         }
+
+        feature.set('alertstyle', alertStyle);
+        feature.set('alertstyleAnimationDuration', 3000);
+
 
         let style: any = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
@@ -55,7 +64,6 @@ export class VehicleStyleFactory implements IStyleFactory {
             StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
         }
 
-        const zoomLevel = MapService.view.getZoomForResolution(resolution);
 
         if (zoomLevel > 14 && zoomLevel < 18) {
             const zz = 1 / resolution + 1;
@@ -72,7 +80,7 @@ export class VehicleStyleFactory implements IStyleFactory {
 
             if (zoomLevel > 14 && zoomLevel < 18) {
                 const zz = 1 / resolution + 1;
-                alertStyle.getImage().setScale(zz);
+                //alertStyle.getImage().setScale(zz);
             }
             style.getText().setBackgroundFill(new Fill({ color: 'red' }));
             return [alertStyle, style];
@@ -80,6 +88,7 @@ export class VehicleStyleFactory implements IStyleFactory {
 
         return [style];
     }
+
 }
 
 export default new VehicleStyleFactory();
