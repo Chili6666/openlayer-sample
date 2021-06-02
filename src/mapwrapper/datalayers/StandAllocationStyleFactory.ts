@@ -18,7 +18,9 @@ export class StandAllocationStyleFactory implements IStyleFactory {
         const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
         const standAllocation: IStandAllocation = feature.get('mapDataItem');
 
-        let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
+        /***********************************************************************
+        SETUP ALERT STYLE
+        ************************************************************************/
         let alertStyle = StyleService.getStyle(mapItemVisualization.pictogramId + 'STANDALLOCATION_ALERT', mapItemVisualization.toString());
         if (!alertStyle) {
             alertStyle = new Style({
@@ -42,6 +44,10 @@ export class StandAllocationStyleFactory implements IStyleFactory {
             StyleService.setStyle(mapItemVisualization.pictogramId + 'STANDALLOCATION_ALERT', mapItemVisualization.toString(), alertStyle);
         }
 
+        /***********************************************************************
+        SETUP STANDALLOCATION STYLE
+        ************************************************************************/
+        let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
         if (!style) {
             const shape = PictogramService.getPictogram(mapItemVisualization);
             style = new Style({
@@ -51,10 +57,30 @@ export class StandAllocationStyleFactory implements IStyleFactory {
                     rotateWithView: feature.get('rotateWithView'),
                     rotation: direction,
                 }),
+                text: new Text({
+                    text: '1',
+                    //padding: [5, 5, 5, 5],//should be resolution dependent
+                    fill: new Fill({
+                        color: 'black',
+                    }),
+                    backgroundFill: new Fill({
+                        color:  [255, 255, 255, 0.6],
+                    }),
+                    textAlign: 'center',
+                    rotation: direction,
+                    font: '5px sans-serif',
+                }),
             });
 
             StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
         }
+
+        //Update Text-----------------
+      //  style.getText().setBackgroundFill(new Fill({ color: '#AAFFFFFF' }));
+        style.getText().setScale(1 / resolution);
+        style.getText().setText(standAllocation.PictogramId);
+        style.getText().setOffsetY(25 / resolution);
+        style.getText().setOffsetX(2 / resolution);
 
         //IMAGE--------------
         //change colors and other relavent features

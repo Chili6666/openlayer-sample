@@ -41,8 +41,8 @@ export class VehicleStyleFactory implements IStyleFactory {
           //  console.log('create V alertstyle');
             StyleService.setStyle('VEHICLE_ALERT', '', alertStyle);
         }
-
-        feature.set('alertstyle', alertStyle);
+        //DON'T DO THIS!!!!! Serializing a Style is very CPU intensive
+        //feature.set('alertstyle', alertStyle);
         feature.set('alertstyleAnimationDuration', 3000);
 
 
@@ -80,7 +80,7 @@ export class VehicleStyleFactory implements IStyleFactory {
 
             if (zoomLevel > 14 && zoomLevel < 18) {
                 const zz = 1 / resolution + 1;
-                //alertStyle.getImage().setScale(zz);
+                alertStyle.getImage().setScale(zz);
             }
             style.getText().setBackgroundFill(new Fill({ color: 'red' }));
             return [alertStyle, style];
