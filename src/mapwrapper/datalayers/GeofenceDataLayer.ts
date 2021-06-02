@@ -69,6 +69,8 @@ export class GeofenceDataLayer implements IMapDataLayer {
       // maxZoom: 20,
       // minZoom: 14.5
     });
+
+    this._vectorLayer.setVisible(false);
   }
 
   private addGeofence(geofence: IGeofence): void {

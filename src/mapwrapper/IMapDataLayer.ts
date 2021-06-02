@@ -4,4 +4,5 @@ export interface IMapDataLayer{
     getlayer() : VectorLayer ;
     name : string;
     isVisible : boolean;
+    init(): void;
 }

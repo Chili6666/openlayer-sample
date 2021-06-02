@@ -67,8 +67,8 @@ import PictogramService from "@/services/PictogramService";
 
 import StyleService from "@/services/StyleService";
 
-import VectorLayer from "ol/layer/Vector";
 import { IMapDataItem } from "./models/IMapDataItem";
+import { IMapDataLayer } from "./mapwrapper/IMapDataLayer";
 
 export default defineComponent({
   name: "App",
@@ -81,7 +81,7 @@ export default defineComponent({
     ObjectBrowserContainer,
   },
   setup() {
-    const layers: Ref<VectorLayer[]> = ref([]);
+    const layers: Ref<IMapDataLayer[]> = ref([]);
     const sources: Ref<MbTileSource[]> = ref([]);
     const styleCacheCount = ref(0);
     const isloading = ref(true);
@@ -103,7 +103,8 @@ export default defineComponent({
 
     function setupMapBackgroundLayers(): void {
       let mbTileSource = new MbTileSource();
-      mbTileSource.url = "./tiles/{z}/{x}/{y}.png";
+      //mbTileSource.url = "./tiles/{z}/{x}/{y}.png";
+      mbTileSource.url = "https://api.maptiler.com/tiles/c3b2650d-2a91-413e-963f-5a903a640570/{z}/{x}/{y}.png?key=o7HQN0Xh7ZEHjkLi60Vb";
       mbTileSource.maxZoom = 18;
       mbTileSource.minZoom = 3;
       sources.value.push(mbTileSource);
