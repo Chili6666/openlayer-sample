@@ -39,22 +39,21 @@ export class TerminalResourceDataLayer extends MapDataLayerBase {
   private addMapDataItem(dataItem: ITerminalResource): void {
 
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.Longitude, dataItem.Latitude])));
-    const iconFeature = new Feature({
+    const feature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
 
 
     const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
     mapItemVisualization.direction = dataItem.Direction * (Math.PI / 180);
+    mapItemVisualization.rotateWithView = this.rotateWithView;
     mapItemVisualization.textColor = "#C6D6F1";
     this.fakeFillColorDataItem(mapItemVisualization, dataItem);
 
-
-    iconFeature.setId(dataItem.EntityId);
-    iconFeature.set('mapDataItem', dataItem);
-    iconFeature.set('rotateWithView', this.rotateWithView);
-    iconFeature.set('mapItemVisualization', mapItemVisualization);
-    this.addFeature(iconFeature);
+    feature.setId(dataItem.EntityId);
+    feature.set('mapDataItem', dataItem);
+    feature.set('mapItemVisualization', mapItemVisualization);
+    this.addFeature(feature);
   }
 
   private fakeFillColorDataItem(mapItemVisualization: MapItemVisualization, mapDataItem: ITerminalResource): void {

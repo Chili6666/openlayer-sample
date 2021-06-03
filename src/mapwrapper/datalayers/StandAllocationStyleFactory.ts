@@ -15,7 +15,6 @@ export class StandAllocationStyleFactory implements IStyleFactory {
 
     createStyles(feature: Feature, resolution: number): Style[] {
         const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
-        const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
         const standAllocation: IStandAllocation = feature.get('mapDataItem');
 
         /***********************************************************************
@@ -40,7 +39,6 @@ export class StandAllocationStyleFactory implements IStyleFactory {
                     }),
                 }),
             });
-            //console.log('create SA alertstyle');
             StyleService.setStyle(mapItemVisualization.pictogramId + 'STANDALLOCATION_ALERT', mapItemVisualization.toString(), alertStyle);
         }
 
@@ -54,8 +52,8 @@ export class StandAllocationStyleFactory implements IStyleFactory {
                 image: new Icon({
                     opacity: 1,
                     src: "data:image/svg+xml;utf8," + shape,
-                    rotateWithView: feature.get('rotateWithView'),
-                    rotation: direction,
+                    rotateWithView: mapItemVisualization.rotateWithView,
+                    rotation: mapItemVisualization.direction,
                 }),
                 text: new Text({
                     text: '1',
@@ -66,17 +64,16 @@ export class StandAllocationStyleFactory implements IStyleFactory {
                     backgroundFill: new Fill({
                         color:  [255, 255, 255, 0.6],
                     }),
+                    rotateWithView: mapItemVisualization.rotateWithView,
                     textAlign: 'center',
-                    rotation: direction,
+                    rotation: mapItemVisualization.direction,
                     font: '5px sans-serif',
                 }),
             });
-
             StyleService.setStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString(), style);
         }
 
         //Update Text-----------------
-      //  style.getText().setBackgroundFill(new Fill({ color: '#AAFFFFFF' }));
         style.getText().setScale(1 / resolution);
         style.getText().setText(standAllocation.PictogramId);
         style.getText().setOffsetY(25 / resolution);

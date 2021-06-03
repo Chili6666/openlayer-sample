@@ -14,11 +14,10 @@ export class TerminalResourceStyleFactory implements IStyleFactory {
   createStyles(feature: Feature, resolution: number): Style[] {
     const mapDataItem: ITerminalResource = feature.get('mapDataItem');
     const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
-    const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-    const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
-    const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
-    const fontSize = mapItemVisualization.fontSize;
 
+    /***********************************************************************
+       SETUP TERMINALRESOURCE STYLE
+    ************************************************************************/
     let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
 
     if (!style) {
@@ -27,11 +26,11 @@ export class TerminalResourceStyleFactory implements IStyleFactory {
         image: new Icon({
           opacity: 1,
           src: "data:image/svg+xml;utf8," + shape,
-          rotateWithView: feature.get('rotateWithView'),
+          rotateWithView: mapItemVisualization.rotateWithView,
         }),
         text: new Text({
-          font: fontSize + ' sans-serif',
-          rotateWithView: feature.get('rotateWithView'),
+          font: mapItemVisualization.fontSize + ' sans-serif',
+          rotateWithView: mapItemVisualization.rotateWithView,
         }),
       })
 
@@ -41,11 +40,11 @@ export class TerminalResourceStyleFactory implements IStyleFactory {
     //change colors and other relavent features
     //IMAGE--------------
     style.getImage().setScale(1 / resolution);
-    style.getImage().setRotation(direction);
+    style.getImage().setRotation(mapItemVisualization.direction);
     //TEXT--------------
-    style.getText().setFill(new Fill({ color: textColor }));
-    style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
-    style.getText().setRotation(direction);
+    style.getText().setFill(new Fill({ color: mapItemVisualization.textColor }));
+    style.getText().setBackgroundFill(new Fill({ color: mapItemVisualization.textFillColor }));
+    style.getText().setRotation(mapItemVisualization.direction);
     style.getText().setScale(1 / resolution);
     style.getText().setText(mapDataItem.DisplayName);
 

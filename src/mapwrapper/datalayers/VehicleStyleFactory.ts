@@ -17,14 +17,14 @@ export class VehicleStyleFactory implements IStyleFactory {
     createStyles(feature: Feature, resolution: number): Style[] {
         const mapDataItem: IVehicle = feature.get('mapDataItem');
         const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
-        const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : '#000000');
-        const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#FFFFFF');
-
 
         const zoomLevel = MapService.view.getZoomForResolution(resolution);
         feature.set('resolution', resolution);
         feature.set('zoomLevel', zoomLevel);
 
+        /***********************************************************************
+        SETUP ALERT STYLE
+        ************************************************************************/
         let alertStyle = StyleService.getStyle('VEHICLE_ALERT', '');
         if (!alertStyle) {
             alertStyle = new Style({
@@ -34,11 +34,10 @@ export class VehicleStyleFactory implements IStyleFactory {
                         color: 'white',
                     }),
                     fill: new Fill({
-                        color:  [255, 0, 0, .3],
+                        color: [255, 0, 0, .3],
                     }),
                 })
             });
-          //  console.log('create V alertstyle');
             StyleService.setStyle('VEHICLE_ALERT', '', alertStyle);
         }
         //DON'T DO THIS!!!!! Serializing a Style is very CPU intensive
@@ -46,8 +45,10 @@ export class VehicleStyleFactory implements IStyleFactory {
         feature.set('alertstyleAnimationDuration', 3000);
 
 
+        /***********************************************************************
+        SETUP VEHICLE STYLE
+        ************************************************************************/
         let style: any = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
-
         if (!style) {
 
             const shape = PictogramService.getPictogram(mapItemVisualization);
@@ -65,27 +66,25 @@ export class VehicleStyleFactory implements IStyleFactory {
         }
 
 
-        if (zoomLevel > 14 && zoomLevel < 18) {
-            const zz = 1 / resolution + 1;
-            style.getImage().setScale(zz);
-            style.getText().setOffsetY(16 * zz);
-            style.getText().setOffsetX(16 * zz);
+        if (zoomLevel > 14 ) {
+            const scaleFactor = 1 / resolution + 1;
+            style.getImage().setScale(scaleFactor);
+            style.getText().setOffsetY(16 * scaleFactor);
+            style.getText().setOffsetX(16 * scaleFactor);
+
+            if (mapDataItem.Occurrences.length > 0) {
+
+                alertStyle.getImage().setScale(scaleFactor);
+                style.getText().setBackgroundFill(new Fill({ color: 'red' }));
+            }
         }
 
-        style.getText().setFill(new Fill({ color: textColor }));
-        style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
+        style.getText().setFill(new Fill({ color: mapItemVisualization.textColor }));
+        style.getText().setBackgroundFill(new Fill({ color: mapItemVisualization.textFillColor }));
         style.getText().setText(mapDataItem.DisplayName);
 
-        if (mapDataItem.Occurrences.length > 0) {
-
-            if (zoomLevel > 14 && zoomLevel < 18) {
-                const zz = 1 / resolution + 1;
-                alertStyle.getImage().setScale(zz);
-            }
-            style.getText().setBackgroundFill(new Fill({ color: 'red' }));
+        if (mapDataItem.Occurrences.length > 0) 
             return [alertStyle, style];
-        }
-
         return [style];
     }
 

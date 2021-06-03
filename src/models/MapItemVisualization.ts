@@ -4,9 +4,10 @@ export class MapItemVisualization implements IMapItemVisualization {
     private _direction = 0;
     private _pictogramId: string;
     private _textFillColor = "transparent";
-    private _textColor!: string;
+    private _textColor = 'black';
     private _fontSize = '10px';
     private _fillColor!: string;
+    private _rotateWithView = false;
 
     constructor(pictogramId: string) {
         this._pictogramId = pictogramId;
@@ -56,6 +57,15 @@ export class MapItemVisualization implements IMapItemVisualization {
         this._fillColor = value;
     }
     
+    public get rotateWithView(): boolean {
+        return this._rotateWithView;
+    }
+
+    public set rotateWithView(value: boolean) {
+        this._rotateWithView = value;
+    }
+    
+
     //identifier
     public toString(): string {
         return `${this._pictogramId}_${this._direction}_${this._textFillColor}_${this._textColor}_${this._fontSize}_${this._fillColor}`;

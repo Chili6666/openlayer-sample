@@ -42,7 +42,7 @@ export class StandAllocationDataLayer extends MapDataLayerBase {
   private addMapDataItem(mapDataItem: IStand, standAllocation: IStandAllocation): void {
 
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([mapDataItem.StandAllocationLongitude, mapDataItem.StandAllocationLatitude])));
-    const iconFeature = new Feature({
+    const feature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
 
@@ -50,14 +50,14 @@ export class StandAllocationDataLayer extends MapDataLayerBase {
     const mapItemVisualization = new MapItemVisualization('AIRCRAFT' /*standAllocation.PictogramId*/);
     mapItemVisualization.direction = mapDataItem.StandAllocationDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
+    mapItemVisualization.rotateWithView = this.rotateWithView
     this.fakeFillColorDataItem(mapItemVisualization, mapDataItem);
 
 
-    iconFeature.setId(standAllocation.EntityId);
-    iconFeature.set('mapDataItem', standAllocation);
-    iconFeature.set('rotateWithView', this.rotateWithView);
-    iconFeature.set('mapItemVisualization', mapItemVisualization);
-    this.addFeature(iconFeature);
+    feature.setId(standAllocation.EntityId);
+    feature.set('mapDataItem', standAllocation);
+    feature.set('mapItemVisualization', mapItemVisualization);
+    this.addFeature(feature);
   }
 
   private fakeFillColorDataItem(mapItemVisualization: MapItemVisualization, mapDataItem: IStand): void {

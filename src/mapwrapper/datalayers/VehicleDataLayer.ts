@@ -101,10 +101,9 @@ export class VehicleDataLayer extends MapDataLayerBase {
     private addMapDataItem(dataItem: IVehicle): void {
 
         const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.Position.Longitude, dataItem.Position.Latitude])));
-        const iconFeature = new Feature({
+        const feature = new Feature({
             geometry: new Geopoint(mapPoint),
         });
-
 
         const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
         mapItemVisualization.direction = dataItem.Direction;
@@ -113,10 +112,10 @@ export class VehicleDataLayer extends MapDataLayerBase {
         //fake fillcolor
         this.fakeFillColorForVehicle(mapItemVisualization, dataItem);
 
-        iconFeature.setId(dataItem.EntityId);
-        iconFeature.set('mapDataItem', dataItem);
-        iconFeature.set('mapItemVisualization', mapItemVisualization);
-        this.addFeature(iconFeature);
+        feature.setId(dataItem.EntityId);
+        feature.set('mapDataItem', dataItem);
+        feature.set('mapItemVisualization', mapItemVisualization);
+        this.addFeature(feature);
     }
 
     private fakeFillColorForVehicle(mapItemVisualization: MapItemVisualization, vehicle: IVehicle): void {

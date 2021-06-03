@@ -37,7 +37,7 @@ export class StandLabelDataLayer extends MapDataLayerBase {
 
   private addMapDataItem(dataItem: IStand): void {
     const mapPoint = pointToArray(positionToPoint(arrayToPosition([dataItem.LabelLongitude, dataItem.LabelLatitude])));
-    const iconFeature = new Feature({
+    const feature = new Feature({
       geometry: new Geopoint(mapPoint),
     });
 
@@ -45,15 +45,15 @@ export class StandLabelDataLayer extends MapDataLayerBase {
     const mapItemVisualization = new MapItemVisualization(dataItem.PictogramId);
     mapItemVisualization.direction = dataItem.LabelDirection * (Math.PI / 180);
     mapItemVisualization.textColor = "#000000";
+    mapItemVisualization.rotateWithView =this.rotateWithView;
     //fake fillcolor
     this.fakeFillColorDataItem(mapItemVisualization, dataItem);
 
 
-    iconFeature.setId(dataItem.EntityId);
-    iconFeature.set('mapDataItem', dataItem);
-    iconFeature.set('rotateWithView', this.rotateWithView);
-    iconFeature.set('mapItemVisualization', mapItemVisualization);
-    this.addFeature(iconFeature);
+    feature.setId(dataItem.EntityId);
+    feature.set('mapDataItem', dataItem);
+    feature.set('mapItemVisualization', mapItemVisualization);
+    this.addFeature(feature);
   }
 
   private fakeFillColorDataItem(mapItemVisualization: MapItemVisualization, stand: IStand): void {

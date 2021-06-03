@@ -14,24 +14,23 @@ export class StandLabelStyleFactory implements IStyleFactory {
     createStyles(feature: Feature, resolution: number): Style[] {
         const mapDataItem: IStand = feature.get('mapDataItem');
         const mapItemVisualization: MapItemVisualization = feature.get('mapItemVisualization');
-        const direction = (mapItemVisualization.direction !== undefined ? mapItemVisualization.direction : 0);
-        const textFillColor = (mapItemVisualization.textFillColor !== undefined ? mapItemVisualization.textFillColor : 'transparent');
-        const textColor = (mapItemVisualization.textColor !== undefined ? mapItemVisualization.textColor : '#000000');
 
+        /***********************************************************************
+        SETUP STANDLABEL STYLE
+        ************************************************************************/
         let style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
-
         if (!style) {
             const shape = PictogramService.getPictogram(mapItemVisualization);
             style = new Style({
                 image: new Icon({
                     opacity: 1,
                     src: "data:image/svg+xml;utf8," + shape,
-                    rotateWithView: feature.get('rotateWithView'),
-                    rotation: direction,
+                    rotateWithView: mapItemVisualization.rotateWithView,
+                    rotation: mapItemVisualization.direction,
                 }),
                 text: new Text({
-                    rotateWithView: feature.get('rotateWithView'),
-                    rotation: direction,
+                    rotateWithView: mapItemVisualization.rotateWithView,
+                    rotation: mapItemVisualization.direction,
                     font: '8px sans-serif',
                 }),
             })
@@ -41,8 +40,8 @@ export class StandLabelStyleFactory implements IStyleFactory {
         //IMAGE--------------
         //change colors and other relavent features
         style.getImage().setScale(1 / resolution);
-        style.getText().setFill(new Fill({ color: textColor }));
-        style.getText().setBackgroundFill(new Fill({ color: textFillColor }));
+        style.getText().setFill(new Fill({ color: mapItemVisualization.textColor }));
+        style.getText().setBackgroundFill(new Fill({ color: mapItemVisualization.textFillColor }));
         style.getText().setScale(1 / resolution);
         style.getText().setText(mapDataItem.DisplayName);
 
