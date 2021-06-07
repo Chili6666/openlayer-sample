@@ -63,8 +63,7 @@ import { StandAllocationDataLayer } from "@/mapwrapper/datalayers/StandAllocatio
 import { GeofenceDataLayer } from "@/mapwrapper/datalayers/GeofenceDataLayer";
 
 import PictogramService from "@/services/PictogramService";
-
-
+import MapService from "@/services/MapService";
 import StyleService from "@/services/StyleService";
 
 import { IMapDataItem } from "./models/IMapDataItem";
@@ -97,14 +96,16 @@ export default defineComponent({
       zoom.value = zoomLevel.toFixed(2);
     }
 
-    function onMapDataitemSelected(mapDataItem: IMapDataItem) {
+    function onMapDataitemSelected(mapDataItem: IMapDataItem, coordinate: any) {
       selectedMapDataItem.value = mapDataItem;
+      MapService.showOverlayForDataItem(mapDataItem, coordinate);
     }
 
     function setupMapBackgroundLayers(): void {
       let mbTileSource = new MbTileSource();
       //mbTileSource.url = "./tiles/{z}/{x}/{y}.png";
-      mbTileSource.url = "https://api.maptiler.com/tiles/c3b2650d-2a91-413e-963f-5a903a640570/{z}/{x}/{y}.png?key=o7HQN0Xh7ZEHjkLi60Vb";
+      mbTileSource.url =
+        "https://api.maptiler.com/tiles/c3b2650d-2a91-413e-963f-5a903a640570/{z}/{x}/{y}.png?key=o7HQN0Xh7ZEHjkLi60Vb";
       mbTileSource.maxZoom = 18;
       mbTileSource.minZoom = 3;
       sources.value.push(mbTileSource);
