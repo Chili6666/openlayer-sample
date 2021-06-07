@@ -3,7 +3,7 @@
 		"Vehicles": [
 			{
 				"EntityId": "Vehicle.BUS5 - 80",
-				"Direction": 1.51,
+				"Direction": 0.5,
 				"PictogramId": "BUS",
 				"Position": {
 					"Latitude": 50.70732027,

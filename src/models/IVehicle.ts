@@ -7,8 +7,9 @@ export interface IVehicle extends IMapDataItem {
     PictogramId: string;
     Position: IPosition;
     DisplayName: string;
-    Occurrences : IOccurrence[];
+    Occurrences: IOccurrence[];
     TypeName: string;
     OperationalStatusName: string;
     Department: string;
+    Velocity: number;
 }

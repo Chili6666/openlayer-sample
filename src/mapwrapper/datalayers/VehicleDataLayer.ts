@@ -52,6 +52,7 @@ export class VehicleDataLayer extends MapDataLayerBase {
                 const mapDataItem: IVehicle = vehicleFeature.get('mapDataItem');
                 const newPosition: IPosition = { Latitude: mapDataItem.Position.Latitude + 0.0001, Longitude: mapDataItem.Position.Longitude + 0.0001 }
                 mapDataItem.Position = newPosition;
+                mapDataItem.Velocity = 4;
                 vehicleFeature.getGeometry().setCoordinates(pointToArray(positionToPoint(mapDataItem.Position)));
             }
             else {

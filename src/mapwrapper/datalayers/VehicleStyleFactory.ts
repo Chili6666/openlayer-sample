@@ -25,7 +25,7 @@ export class VehicleStyleFactory implements IStyleFactory {
         /***********************************************************************
         SETUP ALERT STYLE
         ************************************************************************/
-        let alertStyle = StyleService.getStyle('VEHICLE_ALERT', '');
+        let alertStyle: Style = StyleService.getStyle('VEHICLE_ALERT', '');
         if (!alertStyle) {
             alertStyle = new Style({
                 image: new Circle({
@@ -48,7 +48,7 @@ export class VehicleStyleFactory implements IStyleFactory {
         /***********************************************************************
         SETUP VEHICLE STYLE
         ************************************************************************/
-        let style: any = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
+        let style: Style = StyleService.getStyle(mapItemVisualization.pictogramId, mapItemVisualization.toString());
         if (!style) {
 
             const shape = PictogramService.getPictogram(mapItemVisualization);
@@ -66,11 +66,38 @@ export class VehicleStyleFactory implements IStyleFactory {
         }
 
 
-        if (zoomLevel > 14 ) {
+        /***********************************************************************
+        SETUP DIRECTION VEHICLE STYLE
+        ************************************************************************/
+        let directionStyle: Style = StyleService.getStyle('vehicleDirection', mapItemVisualization.direction.toString());
+        if (!directionStyle) {
+            const directionImage = '<svg width="50" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg">'
+                + '<path transform="translate(17 0)  scale (0.8)" fill="%2346ff46"  stroke="black" stroke-width="0.2"  d="M 0.65625,19.375L 9.9375,0.968752L 19.3125,19.3125L 10.0312,15.6563L 0.65625,19.375 Z " /> '
+                + '</svg>';
+
+            directionStyle = new Style({
+                image: new Icon({
+                    opacity: 1,
+                    src: "data:image/svg+xml;utf8," + directionImage,
+                    rotateWithView: true,
+                    rotation: mapItemVisualization.direction,
+                }),
+
+            })
+            StyleService.setStyle('vehicleDirection', mapItemVisualization.direction.toString(), directionStyle);
+        }
+
+        const styles: Style[] = [];
+
+
+        if (zoomLevel > 14) {
             const scaleFactor = 1 / resolution + 1;
             style.getImage().setScale(scaleFactor);
             style.getText().setOffsetY(16 * scaleFactor);
             style.getText().setOffsetX(16 * scaleFactor);
+
+
+            directionStyle.getImage().setScale(scaleFactor);
 
             if (mapDataItem.Occurrences.length > 0) {
 
@@ -83,9 +110,15 @@ export class VehicleStyleFactory implements IStyleFactory {
         style.getText().setBackgroundFill(new Fill({ color: mapItemVisualization.textFillColor }));
         style.getText().setText(mapDataItem.DisplayName);
 
-        if (mapDataItem.Occurrences.length > 0) 
-            return [alertStyle, style];
-        return [style];
+
+        styles.push(style);
+        if (mapDataItem.Occurrences.length > 0)
+            styles.push(alertStyle);
+        if (mapDataItem.Velocity > 2)
+            styles.push(directionStyle);
+
+        return styles;
+
     }
 
 }
