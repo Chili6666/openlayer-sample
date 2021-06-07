@@ -1,7 +1,8 @@
+import { IMapDataItem } from '@/models/IMapDataItem';
 import { reactive} from 'vue'
 export class SmartviewStore {
     private _sdlKey = '';
-    private _entityId = '';
+    private _mapDataItem : IMapDataItem | null = null;
 
     public get sdlKey(): string {
         return this._sdlKey;
@@ -11,12 +12,12 @@ export class SmartviewStore {
         this._sdlKey = sdlKey;
     }
 
-    public get entityId(): string {
-        return this._entityId;
+    public get mapDataItem(): IMapDataItem |null {
+        return this._mapDataItem;
     }
 
-    public set entityId(_entityId: string) {
-        this._entityId = _entityId;
+    public set mapDataItem(_mapDataItem: IMapDataItem | null) {
+        this._mapDataItem = _mapDataItem;
     }
 }
 

@@ -85,7 +85,7 @@ class MapService {
         //  this.smartViewHost.entityId = "mapDataItem.EntityId";
 
         reactiveStore.sdlKey = 'SDL Key is not defined';
-        reactiveStore.entityId = mapDataItem.EntityId;
+        reactiveStore.mapDataItem = mapDataItem;
 
         this.overlay.setPosition(coordinate);
 
