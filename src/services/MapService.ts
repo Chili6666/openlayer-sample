@@ -6,16 +6,17 @@ import Feature from "ol/Feature";
 import { IPosition } from "@/mapwrapper/IPosition";
 import { pointToArray, positionToPoint, pointToPosition, arrayToPoint } from "@/mapwrapper/MapHelper";
 import { IMapDataItem } from "@/models/IMapDataItem";
+import reactiveStore from "@/stores/smartViewStore"
 
 class MapService {
-    private internalMap:Map;
+    private internalMap: Map;
     private overlay: Overlay;
-    private smartViewContainer : any;
+    private smartViewHost: any;
 
-    public initializeService(map: Map, overlay: Overlay, container : any): void {
+    public initializeService(map: Map, overlay: Overlay, smartViewHost: any): void {
         this.internalMap = map;
         this.overlay = overlay;
-        this.smartViewContainer = container;
+        this.smartViewHost = smartViewHost;
     }
 
     public get map(): Map {
@@ -39,7 +40,7 @@ class MapService {
         return this.internalMap.forEachFeatureAtPixel(
             pixel,
             (feature: Feature, layer: any) => {
-                if(feature)
+                if (feature)
                     return feature.get('mapDataItem') as IMapDataItem;
                 return null;
             }
@@ -52,7 +53,7 @@ class MapService {
         return pointToPosition(arrayToPoint(center));
     }
 
-    public moveMapTo(position: IPosition, rotation: number, zoomLevel: number) : void {
+    public moveMapTo(position: IPosition, rotation: number, zoomLevel: number): void {
         this.view.animate({
             center: pointToArray(positionToPoint(position)),
             duration: 1500,
@@ -61,26 +62,36 @@ class MapService {
         }, this.animationFinished);
     }
 
-    public moveMapToPosition(position: IPosition) : void {
+    public moveMapToPosition(position: IPosition): void {
         this.view.animate({
             center: pointToArray(positionToPoint(position)),
             duration: 500,
         }, this.animationFinished);
     }
 
-    public showOverlayForDataItem(mapDataItem: IMapDataItem, coordinate: any){
-        if(!this.overlay) return;
-        if(!this.smartViewContainer) return;
-        if(!mapDataItem) return;
-        if(!coordinate) return;
+    public showOverlayForDataItem(mapDataItem: IMapDataItem, coordinate: any) {
+        if (!this.overlay) return;
+        if (!this.smartViewHost) return;
+        if (!mapDataItem) return;
+        if (!coordinate) return;
 
         //TODO Replace this with real mapDataItem based Smartview   
-        this.smartViewContainer.innerHTML = '<p>You clicked Item:</p><code>' + mapDataItem.EntityId + '</code>';
+        // this.smartViewContainer.innerHTML = '<p>You clicked Item:</p><code>' + mapDataItem.EntityId + '</code>';
+
+        // this.smartViewHost.sdlKeyd = "SDL KEY";
+
+        //  console.log('inner' +  this.smartViewHost.innerHTML);
+
+        //  this.smartViewHost.entityId = "mapDataItem.EntityId";
+
+        reactiveStore.sdlKey = 'SDL Key is not defined';
+        reactiveStore.entityId = mapDataItem.EntityId;
+
         this.overlay.setPosition(coordinate);
 
     }
 
-    private animationFinished() : void {
+    private animationFinished(): void {
         console.log('animationFinished');
     }
 

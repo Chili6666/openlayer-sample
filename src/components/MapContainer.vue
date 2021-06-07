@@ -2,7 +2,7 @@
   <div ref="root" style="width: 100%; height: 100%">
     <div id="popup" class="ol-popup">
       <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-      <div id="popup-content"></div>
+      <SmartViewHost id="popup-content"></SmartViewHost>
     </div>
   </div>
 </template>
@@ -15,6 +15,7 @@ import TileLayer from "ol/layer/Tile";
 import XYZ from "ol/source/XYZ";
 import OSM from "ol/source/OSM";
 import Overlay from "ol/Overlay";
+import SmartViewHost from "@/components/SmartViewHost.vue";
 
 import MapService from "@/services/MapService";
 
@@ -29,6 +30,9 @@ import { IMapDataLayer } from "@/mapwrapper/IMapDataLayer";
 import { IMapDataItem } from "@/models/IMapDataItem";
 
 export default defineComponent({
+  components: {
+    SmartViewHost,
+  },
   props: {
     zoomlevel: {
       type: Number,
@@ -142,8 +146,14 @@ export default defineComponent({
     }
 
     function onMove(value: any) {
-      if (isDragging.value) {
+      if (!isDragging.value) {
         // console.log("onMove");
+
+        if (MapService.GetFeatureAtPixel(value.pixel)) {
+          MapService.map.getTargetElement().style.cursor = "pointer";
+        } else {
+          MapService.map.getTargetElement().style.cursor = "";
+        }
       }
     }
 
